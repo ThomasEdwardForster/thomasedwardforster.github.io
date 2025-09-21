@@ -1,0 +1,165 @@
+<TITLE>Part II Teaching Materials</TITLE>
+
+
+<HTML>
+<HEAD>
+
+<TITLE> Part II Teaching Materials</TITLE>
+
+</HEAD>
+
+<BODY >
+
+        <FONT SIZE="+3"> Materials for Part II
+Mathematics</FONT></TD><hr> <FONT SIZE="+1"> <hr> 
+I include here a shameless plug for <A HREF =
+"baby.html"> Logic Induction and Sets </A>, the most wonderful
+introduction to&mdash;well&mdash;<i>Logic, Induction and Sets </i> that
+the world has ever seen.  I'm not suggesting for even one moment that
+you should <i> read </i> it: just <i> buy </i> it!  However, if you
+really <i>do</i> want to actually read it you will need to refer to
+the <A HREF = "http://www.dpmms.cam.ac.uk/~tf/typoslis.html"> page of
+typos</A>.  It was written to the same syllabus for the old Part II
+logic course of <i>circa</i> 2000 that also gave rise to Professor
+Johnstone's <i> Notes on Logic and Set Theory </i>. That course has
+now bifurcated into the two courses to which this page is devoted: the
+languages-and-automata material from that old course has been hived
+off into Dr Chiodo's (now Dr Button's) course where it is joined by
+some material on
+PDAs and context-free grammars that was not in the old course (see
+below); the bulk of the material has gone into <i>ST&L</i>.  Old Exam
+questions going back to the 1990s will still be relevant to people
+pursuing <b>both</b> courses; such people will benefit from reading
+either Prof Johnstone's book or mine.<hr> <hr>
+
+<br>
+I am guilty of two pdfs which contain most (if not all) the basic
+logic and discrete maths that in my not-so-humble opinion should be in
+the backpack of every young mathematician about town.  One on <A
+HREF="countability.pdf"> Countability</A> and another on <A
+HREF="CUPdiscretelectures.pdf"> Discrete Mathematics</A>.  Read through
+them quickly, it won't take long.
+
+ <hr>
+
+
+ <FONT SIZE="+2">
+Set Theory and Logic
+<hr>         <FONT SIZE="+1"> 
+
+ Professor Leader's lecture notes for this course are available from
+<A HREF="http://tartarus.org/gareth/maths/notes/"> Gareth Taylor </A>
+(may he live for ever) and students will find them very helpful.  My
+lecture notes from 2016/7 are <A HREF = "partiilectures2016.pdf"> here
+</A>. 
+
+<hr> When lecturing this course in 2016/7 i started by talking about
+ordinals, so I made available a cleaned up version of my <A HREF =
+"TMStalk2012.pdf"> talk on ordinals</A> to the Trinity Mathematical
+Society from 2012.  There is also <A HREF ="fundamentalsequence.pdf">
+notes on countable ordinals </A> which might be useful, but they
+should be read (if at all!) only <i> after</i> the TMS notes.  Actually there is <A HREF="ordinalsforwelly.pdf"> slightly later series of notes </A> that you might like to at least start on.
+
+<hr><hr> <FONT SIZE="+2"> Additional materials <FONT SIZE="+1"><hr>
+
+In previous years i made my supervision-notes-and-discussions-of-old-examples-sheets-and-tripos-questions available to all
+Cambridge students but i have reluctantly concluded that the easy
+availability of these materials (i have been struck by the number of
+students consulting them who are supervised by people other than me)
+makes it easier for the faculty to not support logic properly, so i
+have taken them down.  If your supervisor is not able to supply these resources then take it up with your Director of Studies.  That is the only way things will change.  If you really want to see these materials then ask me, and
+have a good story handy &mdash; like: you're a Queens person, or the
+offspring of an old girlfriend, or anything else that might tug on my
+heartstrings.
+
+
+<hr><hr>
+
+<FONT SIZE="+2">
+Languages and Automata
+<hr>         <FONT SIZE="+1"> 
+
+</h3>
+I suspect that the students attending this course make a bimodal distribution.
+You may be someone who needs a lo-stress C course to keep your life under
+control, or you may be an enthusiast who really <i>really</i> wants to know
+about computability.  If you are of the second inclination you might like
+to keep an eye on the Part III reading course in <i>Computability and Logic</i>
+for which i have some sort of responsibility; look at
+<A HREF="partiiimaterials.html"> my Part III page </A>. <p>
+Either way you might like to cast an eye over <A HREF="blog.pdf"> my
+supervision notes for this course </A>(I have been supervising it since
+its inception and i have accumulated 50-odd pages of observations.)  Read
+at you own risk.
+
+<p>
+
+You will find very useful Prof Pitts' materials on <A HREF=
+"http://www.cl.cam.ac.uk/teaching/1213/RLFA/materials.html"> Languages
+and Automata </A> on the computer laboratory's course pages; ditto his
+<A HREF="https://www.cl.cam.ac.uk/teaching/1819/CompTheory/"> CS 1B materials </A>. <br>
+You may find <A HREF="x10nonce.pdf">my discussion of the last part of Q10 on his sheet</A> useful: it concerns the question of why the Ackermann function is not primitive recursive even tho' its slices are.<br>
+
+There is a slight mismatch between his materials and Dr Button's in
+that our course covers push-down automata and context-free languages
+(which CS doesn't&mdash;(I think!) and we do not cover lambda calculus
+whereas they do.  Nevertheless, Prof Pitts' materials come with the
+highest possible recommendation.  He is sensationally organised and
+the materials are beautifully set out.
+
+<hr>
+Here are my <A HREF ="languages-and-automata.pdf">Regular Languages
+and Finite Automata </A> materials (originally written for Queen Mary)
+in pdf format.  I am greatly endebted to Chlo&euml; Brown for creating
+a <A HREF ="langs-and-automata/main.html"> version in html </A>.  This
+version is preferable in various ways to the pdf version, since the
+answers to the exercises are not immediately visible in the way they
+are in the .pdf version, but can be seen only when you click on the
+link.  Thank you, Chlo&euml; Brown!! Here <A HREF ="112coursework2answers.pdf">
+is a file of answers to the coursework questions at the end </A>.
+<hr>
+Some of you have asked me whether Regular languages are good for
+anything.  These <A HREF ="arthur-norman.pdf"> notes of Arthur
+Norman's </A> on the hardness of the equality problem for regular
+languages may be of interest to strong students.  <hr> 
+
+This <A HREF ="chiodosheetIVq4i.pdf"> discussion answer to Sheet 4
+Question 4 Part (i)  </A> of Dr Chiodo's 2017 materials might be useful.
+ <hr>
+Here is <A HREF ="2017p4q4H.pdf">a discussion of 2017 paper 4 question 4H</A>.
+ <hr>
+Here is <A HREF ="2017p3q11H.pdf">a discussion of 2017 paper 3 question 11H</A>.
+
+ <hr>
+This <A HREF ="mauricenonce.pdf"> discussion answer to Sheet 2 Question 1 Part (d)  </A> of Dr Chiodo's 2016 materials might be useful.<br>
+Here is a discussion of  the last part of <A HREF ="2009p6q3.pdf"> 2009 paper 6 question 3 </A> of the CS Tripos.<hr>
+Here is the pdf file of the notes of Richard Crouch's second-year course at 
+the University of Nottingham on <A HREF ="crouchnotes.pdf"> Languages, Computation and Automata</A>. They do not correspond exactly to any course here, but students might find them useful: they are <i> very</i> meaty.
+<hr> I found this rather nice <A HREF
+="http://www.itu.dk/people/sestoft/lamreduce/"> lambda-calculus reduction workbench</A>.  I hope you will find it fun.
+<FONT SIZE="+1">
+<hr><hr>
+<A HREF = "1bCSmaterials.html">  Materials for 1b Computer Science</A>.
+<br>
+<A HREF = "1aCSmaterials.html"> Materials for 1a Computer Science </A>.
+<br> <A HREF = "partiiimaterials.html"> Materials for Part III Mathematics </A>.
+<br><A HREF = "logicforlinguistsmaterials.html"> Materials for Logic-For-Linguists</A>.
+<br> <A HREF = "partiimaterials.html"> Materials for Part II Mathematics </A>.
+<br> <A HREF = "partivmaterials.html"> Materials for Part IV Mathematics </A>.
+<br> <A HREF = "CSlogiccoursematerials.html"> Materials for the Computer Science M. Phil </A>.
+  </FONT></TD>
+
+</body>
+
+
+
+</BODY>
+
+</HTML>
+
+
+
+
+
+
+

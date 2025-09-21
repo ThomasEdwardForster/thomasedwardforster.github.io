@@ -1,0 +1,65 @@
+<TITLE>1a Mathematics Teaching Materials</TITLE>
+<HTML>
+<HEAD>
+</HEAD>
+<BODY >
+        <TR ALIGN="center" VALIGN="middle">
+        <TD ALIGN="center" BGCOLOR="#FFFFFF">
+<hr><hr> <FONT SIZE="+2">1a Mathematics Teaching Materials:<br>
+<hr></FONT></TD> <p>  
+Here are my <A HREF ="discretelectures.pdf">
+        Lecture Notes on Discrete Mathematics</A>.        </FONT></TD> <p>  
+
+<b>Health warning:</b><br>
+
+These notes started off as <i>my</i> notes - for lecturing <i>from</i>
+- when I was lecturing DM at Queen Mary - to Computer Science students
+as it happens - and in making them available I am giving no
+guarantees.  Word has reached me that Cambridge 1a CS students refer
+to these notes, so I have tidied them up a bit. Notification of typos,
+etc, suggestions for improvement, etc, will be received with thanks
+and attract the usual rewards.<br>
+
+They should be useful to 1a mathmos; the 1a course being followed by 
+my CS readers is a cousin of 1a Numbers-and-Sets: years ago
+CS Discrete Mathematics and Maths Numbers and sets were the same
+course.  They probably still should be.  <hr> Here is a <A HREF
+="Induction.pdf"> worked example of a proof by course-of-values
+induction</A>, prepared by Frank King, and included with his
+permission.  <hr> 
+At some point i shall put here my discussion notes of Dr Wadsley's 2017 lectures.<br>
+<hr>Here are my notes of <A HREF ="rachellectures.pdf"> Dr Camina's 1a Algebra lectures </A> from a couple of years ago.
+
+<hr>Here is a <A HREF ="countability.pdf"> file </A>
+that contains everything you need to know about countability.  It also
+has some instructive exercises.  You can skip the appendix if you like
+but you should definitely read everything before it. It has to be said
+that Gareth Taylor thinks that they are too sophisticated for 1a maths
+students.  I think he's wrong.  (He's not often wrong about paedogogy but we are none of us infallible)
+
+</h3>
+
+<hr><hr>
+<FONT SIZE="+1">
+<A HREF = "1aCSmaterials.html">  Materials for 1a Computer Science</A>.<br>
+<A HREF = "1bCSmaterials.html">  Materials for 1b Computer Science</A>.
+<br> <A HREF = "partiiimaterials.html"> Materials for Part III Mathematics </A>.
+<br><A HREF = "logicforlinguistsmaterials.html"> Materials for Logic-For-Linguists</A>.
+<br> <A HREF = "partiimaterials.html"> Materials for Part II Mathematics </A>.
+<br> <A HREF = "partivmaterials.html"> Materials for Part IV Mathematics </A>.
+<br> <A HREF = "CSlogiccoursematerials.html"> Materials for the M.Phil. in Computer Science </A>.
+
+  </FONT></TD>
+</body>
+
+
+
+</BODY>
+
+</HTML>
+
+
+
+
+
+

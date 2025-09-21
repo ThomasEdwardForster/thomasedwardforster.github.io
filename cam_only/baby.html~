@@ -1,0 +1,59 @@
+
+<!--Books not babies -->
+
+
+<HTML>
+<HEAD>
+
+<TITLE>Buy this and make me rich, famous and universally loved</TITLE>
+
+</HEAD>
+
+<BODY >
+
+<TABLE WIDTH="95%" HEIGHT="100%" CELLSPACING="3" CELLPADDING="3" BORDER="0">
+
+ <IMG SRC="baby.jpg" WIDTH= "520" HEIGHT="420" ALT="Logic, Induction and Sets"></TD>
+
+<TABLE WIDTH="95%" CELLSPACING="3" CELLPADDING="3" BORDER="0">
+
+<p>
+
+
+<HR>
+
+
+
+This book is written to the specifications of the syllabus committe
+for the third year course in Logic given in the Mathematics Faculty at
+Cambridge, and is based on the lecture notes from which I lectured it.
+It is now lectured by <A HREF =
+"http://www.dpmms.cam.ac.uk/site2002/People/hyland_jme.html"> Martin Hyland </A>.  It starts off with background in discrete maths, then
+has chapters on recursive datatypes, boolean logic, lattices and
+fixed-point-theorems, predicate logic, computable functions, ordinals
+and sets. There are exercises sprinkled throughout the text, and it ends with a chapter of worked answers to a selection of them. Despite this, it is not really recommended for self-study, but rather as an adjunct
+for people who are attending a course of lectures in undergraduate
+logic, since it grew also out of my supervision notes for this course.  In fact it ideally complements Peter Johnstone's ``Notes on
+Set theory and Logic''.  To order it visit <A HREF =
+"http://us.cambridge.org/titles/catalogue.asp?isbn=0521533619"> CUP
+(New York) </A> (if you happen to be in the US) or <A HREF =
+"http://titles.cambridge.org/catalogue.asp?isbn=0521533619"> CUP
+(Cambridge) </A> if you are in the United Kingdom.  If you are in
+Australia or lucky enough to be in New Zealand go to <A HREF =
+"http://au.cambridge.org/result.asp?isbn=0521533619"> CUP in Melbourne
+</A>.  Paperback and hardback both available.  
+
+<p>
+
+A list of typos will be maintained <A HREF = "http://www.dpmms.cam.ac.uk/~tf/typoslis.html">
+here </A>
+
+
+
+
+<HR>
+
+
+</BODY>
+
+</HTML>

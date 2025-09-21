@@ -1,0 +1,13 @@
+Logicians and philosophers of science (e.g. Carnap, Popper) have taken
+the logical content of a wff to be the class of its logical
+consequences.  This has many unintuitive results and has particularly
+hampered research in philosophy of science (e.g. in defining
+hypothetico-deductive confirmation, verisimilitude, empirical
+significance, irrelevance and probabilistic conformation.).  An
+alternative account of logical content is proposed.  Definitions, both
+syntactic and semantic, allowing for a completeness proof for
+propositional languages and a definition for a quantificational language
+with identity, are given.  The later makes use of a substitutional
+interpretation of the quantifiers.  Open problems concerning the
+definitions for more advanced languages are presented.
+

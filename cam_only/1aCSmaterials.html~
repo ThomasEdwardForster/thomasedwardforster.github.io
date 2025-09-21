@@ -1,0 +1,175 @@
+
+
+
+
+<TITLE>1a Computer Science Teaching Materials</TITLE>
+
+
+<HTML>
+<HEAD>
+
+
+</HEAD>
+
+<BODY >
+
+
+        <TR ALIGN="center" VALIGN="middle">
+        <TD ALIGN="center" BGCOLOR="#FFFFFF">
+
+
+
+<hr><hr> <FONT SIZE="+2">Computer Science 1a Teaching Materials:<br>
+
+<hr><hr> <b>Assorted Lecture Notes</b> <hr> 
+
+Here are my <A HREF ="CUPdiscretelectures.pdf">
+        Lecture Notes on Discrete Mathematics</A>.        </FONT></TD> <p>  
+<FONT SIZE="+1"> 
+<b>Health warning:</b><br>
+
+These notes started off as <i>my</i> notes - for lecturing <i>from</i> - 
+when I was lecturing DM at Queen Mary, and in making them available to
+my supervisees I offer no guarantees.  Word has reached me that
+Cambridge 1a CS students refer to these notes, so I have tidied them
+up a bit. Notification of typos, etc, suggestions for improvement,
+etc, will be received with thanks and attract the usual rewards.<br>
+<b>If I am supervising you for 1A Discrete Maths I want you to read 
+these notes and attempt all the  exercises</b>.<br> <hr> You might find
+<A HREF ="http://www.cis.upenn.edu/~jean/gbooks/discmath.html"> Jean Gallier's lecture notes on first-year discrete maths for CS students </A> helpful.<hr> 
+Here are my <A HREF ="languages-and-automata.pdf">Regular Languages
+and Finite Automata </A> materials (originally written for Queen Mary)
+in pdf format.  I am greatly endebted to Chlo&euml; Brown for creating
+a <A HREF ="langs-and-automata/main.html"> version in html </A>.  This
+version is preferable in various ways to the pdf version, since the
+answers to the exercises are not immediately visible in the way they
+are in the .pdf version, but can be seen only when you click on the
+link.  Thank you, Chlo&euml; Brown!! Here <A HREF ="112coursework2answers.pdf">
+is a file of answers to the coursework questions at the end </A>.
+<hr><hr>
+
+<b>ASSORTED EXERCISES</b> <hr>
+<A HREF= "discex.pdf"> Here </A> is a file containing lots of exercises.  You should certainly attempt at least some of them, tho' some of them (for example the structured proof exercises) pertain to material that is not currently lectured. Some of them have answers prepared by my supervisees, and displayed below. Here are <br>
+<A HREF ="basuita.ps"> Simrun Basuita's answer to question 3</A> of 
+the section on structured proof; <br>
+<A HREF ="bakerdiscreteexercise.pdf"> James Baker's
+answer to question 6 </A> 
+in that section; and <br>
+<A HREF ="bakerproof6.pdf"> James Baker's
+answer to question 7 </A> 
+in that section.
+<hr>
+<A HREF ="153.pdf"> A discussion answer to the question about two-to-the-power-153 mod 153 from Prof Fiore's materials</A>.<br>
+Here is a <A HREF ="workout26.pdf"> discussion of workout 26 on Prof. Fiore's notes</A>.<br>
+Here is a <A HREF ="dddc2.pdf"> discussion of Question 3.2.4 on sheet 3 of Prof. Fiore's exercises</A>.
+ <hr>
+Here are some <A HREF ="lflexercises2.pdf"> exercises on predicate calculus</A>
+and here is <A HREF ="lpcanswers.pdf">  the same file with some answers</A>
+
+ <hr> <hr>
+<b>ASSORTED ANSWERS TO OLD TRIPOS QUESTIONS</b> <hr>
+<A HREF ="oldCS1atriposquestions.pdf"> Some discussion answers to (very!) old tripos questions</A> (some of these are <b> from the last millenium!)</b>;<br>
+<A HREF ="compscinonce.pdf"> Worked answer to 1995 Paper 5 question 4X (Maths tripos)</A>;<br>
+<A HREF ="1996p1q8.pdf"> Worked answer to 1996 Paper 1 question 8</A>;<br>
+<A HREF ="1997p1q7.pdf"> Worked answer to 1997 Paper 1 question 7</A>;<br>
+<A HREF ="2002p1q8.pdf"> Worked answer to 2002 Paper 1 question 8 part (a) (ii)</A>;<br>
+<A HREF ="2007.2.5.pdf"> Worked answer to 2007 Paper 2 question 5</A>;<br>
+<A HREF ="2009p1q4.pdf"> Worked answer to 2009 Paper 1 question 4</A>;<br>
+<A HREF ="2010p1q4.pdf"> Worked answer to 2010 Paper 1 question 4 (``Societies involving fighting'')</A>;<br>
+<A HREF ="2011.2.6.pdf"> Worked answer to 2011 Paper 2 question 5</A>;<br>
+<A HREF ="2013p2q5.pdf"> Worked answer to 2013 Paper 2 question 5</A>.<br>
+<A HREF ="2013p2q6.pdf"> Worked answer to 2013 paper 2 question 6</A>; (or rather it will be as soon as i have finished the answer!!<br>
+<A HREF ="2015p2q7c.pdf"> Worked answer to 2015 paper 2 question 7</A><br> 
+<A HREF ="2015p2q9.pdf"> Worked answer to 2015 paper 2 question 9.<br>
+<A HREF ="2018p2q7.pdf"> Worked answer to 2018 paper 2 question 7.<br>
+<A HREF ="2018p2q9.pdf"> Worked answer to 2018 paper 2 question 9.<br>
+<A HREF ="2018p2q10.pdf"> Worked answer to 2018 paper 2 question 10.<br>
+<A HREF ="2019p2q5.pdf"> Worked answer to 2019 paper 2 question 5.<br>
+
+
+
+
+
+
+</A> 
+<hr>
+<b>ASSORTED OTHER MATERIALS</b> <hr>
+I think you will find these <A HREF
+="discrete-trial-101-test.pdf">exercises on matrix representation of
+binary relations</A> very useful.  They are elementary, and you need -
+eventually! - to be able to do them all without breaking sweat.  Don't
+feel any need to do the whole lot, but try a random sample to make sure you're OK.<hr> <A HREF
+="structuralinductionexercise.pdf">An exercise on structural
+induction</A>.  <hr> You presumably know what a Necker cube is.  Cook
+up a bundle of literals that say things like...whether or not [in the
+3D reconstruction] a line segment lies in the plane of the paper or in
+a plane normal to it.  Oh yes, and something about what happens when
+two lines cross.  The idea will be that you will have a big fat
+formula with lots of literals in it and there will be precisely two
+valuations that make the formula true, corresponding to the two
+possible orientations of the cube in the reconstruction. I have a
+discussion answer which I will show you if you attempt the exercise.
+
+ <hr>
+
+<A HREF ="keeping_out_of_mischief.htm"> Here </A> is Gary Jackson's html-ised
+illustrated discussion of the handshaking riddle. <hr>
+<hr>
+
+
+
+
+Here is a <A HREF ="Induction.pdf"> worked example of a proof by
+course-of-values induction</A>, prepared by Frank King, and included
+with his permission.  <hr> Here is a <A HREF ="countability.pdf"> file
+</A> that contains everything you need to know about countability.  It
+also has some instructive exercises.  You can skip the appendix if you
+like but you should definitely read everything before it.
+
+<hr>
+ <A HREF ="discretenotes.pdf"> Here </A> is a discussion of some of the exercises in the 2012-3 lecture notes for DMI and DMII.<br>
+
+<hr>
+
+       <FONT SIZE="+1"> <A HREF ="http://www.japeforall.org.uk"> JAPE </A> (``Just Another Proof Editor'') is a gadget that is no longer examinable, but it can be very useful as long as you don't become addicted to it. It was developed in part by Richard Bornat, then at QMW, and <A HREF ="bornat-on-JAPE.pdf"> here</A> is his introduction....it may be useful (the exercises I supply invite you to use it).   In any case it anticipates the 1b course: <i>Logic and Proof</i>.
+
+<hr>
+
+<A HREF ="compsci_notes.pdf"> Here 
+</A> are my supervision notes for assorted CS topics (and not
+just 1a).  They are messages to myself, and come with no guarantees.
+The chapters on ML and discrete mathematics might be helpful.
+ <hr><p> 
+<A HREF = "dualityquestion.pdf"> This </A> is a model tripos question for ....  well, i'm not sure.  It just might be a teeny bit hard for 1a discrete maths but is probably too easy for 1b.<hr>
+
+
+
+If you are interested in Linear Logic then <A HREF = "http://www.math.lsa.umich.edu/~ablass/llgames.pdf"> Andreas Blass's notes on Linear Logic</A> is as good a place to start as any.
+
+
+</h3>
+
+<hr><hr>
+<FONT SIZE="+1">
+
+<A HREF = "1bCSmaterials.html">  Materials for 1b Computer Science</A>.
+<br> <A HREF = "partiiimaterials.html"> Materials for Part III Mathematics </A>.
+<br><A HREF = "logicforlinguistsmaterials.html"> Materials for Logic-For-Linguists</A>.
+<br> <A HREF = "partiimaterials.html"> Materials for Part II Mathematics </A>.
+<br> <A HREF = "partivmaterials.html"> Materials for Part IV Mathematics </A>.
+<br> <A HREF = "CSlogiccoursematerials.html"> Materials for the M.Phil. in Computer Science </A>.
+
+  </FONT></TD>
+</body>
+
+
+
+</BODY>
+
+</HTML>
+
+
+
+
+
+

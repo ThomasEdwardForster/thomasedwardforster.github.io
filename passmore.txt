@@ -1,0 +1,47 @@
+So sorry for the delay!  Here's what I've got.  Do you think it is too long?
+
+Thanks so much!
+grant
+
+--
+
+Title: A Family of Decidable Nonlinear Fragments of the True Existential
+Theory of the Rational Number Field
+
+For my dissertation, I am interested in isolating decidable nonlinear
+fragments of discrete number theories.  Of particular interest to me is
+the isolation of decidable nonlinear fragments of the true existential
+theory of the rational number field, as the decidability of the full
+true existential theory of the rational number field (Hilbert's 10th
+Problem over Q) remains as a difficult and important problem in
+arithmetic algebraic geometry.
+
+I've recently obtained the following result: Let L be the first-order
+language of fields restricted to only include WFFs formed with the
+existential quantifier, disjunction, and relation symbols for
+disequality and greater-than-or-equal-to in the natural way (note that
+term formation has not been restricted).  Then, the true L-theory of the
+rational number field is decidable.  Moreover, this decidability result
+holds even when the structure of the rational number field is extended
+by an arbitrary collection of F-definable `real-extended continuous
+rational endomaps,' where F is the full first-order language of fields
+and a `real-extended continuous rational endomap' is a continuous map
+from R^n -> R with the property that its image over a rational vector is
+always rational-valued.  The proof is very simple, utilizing only
+rudimentary model-theoretic and topological properties of Euclidean space.
+
+I will present some background on Hilbert's 10th Problem over Q, present
+this proof, and seek advice from attendees as to (a) whether this result
+was already known (perhaps it is folklore?), and (b) promising
+approaches and directions I might head into for hopefully isolating more
+interesting decidable nonlinear fragments.
+
+Thomas Forster wrote:
+> 
+> 
+> The header says it all....
+> 
+> 
+> 
+> 
+

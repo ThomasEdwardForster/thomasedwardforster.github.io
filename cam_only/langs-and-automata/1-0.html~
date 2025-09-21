@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>Chapter 1</h2>
+<h1>Machines</h1>
+<p>This is a course on Languages, Automata and Computation. We have to start
+somewhere, and 'a' is before 'c' or 'l' so let's start with automata!</p>
+<p>'Automata' (singular: automaton) is a Greek word for 'machines'. The
+automata in this course are all <i>discrete</i> rather than <i>continuous</i> machines. Or
+perhaps one should say <i>digital-rather-than-analogue</i>. If you are not happy about
+this difference go away and ask your supervisor before you read any further. If
+you are happy about this difference just check that you and I have the same
+take on it: a car is an <i>analogue</i> machine, and a computer is a <i>digital</i> machine.</p>
+<p>There are two ways into machines, and one can profitably run both - one
+does not have to choose one.</p>
+
+<ul><li>One can draw a couple of FSAs and talk through what they do.</li><br>
+<li>One can start with a well-motivated story from life and say how this might
+be a machine. Try for example:<br><a href="http://www.philosophy.uncc.edu/logic/projectTALLC/tallc2/applets/puzzles/wj/wj_jar.html">http://www.philosophy.uncc.edu/logic/projectTALLC/tallc2/applets/puzzles/wj/wj_jar.html</a><br>or try googling 'water jugs'</li></ul>
+
+<p>Finite state machines can be quite useful in describing games, like chess, or
+Go, or draughts. This is because many games (for example, those I have just
+mentioned) have machines naturally associated with them: the board positions
+can be thought of as states of a machine. It's not always clear what the input
+alphabet is!</p>
+<p>The point of departure is this: machines are things with finite descriptions
+that have states, and they move from one state to another on receiving an input,
+which is a character from an input alphabet.</p>
+<p>To be formal about it: A machine &#8499; is a set <i>S</i> of states, together with a
+family of transition operations, one for each <i>w</i> &#8714; &#931;, the input alphabet. These transition operations are usually written as one function of two arguments rather than lots of unary operations. Thus <i>&#948;</i>(<i>s</i>, <i>c</i>) is the state that machine is in after it received character <i>c</i> when it was in state <i>s</i>:&nbsp;&nbsp;&nbsp;
+<i>&#948;</i> : <i>S</i> &#10799; &#931; &#8594; <i>S</i>.<br>
+<p>    There must of course be a designated start state <i>s<sub>0</sub></i> &#8714; <i>S</i>, and there is a set <i>A</i> of accepting states <i>A</i> &#8838; <i>S</i>, whose significance we will explain later. We will also only be interested in machines with only finitely many states. There are technicalities to do with infinity, but we don't need to worry about them just yet. All we mean is that for our machine &#8499; the number | <i>S</i> | (the size of the set of states) must be a natural number: | <i>S</i> | = 1 or | <i>S</i> | = 2 or . . . .</p>
+
+<a href="1-1.html">Next: 1.1 Languages recognised by machines</a><br>
+<a href="0-2.html">Back: 0.2 Introduction</a>
+
+</body>
+</html>

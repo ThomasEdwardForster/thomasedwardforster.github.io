@@ -1,0 +1,29 @@
+body {
+  padding-left: 10em;
+  padding-right: 8em;
+  font-family: "Times New Roman",Times,serif;
+  color: black;
+  background-color: white
+}
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  width: 7em }
+h1 {
+  font-family: "Times New Roman",Times,serif }
+ul.navbar li {
+  background: white;
+  margin: 0.5em 0;
+  padding: 0.3em;
+  }
+ul.navbar a {
+  text-decoration: none }
+a:link {
+  color: blue }
+a:visited {
+  color: purple }
+

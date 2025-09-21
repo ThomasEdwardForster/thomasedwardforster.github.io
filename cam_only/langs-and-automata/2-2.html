@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Kleene's theorem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>2.2 Kleene's theorem</h2>
+<p>Kleene's theorem states that a language is regular if it can be notated by a
+regular expression. One direction of this is fairly easy: showing that if there is
+a regular expression for a language <i>L</i> then there is a machine that recognises <i>L</i>.
+This breaks down into several steps, one for each constructor: slash, concatenation and Kleene star. We've seen how to do slash - after all <i>L</i>(<i>K</i><sub>1</sub>|<i>K</i><sub>2</sub> ) is just
+<i>L</i>(<i>K</i><sub>1</sub>)&#8746;<i>L</i>(<i>K</i><sub>2</sub>) - but to do the other two involves nondeterministic machines
+and we don't encounter those until later.</p>
+<p>The hard part is the other direction: showing how to find a regular expression
+for the language recognised by a given machine.</p>
+<p>What we prove is something apparently much stronger:<br>
+For every machine &#8499;, for any two states <i>q</i><sub>1</sub> and <i>q</i><sub>2</sub> of &#8499;, and for any set
+<i>Q</i> of states, there is a regular expression &#966;(<i>q</i><sub>1</sub>, <i>q</i><sub>2</sub>, <i>Q</i>) which notates the set of
+strings that take us from state <i>q</i><sub>1</sub> to state <i>q</i><sub>2</sub> while never leaving the set <i>Q</i>.</p>
+<p>Of course all we are after is the regular expression formed by putting slashes
+between all the expression &#966;(<i>q</i><sub>1</sub>, <i>q</i><sub>2</sub>, <i>Q</i>) where <i>q</i><sub>1</sub> is the initial state, <i>q</i><sub>2</sub> is an
+accepting state, and <i>Q</i> is the set of all states. But it turns out that the only
+way to prove this special case is to prove the much more general assertion.</p>
+<p>We prove this general assertion by induction. The only way to have a hope of
+understanding this proof is to be quite clear about what it is we are proving by
+induction. You are probably accustomed to having '<i>n</i>' as the induction variable
+in your proofs by induction so let's do that here.</p><br>
+      "For all machines &#8499;, and for all subsets <i>Q</i> of the set of &#8499;'s states
+      with |<i>Q</i>| = <i>n</i>, and for any two states <i>q</i><sub>1</sub> and <i>q</i><sub>2</sub> of &#8499;, there is a
+      regular expression &#966;(<i>q</i><sub>1</sub>, <i>q</i><sub>2</sub>, <i>Q</i>) which notates the set of strings that
+      take us from state <i>q</i><sub>1</sub> to state <i>q</i><sub>2</sub> while never leaving the set <i>Q</i>"<br>
+<p>We fix &#8499; once for all (so that we are doing a '&#8704;-introduction rule, or "universal generalisation" on the variable '&#8499;', and we prove by induction on '<i>n</i>'
+that this is true for all <i>n</i>.</p>
+<p>At the risk of tempting fate, I am inclined to say at this point that if you
+are happy with what has gone so far in this section (and that is quite a big if!)
+then you have done all the hard work. The proof by induction is not very hard.
+The hard part lay in seeing that you had to prove the more general assertion
+first and then derive Kleene's theorem as a consequence.</p>
+<p>Proofs by induction all have two parts. (i) A base case, and (ii) induction
+step. I submit, ladies and gentlemen, that the base case - with <i>n</i> = 1 - is
+obvious. Whatever &#8499;, <i>s</i> and <i>q</i> are, you can either get from <i>q</i><sub>1</sub> to <i>q</i><sub>2</sub> in one
+hop by means of - character <i>c</i>, say (in which case the regular expression is <i>c</i>) - 
+or you can't, in which case the regular expression is &#949;.
+<p>Now let's think about the induction step. Suppose our assertion true for <i>n</i>.
+We want to prove it true for <i>n</i> + 1.</p>
+<p>We are given a machine &#8499;, and two states <i>q</i><sub>1</sub> and <i>q</i><sub>2</sub> of &#8499;. We want to
+show that for any set <i>Q</i> of states of &#8499;, with |<i>Q</i>| = <i>n</i> + 1, there is a regular
+expression that captures the strings that take the machine from <i>q</i><sub>1</sub> to <i>q</i><sub>2</sub> without
+leaving <i>Q</i>.</p>
+<p>What are we allowed to assume? The induction hypothesis tells us that for
+any two states <i>s'</i> and <i>t'</i> and any set <i>Q'</i> of states with |<i>Q'</i> | = <i>n</i>, there is a regular
+expression that captures the strings that take the machine from <i>q'</i><sub>1</sub> to <i>q'</i><sub>2</sub> without
+leaving <i>Q'</i> . (I have written '<i>q'</i><sub>1</sub>' and '<i>q'</i><sub>2</sub>' and <i>Q'</i> because I don't want to reuse
+the same variables!)</p>
+<p>For any state <i>r</i> in <i>Q</i>, we can reason as follows: "Every string that takes &#8499;
+from <i>q</i><sub>1</sub> to <i>q</i><sub>2</sub> without leaving <i>Q</i> either goes through <i>r</i> or it doesn't.</p>
+<p>The strings that take &#8499; from <i>q</i><sub>1</sub> to <i>q</i><sub>2</sub> without either going through <i>r</i> or
+leaving <i>Q</i> are captured by a regular expression because |<i>Q</i> \ {<i>r</i>}| = <i>n</i>. Let <i>w</i><sub>1</sub>
+be this regular expression.</p>
+<p>The strings that take &#8499; from <i>q</i><sub>1</sub> to <i>q</i><sub>2</sub> via <i>r</i> are slightly more complicated.
+By induction hypothesis we have a regular expression for the set of strings that
+take &#8499; from <i>q</i><sub>1</sub> to <i>r</i> without going through <i>q</i><sub>2</sub> (while remaining in <i>Q</i>) - because
+|<i>Q</i> \ {<i>q</i><sub>2</sub> }| = <i>n</i> - so let's call that regular expression <i>w</i><sub>2</sub>. Similarly by induction
+hypothesis we have a regular expression for the set of strings that take &#8499; from <i>r</i>
+to <i>q</i><sub>2</sub> without going through <i>q</i><sub>1</sub> (while remaining in <i>Q</i>) - because |<i>Q</i>\{<i>q</i><sub>1</sub> }| = <i>n</i> - 
+so let's call that regular expression <i>w</i><sub>3</sub>. Finally by induction hypothesis we have
+a regular expression for the set of strings that take &#8499; from <i>r</i> back to <i>r</i> without
+going through <i>q</i><sub>1</sub> or <i>q</i><sub>2</sub> (while remaining in <i>Q</i>) - because |<i>Q</i>\{<i>q</i><sub>1</sub>, <i>q</i><sub>2</sub> }| = <i>n</i>-1 - so
+let's call that regular expression <i>w</i><sub>4</sub>.</p>
+<p>Now a string that takes &#8499; from <i>q</i><sub>1</sub> to <i>q</i><sub>2</sub> via <i>r</i> will consist of a segment that
+takes &#8499; from <i>q</i><sub>1</sub> to<i> r</i> (captured by <i>w</i><sub>2</sub>) followed by a bit that takes it from <i>r</i>
+back to <i>r</i> any number of times (captured by <i>w</i><sub>4</sub>*) followed by a bit that takes
+&#8499; from <i>r</i> to <i>q</i><sub>2</sub> (captured by <i>w</i><sub>3</sub>).</p>
+<p>So the regular expression we want is <i>w</i><sub>1</sub> |<i>w</i><sub>2</sub> (<i>w</i><sub>4</sub> )*<i>w</i><sub>3</sub>.</p>
+<p>This concludes the proof.</p>
+<p>If you are a confident and fluent programmer in a language that handles
+strings naturally then you should try to program the algorithm on which this
+proof relies. It will give you good exercise in programming and will help you
+understand the algorithm.</p>
+
+<a href="2-2-1.html">Next: 2.2.1 Some more exercises</a><br>
+<a href="2-1-1.html">Back: 2.1.1 More about bombs</a>
+
+</body>
+</html>

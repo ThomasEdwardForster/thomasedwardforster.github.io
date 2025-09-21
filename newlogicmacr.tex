@@ -1,0 +1,410 @@
+\def\forces{\mathrel\mathchar"326B\mkern-9mu -}
+\newcommand{\TZT}{\mbox{\mbox{{\rm T}}{\mbox{\rm{Z \kern-7.7pt Z}}}\mbox{{\rm T}}}}
+\newcommand{\smallTZT}{\mbox{\footnotesize{T{\mbox{\rm{Z \kern-7.5pt Z}}}T}}}
+\newcommand{\smallPp}{\mbox{\footnotesize{\Pp}}}
+\renewcommand{\TZT}{\mbox{T$\Z$T}}
+%\renewcommand{\TZT}{\mbox{{\rm T}}$\mathbb{Z}$\mbox{{\rm T}}}
+
+\newcommand{\XOR}{\mbox{\, {\tt XOR} \, }}
+\newcommand{\TCZ}{\mbox{TC$\Z$}}
+\newcommand{\smallZZ}{\mbox{\footnotesize{{\mbox{\rm{Z \kern-7.5pt Z}}}}}}
+
+\newcommand{\C}{\mathbb{C}} 
+%\usepackage{graphicx,xcolor}
+%\graphicspath{{/tmp/df224/}}
+\newcommand{\Pig}{\includegraphics[width=0.7cm]{pig5}}
+\newcommand{\2}{\mbox{2\hspace{-0.22cm}2}}
+\newcommand{\commentblock}[1]{}
+\newcommand{\iNF}{{\sl i}NF}
+
+\newcommand{\smallpara}[1]{\begin{small}\begin{spacing}{0.8}\begin{quote} #1  \end{quote}\end{spacing}\end{small}}
+
+
+%\renewcommand{\smallpara}[1]{\begin{small}\begingroup\setstretch{0.6}#1\par\endgroup\end{small}}
+
+ % defs
+
+\renewcommand{\tilde}{\symbol{'176}} 
+ % nat deduct stuff
+ \newcommand{\orint}[1]{\RightLabel{$\lor$-int}\UnaryInfC{#1}}
+ \newcommand{\orelim}[1]{\RightLabel{$\lor$-elim}\TrinaryInfC{#1}}
+ \newcommand{\orelimlabel}[2]{\RightLabel{$\lor$-elim ({#1})}\TrinaryInfC{#2}}
+ \newcommand{\identityrule}[1]{\RightLabel{identity rule}\BinaryInfC{#1}}
+ \newcommand{\identityruleU}[1]{\RightLabel{identity rule}\UnaryInfC{#1}}
+ \newcommand{\epsilonint}[1]{\RightLabel{$\in$-int}\UnaryInfC{#1}}
+
+ \newcommand{\inint}[1]{\RightLabel{$\in$-int}\UnaryInfC{#1}}
+ \newcommand{\inelim}[1]{\RightLabel{$\in$-elim}\UnaryInfC{#1}}
+
+ \def\apercu{{\sl aper\c{c}u}\ }
+
+ \newcommand{\andelim}[1]{\RightLabel{$\land$-elim}\UnaryInfC{#1}}
+ \newcommand{\andint}[1]{\RightLabel{$\land$-int}\BinaryInfC{#1}}
+
+ \newcommand{\arrowelim}[1]{\RightLabel{$\rightarrow$-elim}\BinaryInfC{#1}}
+ \newcommand{\arrowint}[1]{\RightLabel{$\rightarrow$-int}\UnaryInfC{#1}}
+ \newcommand{\arrowintlabel}[2]{\RightLabel{$\rightarrow$-int ({#2})}\UnaryInfC{#1}}
+
+   \newcommand{\classicalneg}[1]{\RightLabel{classical negation}\UnaryInfC{#1}}
+ \renewcommand{\classicalneg}[2]{\RightLabel{classical negation (#2)}\UnaryInfC{#1}}
+
+ \newcommand{\doubleneg}[1]{\RightLabel{double negation}\UnaryInfC{#1}}
+ %\newcommand{\falseelim}[1]{\AxiomC{$\thefalse$}\RightLabel{ex falso sequitur quodlibet}\UnaryInfC{#1}}
+ \newcommand{\falseelim}[1]{\RightLabel{ex falso sequitur quodlibet}\UnaryInfC{#1}}
+ \newcommand{\rrrr}[1]{\RightLabel{Rule 4}\UnaryInfC{#1}}
+
+
+ \newcommand{\necc}[1]{\RightLabel{neccessitation}\UnaryInfC{#1}}
+
+
+
+ \newcommand{\affixing}[1]{\RightLabel{Affixing}\UnaryInfC{#1}}
+ \newcommand{\mixedrule}[1]{\RightLabel{Mixed Rule}\UnaryInfC{#1}}
+
+ \newcommand{\subst}[1]{\RightLabel{subst}\BinaryInfC{#1}}
+ \newcommand{\forallint}[1]{\RightLabel{$\forall$-int}\UnaryInfC{#1}}
+ \newcommand{\forallelim}[1]{\RightLabel{$\forall$ elim}\UnaryInfC{#1}}
+ \newcommand{\existsint}[1]{\RightLabel{$\exists$-int}\UnaryInfC{#1}}
+ \newcommand{\existselim}[2]{\RightLabel{$\exists$-elim({#2})}\BinaryInfC{#1}}
+
+
+ \newcommand{\ambiguity}[1]{\RightLabel{Typical Ambiguity}\UnaryInfC{#1}}
+ % aliases
+ \newcommand{\modpon}[1]{\arrowelim{#1}}
+
+
+ % sequent deduction stuff
+ \newenvironment{sequent}{\begin{equation}\def\fCenter{\ \vdash\ }}{\DisplayProof \end{equation}}
+
+ \newcommand{\negr}[1]{\RightLabel{$\neg$ R}\UnaryInf#1}
+ \newcommand{\negl}[1]{\RightLabel{$\neg$ L}\UnaryInf#1}
+
+ \newcommand{\inr}[1]{\RightLabel{$\in$ R}\UnaryInf#1}
+ \newcommand{\inl}[1]{\RightLabel{$\in$ L}\UnaryInf#1}
+
+
+
+ \newcommand{\arrowr}[1]{\RightLabel{$\rightarrow$ R}\UnaryInf#1}
+ \newcommand{\arrowl}[1]{\RightLabel{$\rightarrow$ L}\BinaryInf#1}
+
+ \newcommand{\orl}[1]{\RightLabel{$\lor$ L}\BinaryInf#1}
+ \newcommand{\orr}[1]{\RightLabel{$\lor$ R}\UnaryInf#1}
+ \newcommand{\orrone}[1]{\RightLabel{$\lor$ R $_1$}\UnaryInf#1}
+ \newcommand{\orrtwo}[1]{\RightLabel{$\lor$ R $_2$}\UnaryInf#1}
+
+ \newcommand{\andr}[1]{\RightLabel{$\land$ R}\BinaryInf#1}
+ \newcommand{\andlone}[1]{\RightLabel{$\land$ L$_1$}\UnaryInf#1}
+ \newcommand{\andltwo}[1]{\RightLabel{$\land$ L$_2$}\UnaryInf#1}
+ \newcommand{\wedgeL}[1]{\RightLabel{$\land$ L}\UnaryInf#1}
+
+ \newcommand{\weakr}[1]{\RightLabel{Weakening-R}\UnaryInf#1}
+ \newcommand{\contrR}[1]{\RightLabel{contraction-R}\UnaryInf#1}
+ \newcommand{\weakl}[1]{\RightLabel{Weakening-L}\UnaryInf#1}
+
+ \newcommand{\existsl}[1]{\RightLabel{$\exists$ L}\UnaryInf#1}
+ \newcommand{\existsr}[1]{\RightLabel{$\exists$ R}\UnaryInf#1}
+
+ \newcommand{\forallr}[1]{\RightLabel{$\forall$ R}\UnaryInf#1}
+ \newcommand{\foralll}[1]{\RightLabel{$\forall$ L}\UnaryInf#1}
+
+ \newcommand{\cut}[1]{\RightLabel{Cut}\BinaryInf#1}
+ \newcommand{\contractl}[1]{\RightLabel{Contract-L}\UnaryInf#1}
+
+ % Make equations restart their numbering at sections
+
+ %\usepackage{remreset}
+ \makeatletter
+ %\@addtoreset{equation}{section}
+ %\@addtoreset{equation}{subsection}
+ \makeatother
+
+
+
+% \newcommand{\say}{Say something about }
+\newcommand{\unit}{\mbox{1 \kern-7.2pt 1}}
+%\renewcommand{\unit}{\mathbb 1}
+ \def\Proof{\noindent{\sl Proof:\/ }}
+ \newcommand{\bic}{\longleftrightarrow}
+ \newcommand{\M}{{\mathfrak M}}
+  \newcommand{\Rez}{{\cal R}}
+  \newcommand{\N}{{\mathfrak N}}
+ \newcommand{\proof}[2]{\frac{\displaystyle {#1}}{\displaystyle {#2}}}
+ \def\endproof{\nobreak\hfill{\rule{2mm}{2mm}}\medskip}
+ \newcommand{\argument}[2]{\proof{\mbox{\rm {#1}}}{\mbox{\rm {#2}}}}
+ \newcommand{\scripts}{\kern-2.7pt \int \kern-2.7pt}
+
+\def\KF{\mbox{\rm KF}}
+\def\KFI{\mbox{\rm KFI}}
+\def\TST{\mbox{\rm TST}}
+\def\TSTI{\mbox{\rm TSTI}}
+\def\NF{\mbox{\rm NF}}
+\def\ZF{\mbox{\bf Z}}
+\def\ZFC{\mbox{\rm ZFC}}
+\def\Z{\mbox{\rm{Z \kern-7.5pt Z}}}
+\def\AC{\mbox{\rm AC}}
+\def\TCl{\mbox{\rm TCl}}
+\def\TCo{\mbox{\rm TCo}}
+\def\Mac{\mbox{\rm Mac}}      
+\def\Con{\mbox{\rm Con}}      
+\def\Amb{\mbox{\rm Amb}}      
+\def\AxInf{\mbox{\rm AxInf}}      
+\def\foundation{\mbox{\rm foundation}}      
+\def\can{\mbox{\rm can}}
+\def\stcan{\mbox{\rm stcan}}
+\def\Ala{As long as}
+\def\ala{as long as}
+\def\apercu{{\sl aper\c{c}u}\ }
+%various other new commands/definitions:
+\def\Proof{\noindent{\sl Proof:\/ }}
+\def\endproof{\nobreak\hfill\blob\medskip}
+\def\noproof{\nobreak\hfill\blob}
+\def\eqdef{=_{\rm def}}     % intended to be used in Maths mode
+%\DeclareMathSymbol{\strictif}{\mathrel}{symbolsC}{74}
+%\newtheorem{thm}{Theorem}
+\newtheorem{thm}{\mbox{T\footnotesize{HEOREM\ }}}
+\newtheorem{factoid}{\mbox{F\footnotesize{ACTOID\ }}}
+\newtheorem{rem}{R\mbox{\footnotesize{EMARK\ }}}
+\newtheorem{prop}{P\mbox{\footnotesize{ROPOSITION\ }}}
+\newtheorem{lem}{L\mbox{\footnotesize{EMMA\ }}}
+\newtheorem{dfn}{D\mbox{\footnotesize{EFINITION\ }}}
+\newtheorem{sublem}{S\mbox{\footnotesize{UBLEMMA\ }}}
+\newtheorem{coroll}{C\mbox{\footnotesize{OROLLARY\ }}}
+\newtheorem{Exercise}{E\mbox{\footnotesize{XERCISE\ }}}
+\newtheorem{conjecture}{C\mbox{\footnotesize{ONJECTURE\ }}}
+\newtheorem{question}{O\mbox{\footnotesize{PEN QUESTION\ }}}
+\newtheorem{examquestion}{\mbox{\footnotesize{QUESTION\ }}}
+\newtheorem{challenge}{C\mbox{\footnotesize{HALLENGE\ }}}
+\newcommand{\mem}{\mbox{\tiny${\cal MEMBER\ }$}}
+\newcommand{\set}{\mbox{\tiny${\cal SET\ }$}}
+
+\newcommand{\Let}[3]{{\rm let}\ { #1} \mbox{$\Leftarrow$} { #2}\ {\rm in}\ { #3}}
+
+
+\newcommand{\Henkin}[4]{^{(\forall{#1})(\exists{#2})}_{(\forall{#3})(\exists{#4})}}
+
+\newcommand{\nf}{\mbox{\sl NF}}
+\newcommand{\NFO}{\mbox{\sl NFO}}
+\newcommand{\NFC}{\mbox{\sl NFC}}
+\newcommand{\TNT}{\mbox{\sl TNT}}
+\newcommand{\tnt}{\mbox{\sl TNT}}
+\newcommand{\On}{\mbox{\sl On}}
+\newcommand{\tnti}{\mbox{\sl TNTI}}
+\newcommand{\tntu}{\mbox{\sl TNTU}}
+\newcommand{\tsti}{\mbox{\sl TSTI}}
+\newcommand{\tstu}{\mbox{\sl TSTU}}
+\newcommand{\tst}{\mbox{\sl TST}}
+\newcommand{\nc}{\mbox{\sl NC}}
+\newcommand{\NCI}{\mbox{\sl NCI}}
+\newcommand{\NFU}{\mbox{\sl NFU}}
+\newcommand{\NO}{\mbox{\sl NO}}
+\newcommand{\zf}{\mbox{\sl ZF}}
+\newcommand{\CUS}{\mbox{\sl CUS}}
+\newcommand{\BF}{\mbox{\sl BF}}
+\newcommand{\No}{\mbox{\sl No}}
+\newcommand{\SM}{\mbox{\sl SM}}
+\newcommand{\WF}{\mbox{\sl WF}}
+\newcommand{\USC}{\mbox{\tt USC}}
+\newcommand{\RUSC}{\mbox{\tt RUSC}}
+\newcommand{\GC}{\mbox{\sl GC}}
+\newcommand{\kf}{\mbox{\sl KF}}
+\newcommand{\mac}{\mbox{\sl MAC}}
+\newcommand{\WC}{\mbox{\sl WC}}
+\newcommand{\WO}{\mbox{\sl WO}}
+\newcommand{\say}{Say something about }
+\newcommand{\Los}{ \L o\'s's theorem\ }
+\newcommand{\Dz}{Dzierzgowski}
+\newcommand{\zi}{\Nn_{\rm Zm}}
+\newcommand{\vno}{\Nn_{\rm vN}}
+\newcommand{\vns}{S_{\rm vN}}
+\newcommand{\gnumber}{G\"odel number}
+\newcommand{\LTTT}{{\cal L}(TTT)}
+\renewcommand{\partial}{\rightharpoondown}
+
+\newcommand{\dual}[1]{#1^\circlearrowleft}
+\def\LTST{{\cal L}_{\rm TST}}  %only works in maths mode 
+\def\Lang{{\cal L}}            %only works in maths mode 
+\newcommand{\aiw}{as it were}
+
+\def\joinrelm{\mathrel{\mkern-3mu}}
+\def\relbar{\mathrel{\smash-}}
+\def\tailpiece{\vrule height 1ex width 0.3ex depth -.1ex} 
+\def\seqsym{\mathrel{\tailpiece\joinrelm\relbar}}
+\def\sequent#1#2{#1 \seqsym #2}
+
+%Example:
+%$$\sequent{\Gamma}{\Delta}$$
+
+
+%\newcommand{\tsub}{\pile{\lower0.5ex\hbox{.} \\ -}}
+\newcommand{\equal}{\mbox{{\LARGE{$=$}}}}
+\newcommand{\notequal}{\mbox{{\LARGE{$\not =$}}}}
+\newcommand{\canon}{\subset_\infty}
+
+%On 28 March 2010 20:38,  <T.Forster@dpmms.cam.ac.uk> wrote:
+%> What is the favoured \LaTeX macro for the underlined cdot wot means bounded
+%> subtraction?
+
+%If you use the excellent web tool
+
+%http://detexify.kirelabs.org/classify.html
+
+%to try to find the answer to this question, you find, surprisingly,
+%that there is no pre-packaged symbol for this. I needed the standard
+%symbol for truncated subtraction for my Computation Theory lectures
+%and Robin Fairbairn kindly supplied the following:
+
+\newcommand{\tsub}% truncated subtraction
+{\ensuremath{\mathbin{\hbox{      \ooalign{\hfil\raisebox{4pt}{$\cdot$}          \hfil\cr\hfil$-$\hfil}}}}}
+% texery via Robin Fairbairns
+
+%which is OK provided you don't want to sub- or super-script this symbol.
+
+%Best wishes,
+
+%Andy
+
+
+\newcommand{\splat}{\tsub}
+
+\newcommand{\dfunset}{\mapsto\kern-7.5pt\to}
+\renewcommand{\Re}{\hbox{\rm I\negthinspace R}}
+%\newcommand{\Rez}{\mbox{\cal R}}
+\newcommand{\K}{\hbox{\rm I\negthinspace K}}
+
+%Or without serif, \newcommand{\dfunset}{\to\kern-7.5pt\to}
+\newcommand{\diverges}{ \kern -4.5pt \uparrow}
+\newcommand{\converges}{ \kern -4.5pt \downarrow}
+\newcommand{\cons}{\kern-2.7pt::\kern-2.7pt}
+
+\newcommand{\blob}{\rule{2mm}{2mm}}
+\newcommand{\tfae}{the following are equivalent}
+\newcommand{\AxC}{\mbox{{AxCount$_{\leq}$\ }}}
+\newcommand{\Fraisse}{Fra\"\i ss\'e}
+\newcommand{\restric}{\kern-2pt\upharpoonright\kern-3pt}
+\newcommand{\tuple}[1]{\mbox{$\langle #1 \rangle$}}
+\newcommand{\thefalse}{\perp}
+\newcommand{\Nn}{\hbox{\rm I\negthinspace N}} %Richard's modification
+\newcommand{\Pp}{\hbox{\rm I\negthinspace P}}
+\newcommand{\poss}{\mbox{{\Large{$\diamond$}}}}
+\newcommand{\true}{\tt true}
+\newcommand{\false}{\tt false}             
+\newcommand{\onto}{\to\kern-7.5pt\to}
+\newcommand{\ontoreverse}{\rightarrow\kern-7.5pt\rightarrow}
+
+\newcommand{\ivo}{\mbox{in virtue of }}
+\newcommand{\lp}{\mbox{\rm (}}
+\newcommand{\rp}{\mbox{\rm )}}
+\newcommand{\bool}{\hbox{\rm I\negthinspace B}} %Richard's modification
+\newcommand{\smallNn}{{\rm I\!N}} %to be used in maths mode as subscript
+\newcommand{\smallRe}{{\rm I\!R}} %to be used in maths mode as subscript
+\newcommand{\smallbool}{{\rm I\!B}} %to be used in maths mode as subscript
+%\newcommand{\ZZ}{\hbox{\rm Z\negthinspace Z}} %Richard's modification
+%\renewcommand{\ZZ}{\mathbb{Z}} %Richard's modification
+\newcommand{\ZZ}{\mbox{\rm{Z \kern-7.5pt Z}}}
+\renewcommand{\ZZ}{\mathbb{Z}}
+\renewcommand{\Z}{\mathbb{Z}}
+\newcommand{\naive}{na\"{\i}ve}
+\newcommand{\Naive}{Na\"{\i}ve}
+\newcommand{\belongs}{\mbox{$\footnotesize{\ \cal B\ }$}}
+%\renewcommand{\choose}[2]{(\small{\stackrel{\scriptstyle #1}{\scriptstyle #2}})}
+
+\newcommand{\card} [1]{|{#1}|}
+
+\newcommand{\tree}{\mbox{{\Large{$\tau$}}}}
+\newcommand{\KAPPA}{\mbox{{\LARGE{$\kappa$}}}}
+\newcommand{\pow}{{\cal P}(}
+\newcommand{\powk} [1]{{\cal P}_{#1}(}
+%\newcommand{\emptyset}{\mbox{\verb#0#}}
+\newcommand{\subend}{\subseteq^{\cal P}_e}
+\newcommand{\injend}{\hookrightarrow^{\cal P}_e}
+\newcommand{\hded}{H_{\mbox{{\footnotesize \rm Dedfin}}}}
+\newcommand{\SiP}{\Sigma^{\cal P}}
+\newcommand{\PiP}{\Pi^{\cal P}}
+\newcommand{\DeP}{\Delta^{\cal P}}
+\newcommand{\RR}{{\bf{R}}}
+\newcommand{\QQ}{{\bf{Q}}}
+\renewcommand{\QQ}{\mathbb{Q}}
+\newcommand{\1}{{\bf{1}}}
+\newcommand{\Wlog}{Without loss of generality}
+\newcommand{\wwlog}{without loss of generality} 
+\newcommand{\hole}[1]{[{\sl HOLE \index{HOLE} {#1}}]}
+
+\newcommand{\smallhole}[1]{\begin{quote}\begin{small}{\sl HOLE \index{HOLE} {#1}}\end{small}\end{quote}}
+\newcommand{\comment}[1]{\begin{quote}{\sl {#1}}\end{quote}}
+\newcommand{\bighole}[1]{\begin{quote}[{\sl HOLE \index{HOLE}{#1}}]\end{quote}}
+\newcommand{\inn}{\in_{\footnotesize{\mbox{\sl new}}}}
+\newcommand{\m} [1]{\mbox{$\langle \langle { #1} \rangle \rangle$}}
+\newcommand{\cnvg}{\downarrow =}
+\newcommand{\inj}{\hookrightarrow}
+\newcommand{\E}{{\cal E}}
+
+%\newcommand{\N}{{\cal N}}
+\newcommand{\U}{{\cal U}}
+\newcommand{\V}{{\cal V}}
+\newcommand{\A}{{\cal A}}
+\newcommand{\B}{{\cal B}}
+\newcommand{\fst}{{\mbox{\tt fst}}}
+\newcommand{\snd}{{\mbox{\tt snd}}}
+\newcommand{\one}{{\mbox{\tt I}}}
+\newcommand{\two}{{\mbox{\tt II}}}
+
+\newcommand{\footI}{{\mbox{\footnotesize{\it I}}}}
+\newcommand{\footII}{{\mbox{\footnotesize{\it II}}}}
+
+
+\newcommand{\bbar}[1]{\overline{B{#1}}}
+\newcommand{\bbarr}{\overline{B}``}
+
+\newcommand{\pair}{{\mbox{\tt pair}}}
+
+\newcommand{\JT} [1]{\mbox{${ #1}$-{ary}}}
+
+\newcommand{\rhobeta}{\rho\negthinspace\beta}
+
+%Miscellaneous stuff that has been deleted but might be undead
+
+%\renewcommand{\proof}[2]{\frac{\displaystyle {#1}}{\displaystyle {#2}}}
+
+%quine quotes
+%\newlength\ququ
+%\newbox\quinebox
+%\def\lquinequote{\rule[\ququ]{.1ex}{.5ex}
+%\addtolength{\ququ}{.4ex}
+%\rule[\ququ]{.5ex}{.1ex}}
+
+%\def\rquinequote{\rule[\ququ]{.5ex}{.1ex}
+%\addtolength{\ququ}{-.4ex}
+%\rule[\ququ]{.1ex}{.5ex}}
+
+%\def\lquine#1\rquine{%
+%\ifinner\setbox\quinebox=\hbox{$\displaystyle #1$}
+%\else\setbox\quinebox=\hbox{$#1$}
+%\fi
+%\setlength{\ququ}{\ht\quinebox}
+%\addtolength{\ququ}{-.2ex}
+%\lquinequote #1\rquinequote}
+%\renewcommand{\lquine}{\ulcorner}
+%\newcommand{\rquine}{\urcorner}
+
+
+ %\input diagrams
+%\font\tenmsym=msbm10
+%\font\sevenmsym=msbm7
+%\font\fivemsym=msbm5
+%\newfam\msymfam
+%\textfont\msymfam=\tenmsym
+%\scriptfont\msymfam=\sevenmsym
+%\scriptscriptfont\msymfam=\fivemsym
+%{\newcount\n \n=\msymfam \multiply\n"100\advance\n'151
+%\global\mathchardef\beth\n}
+
+
+
+%\newcommand{\smallTZT}{\mbox{\footnotesize{T\Z T}}}
+
+\renewcommand{\b}{\mbox{\rotatebox[origin=c]{170}{\reflectbox{\cal P}}}}
+\newcommand{\skull}{\includegraphics[width=4mm]{kindpng_1191141.png}}
+\newcommand{\sav}{\includegraphics[width=4.8mm]{BF2.png}}
+%\def\N{\mathbb{N}}
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Pushdown Automata</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>3.1 Pushdown Automata</h2>
+<p>We have characterised context-free languages in terms of grammars, but they
+can also be characterised in terms of machines. There is a special kind - a
+special class - of machines which we call <b>push-down automata</b> (or "PDA" for
+short) that are related to context-free languages in the same way that finite
+state machines are related to regular languages. Just as a language is regular iff
+there is a finite-state machine that recognises it (accepts all the strings in it and
+accepts no other strings), so a language is context-free iff there is a pushdown
+automaton that recognises it.
+</p>
+<p>So what is a push-down automaton? One way in to this is to first reflect
+on what extra bells and whistles a finite state machine must be given if it is
+to recognise a context-free language such as the matching-brackets language,
+and to then engineer those bells and whistles into the machine. The thought-
+experiment comes in handy here. What does the thought-experiment tell you
+about the matching backets language? Run the experiment and you will find
+that to crack the matching-brackets language it would be really nice to have a
+stack. Every time you see a left bracket you push it onto the stack and every
+time you see a right-bracket you pop a left-bracket off the stack and whenever
+the stack is empty you are in an accepting state. If you ever find yourself trying
+to pop a bracket off an empty stack you know that things have gone permanently
+wrong so you shunt yourself into a scowlie. What I need to hand over to you
+when I go off for my coffee is the stack (or the scowlie).</p>
+<p><i>A stack of course is one
+of those things with springs
+that plates in cafeterias sit
+on, so the top plate is always
+the same height no matter
+how many plates there are in
+it - within reason.</i></p>
+<p>Let us now try to formalise the idea of a machine-with a stack. Our way in
+is to start off by thinking of a PDA as a finite state machine which we are going
+to upgrade, so we have the idea of start state and accepting state as before.
+The stack of course contains a string of characters. For reasons of hygiene
+we will tend to assume that the alphabet of characters that go on the stack
+(the "pushdown alphabet") is disjoint from the alphabet that the context free
+language is drawn from. Clearly if there is to be any point in having a stack at
+all then the machine is going to have to read it, and this entails immediately that
+the transition function of the machine has not two arguments (as the transition
+function of a finite state machine does, namely the old state and the character
+being read) but <i>three</i>, with the novel third argument being the character at
+the top of the stack. And of course the transition function under this new
+arrangement not only tells you what state the machine will go into, but what
+to do with the stack - namely push onto it a word (possibly empty) from the
+stack alphabet.</p>
+<p>   (This is a bit confusing: the transition function in the new scheme of things
+takes an input which is an ordered triple of the contents-of-the-stack, the new
+character that is being fed it by the user, and the current state; the value is
+a pair of a state and the new contents-of-the-stack. However the transition
+function doesn't look at the whole of the contents of the stack but only the
+top element. Specifically this means that the new stack can differ from the
+old in only very limited ways. The new stack is always the old stack with the
+top element replaced by a string (possibly empty) of characters from the stack
+alphabet.)</p>
+<p>    If you are happy with this description you might now like to try designing
+a PDA that accepts the matching bracket language. (Hint: it has only three
+states: (i) accepting, (ii) wait-and-see, and (iii) dead!)</p>
+<a href="answer18.html">Click for answer</a>
+<br>
+<p>There is a slight complication in that PDA's are nondeterministic, so the
+parallel is with regular languages being recognised by nondeterministic finite
+automata rather than FSAs... But we haven't dealt with nondeterministic machines yet. So we'd better deal with them at once!</p>
+
+<a href="3-2.html">Next: 3.2 Exercises</a><br>
+<a href="3-0.html">Back: 3 Grammars</a>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Languages Recognised by Machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>1.1 Languages Recognised by Machines</h2>
+<p>Languages, parsing, compilers etc are the chief motivation for this course. You
+might think that a <i>language</i> is something like English, or Spanish, or perhaps
+(since this is a Computer Science course) PASCAL or JAVA or something like
+that: a naturally occurring set of strings-of-letters with some natural definition
+and a sensible purpose such as meaning something! Who could blame you? It's
+a very reasonable thing to expect. Unfortunately for us the word 'language'
+has been hijacked by the formal-language people to mean something much more
+general than that. What they mean is the following.
+</p>
+<p>We start with an <b>alphabet</b> &#931; (and for some reason they always are called &#931;, don't ask me why) which is a finite set of <b>characters</b>. We are interested in <b>string</b>s of characters from the alphabet in question. A <i>string</i> of characters is not the same as a <i>set</i> of characters. Sets do not have order - the set {<i>a</i>, <i>b</i>} is the same set as the set {<i>b</i>, <i>a</i>} but strings do: the string <i>ab</i> is not the same as the string <i>ba</i>. Sets do not have <i>multiplicity</i>: the set {<i>a</i>, <i>a</i>, <i>b</i>} is the same set as the set
+{<i>a</i>, <i>b</i>} (which is why nobody writes things like '{<i>a</i>, <i>a</i>, <i>b</i>}') but strings definitely do have multiplicity: the string <i>aab</i> is not the same string as the string <i>ab</i>. Also, slightly confusingly, although we have this '{' and '}' notation for sets, there is no corresponding delimiter for strings. Notation was not designed rationally, but just evolved haphazardly.</p>
+
+<p>We write '&#931;*' for the set of all strings formed from characters in &#931;, and then a language ("over &#931;") is just a subset of &#931;* : any subset at all. A subset of &#931;* doesn't have to have a sensible definition in order to be called a language by
+the formal-language people. While we are about it, notice also that people use
+the word 'word' almost interchangeably with 'string'.</p>
+
+<p>A word of warning. Many people confuse &#8838; and &#8714;, and there is a parallel confusion that occurs here. (This is not the same as the confusion between sets and strings: this is the common confusion between sets and their members!) A
+<i>language</i> is not a string: it is a <i>set</i> of strings. This may be because they are thinking that strings are sets of characters and that accordingly a language - on this view - is a set of sets. If in addition you think that everything there is to be said about sets can be drawn in Venn diagrams, this will confuse you.
+Venn diagrams give you pictures of sets of <i>points</i>, but not sets of sets. A Venn diagram picture involving three levels of sets is impossible.</p>
+
+<p>We will write '|<i>w</i>|' for the length of the string <i>w</i>. This may remind you of the notation '|<i>A</i>|' for the number of elements of <i>A</i> when <i>A</i> is a set.
+<p>(Aside on notation: the use of the asterisk in this way to mean something
+like "finite repetitions of" is widespread. You might connect this with the
+notation '<i>R</i>*' for the transitive closure of <i>R</i>. We will also see the notation '&#948;* ' for the function that takes a state <i>s</i>, and a string <i>w</i> and returns the state that the machine reaches if we start it in <i>s</i> and then perform successively all the transitions mandated by the characters in <i>w</i>. Thus, for example, for characters <i>a</i>, <i>b</i> and <i>c</i>, &#948;* (<i>s</i>, <i>ab</i>) = &#948;(&#948;(<i>s</i>, <i>a</i>), <i>b</i>) and &#948;* (<i>s</i>, <i>abc</i>) = &#948;(&#948;(&#948;(<i>s</i>, <i>a</i>), <i>b</i>), <i>c</i>) and so on.</p>
+<p>In fact &#948;* : <i>S</i> &#10799; &#931; &#8594; <i>S</i>. It's easier than it looks!</p>
+<p>Although a language is any old subset of &#931;* , on the whole we are interested
+only in languages that are infinite. And here I find that students need to be
+tipped off about the need to be careful. Print out this warning and pin it to the
+wall:<br><br><br>
+<big><b>The languages we are interested in are <u>usually</u> infinite, but
+the strings in them are <u>always</u> finite!</b></big><br><br><br></p>
+<p>Let's have some examples. Let &#931; be the alphabet {<i>a</i>, <i>b</i>}.</p>
+<p>The language {<i>aa</i>, <i>ab</i>, <i>ba</i>, <i>bb</i>} is the language of two-letter words over &#931;. {<i>a<sup>n</sup></i> :
+<i>n</i> &#8714; &#8469;} is the set of all strings consisting entirely of <i>a</i>'s which is the (yes, it's infinite) language {&#949;, <i>a</i>, <i>aa</i>, <i>aaa</i>, . . .}. {<i>a<sup>n</sup></i> <i>b<sup>n</sup></i> : <i>n</i> &#8714; &#8469;} is the set of all strings that consist of <i>a</i>'s followed by the same number of <i>b</i>'s.</p>
+<p>Question: What might the symbol '&#949;' mean above (in "{&#949;, <i>a</i>, <i>aa</i>, <i>aaa</i>, . . .}").?<p>
+<a href="answer1.html">Click here for the answer</a>
+<p>Mathematics is full of informal conventions that people respect because they
+find them helpful. Some of them apply here, and we will respect them.</p>
+<ol><li>We tend to use letters from near the beginning of the alphabet, <i>a</i>, <i>b</i>, . . . for characters in alphabets;</li>
+<li>We tend to use lower-case letters from near the end of the alphabet - like
+   '<i>u</i>', '<i>v</i>' and '<i>w</i>'- for variables to range over strings;</li>
+<li><i>q</i> is often a variable used to vary over states;</li>
+<li>We tend to use upper-case letters from the middle of the alphabet - like
+   'K', 'L' - for variables to range over languages.</li></ol>
+<p>If <i>w</i> and <i>u</i> are strings then <i>wu</i> is <i>w</i> with <i>u</i> stuck on the end, and <i>uw</i> is <i>u</i> with <i>w</i> stuck on the end. Naturally |<i>uw</i>| = |<i>wu</i>| = |<i>w</i>| + |<i>u</i>|. &#949; is just the empty string so <i>&#949;w</i> - the empty string with <i>w</i> concatenated
+on the end - is just <i>w</i>. So <i>ww</i>, <i>www</i> and <i>wwwww</i> are respectively the result of stringing two, three and five copies of w together. Instead of writing '<i>wwwww</i>' we write '<i>w<sup>5</sup></i>' and we even use this notation for variable exponents, so that <i>w<sup>n</sup></i>
+is <i>n</i> copies of <i>w</i> strung together.</p>
+
+<a href="1-1-1.html">Next: 1.1.1 Languages from machines</a><br>
+<a href="1-0.html">Back: 1 Machines</a>
+</body>
+</html>

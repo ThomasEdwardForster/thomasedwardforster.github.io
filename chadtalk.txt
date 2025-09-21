@@ -1,0 +1,23 @@
+
+Chad
+==================
+Speaker: Chad E Brown
+Affiliation: Saarland University
+
+Title:  Nonstandard Models of Fragments of Church's Type Theory
+
+Abstract:
+
+We use logical relations to construct combinatory frames which model
+fragments of Church's type theory.  The frames will not generally
+realize all the logical constants of Church's type theory and
+consequently will not satisfy the full set comprehension principles.
+In particular, we will define a combinatory frame in which a
+form of Cantor's theorem is false.  This frame also has interesting
+properties with respect to the cardinality of domains at power types.
+
+
+
+       
+---------------------------------
+Be a better friend, newshound, and know-it-all with Yahoo! Mobile.  Try it now.

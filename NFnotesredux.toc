@@ -1,0 +1,301 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Stuff to fit in somewhere}{11}{chapter.1}%
+\contentsline {section}{\numberline {1.1}A question for Randall}{12}{section.1.1}%
+\contentsline {section}{\numberline {1.2}An article on matters arising from the third edition?}{13}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Specker's refutation of AC: does it need parameters?}{14}{section.1.3}%
+\contentsline {section}{\numberline {1.4}A cunning plan to prove Con({\sl i}NF)}{15}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Proving Con(NF) by eliminating cuts from SF}{20}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.5}Fagin and Ambiguity, a false Start}{20}{section.1.5}%
+\contentsline {section}{\numberline {1.6}{\sl i}TTT}{25}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}A factoid to be fitted in}{26}{subsection.1.6.1}%
+\contentsline {section}{\numberline {1.7}SCUM}{26}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Sets Hereditarily the Same Size as a Set of Singletons in str(ZF)}{26}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Coequalisers, and some remarks about Partitions}{27}{section.1.9}%
+\contentsline {section}{\numberline {1.10}A Question of Alice Vidrine}{29}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Quantifier Complexity of the Axiom of Infinity}{30}{section.1.11}%
+\contentsline {section}{\numberline {1.12}definable automorphisms---ain't none.}{33}{section.1.12}%
+\contentsline {section}{\numberline {1.13}Two questions about extracted Models}{34}{section.1.13}%
+\contentsline {subsection}{\numberline {1.13.1}Wherein we spell out the connection between TC$_n$T and special models of NFU}{36}{subsection.1.13.1}%
+\contentsline {subsection}{\numberline {1.13.2}The ambiguity scheme is not finitisable}{38}{subsection.1.13.2}%
+\contentsline {section}{\numberline {1.14}Tangled Types}{40}{section.1.14}%
+\contentsline {subsubsection}{Van der Waerden}{40}{section*.5}%
+\contentsline {section}{\numberline {1.15}Some stuff concerning ordinals}{42}{section.1.15}%
+\contentsline {subsubsection}{Must get straight this business of NF and internal automorphisms}{42}{section*.6}%
+\contentsline {subsubsection}{A message from Nathan in (Northern) Spring 2019}{42}{section*.7}%
+\contentsline {subsubsection}{A message from Alice in (northern) spring 2019}{44}{section*.8}%
+\contentsline {section}{\numberline {1.16}NZF}{44}{section.1.16}%
+\contentsline {subsection}{\numberline {1.16.1}A message from Richard Kaye}{48}{subsection.1.16.1}%
+\contentsline {section}{\numberline {1.17}An Interesting Combinatorial Principle from Randall}{50}{section.1.17}%
+\contentsline {section}{\numberline {1.18}Spectra (well, i've got to call them {\sl something})}{51}{section.1.18}%
+\contentsline {section}{\numberline {1.19}Music minus one}{52}{section.1.19}%
+\contentsline {section}{\numberline {1.20}$B(x)$ and foundation}{52}{section.1.20}%
+\contentsline {section}{\numberline {1.21}A Salutory Tale about Stratification, Variables and Recursive Definitions}{52}{section.1.21}%
+\contentsline {section}{\numberline {1.22}A Conjecture about Permutation Models}{54}{section.1.22}%
+\contentsline {section}{\numberline {1.23}Cardinals of high rank imply Con(NF)?}{55}{section.1.23}%
+\contentsline {section}{\numberline {1.24}A conversation with Zachiri, Gothenburg 15th april 2015}{55}{section.1.24}%
+\contentsline {section}{\numberline {1.25}An Epimorphism that doesn't split}{56}{section.1.25}%
+\contentsline {section}{\numberline {1.26}NFU and weak compactness}{56}{section.1.26}%
+\contentsline {section}{\numberline {1.27}Equivalents of \mbox {{AxCount$_{\leq }$\ }}}{56}{section.1.27}%
+\contentsline {section}{\numberline {1.28}Building the stratified analogue of $L$ {\sl very very slowly}}{57}{section.1.28}%
+\contentsline {subsection}{\numberline {1.28.1}A nugget by Nathan Bowler written up by Thomas Forster}{57}{subsection.1.28.1}%
+\contentsline {subsubsection}{Fast Food/Slow Food}{57}{section*.11}%
+\contentsline {section}{\numberline {1.29}NF$\Omega $}{59}{section.1.29}%
+\contentsline {section}{\numberline {1.30}Co-term models}{61}{section.1.30}%
+\contentsline {section}{\numberline {1.31}Fixed points for type-raising operations}{66}{section.1.31}%
+\contentsline {section}{\numberline {1.32}Parameter-free-NF}{67}{section.1.32}%
+\contentsline {section}{\numberline {1.33}Recursive APGs}{70}{section.1.33}%
+\contentsline {section}{\numberline {1.34}Almost-symmetric sets again}{70}{section.1.34}%
+\contentsline {subsubsection}{Perhaps we need to be more subtle}{71}{section*.14}%
+\contentsline {section}{\numberline {1.35}Notes on the seminar of the gang of four}{71}{section.1.35}%
+\contentsline {subsection}{\numberline {1.35.1}Inductively defined sets}{71}{subsection.1.35.1}%
+\contentsline {section}{\numberline {1.36}Inductive definitions}{73}{section.1.36}%
+\contentsline {section}{\numberline {1.37}Hereditarily Strongly Cantorian Sets}{74}{section.1.37}%
+\contentsline {section}{\numberline {1.38}Extracted Models and Skew-injectivity}{74}{section.1.38}%
+\contentsline {section}{\numberline {1.39}Yablo's Paradox in NF}{78}{section.1.39}%
+\contentsline {section}{\numberline {1.40}A Puzzle of Randall's}{79}{section.1.40}%
+\contentsline {section}{\numberline {1.41}Part IV Set Theory}{80}{section.1.41}%
+\contentsline {section}{\numberline {1.42}Weakly stratified}{84}{section.1.42}%
+\contentsline {subsubsection}{Cooking up a nontrivial congruence relation for $\in $}{85}{section*.16}%
+\contentsline {subsubsection}{Modal equivalence classes}{85}{section*.17}%
+\contentsline {section}{\numberline {1.43}K\"orner Functions}{85}{section.1.43}%
+\contentsline {section}{\numberline {1.44}$\in $-games}{87}{section.1.44}%
+\contentsline {section}{\numberline {1.45}Stuff to fit in}{87}{section.1.45}%
+\contentsline {section}{\numberline {1.46}Chores and Open problems}{88}{section.1.46}%
+\contentsline {subsection}{\numberline {1.46.1}An axiom for H?}{92}{subsection.1.46.1}%
+\contentsline {subsection}{\numberline {1.46.2}A message from Holmes on reflection}{92}{subsection.1.46.2}%
+\contentsline {section}{\numberline {1.47}A message from Isaac}{93}{section.1.47}%
+\contentsline {section}{\numberline {1.48}A message from Adrian}{94}{section.1.48}%
+\contentsline {section}{\numberline {1.49}Does \mbox {\sl NF}+ \mbox {{AxCount$_{\leq }$\ }}prove $Con(\mbox {\sl NF})$?}{95}{section.1.49}%
+\contentsline {section}{\numberline {1.50}Weak Stratification -- conversations with Albert}{96}{section.1.50}%
+\contentsline {subsubsection}{Afterthoughts}{98}{section*.18}%
+\contentsline {subsubsection}{More Afterthoughts}{99}{section*.19}%
+\contentsline {section}{\numberline {1.51}Smash for Albert}{99}{section.1.51}%
+\contentsline {section}{\numberline {1.52}A new refutation of AC in NF(?)}{100}{section.1.52}%
+\contentsline {section}{\numberline {1.53}Someone should write this up}{102}{section.1.53}%
+\contentsline {section}{\numberline {1.54}Orbits in finite models}{103}{section.1.54}%
+\contentsline {section}{\numberline {1.55}A Contribution from Isaac Malitz}{104}{section.1.55}%
+\contentsline {subsection}{\numberline {1.55.1}Another game}{105}{subsection.1.55.1}%
+\contentsline {section}{\numberline {1.56}Non-principal ultrafilters}{106}{section.1.56}%
+\contentsline {section}{\numberline {1.57}A pretty picture}{106}{section.1.57}%
+\contentsline {section}{\numberline {1.58}Typical ergodicity}{106}{section.1.58}%
+\contentsline {section}{\numberline {1.59}Some tho'rts about the theory of wellfounded sets in NF}{107}{section.1.59}%
+\contentsline {section}{\numberline {1.60}Second Edition of Rosser}{108}{section.1.60}%
+\contentsline {section}{\numberline {1.61}TTTP made easy, by Randall Holmes, 20/v/24}{109}{section.1.61}%
+\contentsline {section}{\numberline {1.62}Sergei T's ``strictly impredicative'' TST}{110}{section.1.62}%
+\contentsline {chapter}{\numberline {2}Is NF stratified-tight?}{111}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}tf to Ali Enayat}{113}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Ali Enayat to tf}{114}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}tf to Ali Enayat}{115}{subsection.2.0.3}%
+\contentsline {section}{\numberline {2.1}Other tight Theories}{116}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}PA}{116}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}ZF}{117}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}CUS}{117}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Other stuff to fit in}{117}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Do Tight theories form a Filter?}{117}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Synonymy}{118}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Permutation Models}{121}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The di Giorgi Picture}{121}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Internal Permutations}{123}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Setlike Permutations}{123}{section.3.2}%
+\contentsline {subsubsection}{Closed under inverse}{126}{section*.24}%
+\contentsline {subsubsection}{Closed under composition}{127}{section*.25}%
+\contentsline {section}{\numberline {3.3}Permutation Models}{129}{section.3.3}%
+\contentsline {subsubsection}{Transitivity}{129}{section*.26}%
+\contentsline {subsubsection}{Symmetry}{130}{section*.27}%
+\contentsline {subsection}{\numberline {3.3.1}Suppose $s$ and $t$ be setlike; can $V^s$ and $V^t$ see each other?}{134}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}A Digression on Setlike Permutations}{135}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Automorphisms}{137}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Setlike, internal, and now {\it definable}}{139}{section.3.5}%
+\contentsline {subsubsection}{Must permutation models have the same internal $\in $-automorphisms?}{140}{section*.28}%
+\contentsline {section}{\numberline {3.6}Undoing Permutations October 2018}{141}{section.3.6}%
+\contentsline {subsubsection}{An email from Nathan wherein he explains `return' permutations}{142}{section*.29}%
+\contentsline {subsubsection}{Notes on the above}{143}{section*.30}%
+\contentsline {section}{\numberline {3.7}Permutations and Synonymy}{143}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Appendix 2}{147}{section.3.8}%
+\contentsline {section}{\numberline {3.9}A conversation with Nathan about an idea of Randall's}{147}{section.3.9}%
+\contentsline {section}{\numberline {3.10}Blend this in}{149}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}``Undoing'' Permutations}{151}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Does every model of NF have a permutation model containing the Zermelo Naturals?}{152}{subsection.3.10.2}%
+\contentsline {chapter}{\numberline {4}Quine Pairs and Sequences}{155}{chapter.4}%
+\contentsline {subsubsection}{Some material from November 2016}{155}{section*.31}%
+\contentsline {chapter}{\numberline {5}Ultrafilters}{157}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Models in the Ultrafilters}{157}{section.5.1}%
+\contentsline {section}{\numberline {5.2}How Many Nonprincipal Ultrafilters?}{160}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Choice Functions on Ultrafilters on $V$}{165}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}The Rudin-Keisler Ordering}{165}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Ultrapowers of $\mbox {$\langle V,\in \rangle $}$ in NF(U)}{166}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Digression on nonprincipal ultrafilters}{166}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Let's hope i'm not tempting fate with this one\ldots }{168}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Numerals and $\lambda $-calculus in the Quine Systems}{169}{chapter.6}%
+\contentsline {subsubsection}{The Thoughts of Chairman Holmes}{169}{section*.33}%
+\contentsline {section}{\numberline {6.1}Stuff to fit in}{169}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Stuff to be put in the right place}{172}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Using Church numbers as cardinals}{173}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Notation}{175}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}The Exercises}{175}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Implementing the arithm\'etic Operations, Church-style}{176}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Addition, Multiplication and Exponentiation}{177}{subsection.6.4.1}%
+\contentsline {subsubsection}{Predecessor}{179}{section*.34}%
+\contentsline {subsection}{\numberline {6.4.2}The $T$-function for Church Numbers}{179}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Verifying that the Definitions work}{180}{subsection.6.4.3}%
+\contentsline {subsubsection}{{\tt plus} and {\tt mult}}{180}{section*.35}%
+\contentsline {subsection}{\numberline {6.4.4}Digression on The Axiom of Counting}{183}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Typed lambda calculus}{185}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}A Question of Adam Lewicki's}{185}{subsection.6.5.1}%
+\contentsline {subsubsection}{Older material on the same topic}{186}{section*.36}%
+\contentsline {subsection}{\numberline {6.5.2}How easy is it to interpret typed set theory in the typed $\lambda $-calculus?}{187}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}A Conversation with Adam Lewicki on 15/ix/19}{187}{subsection.6.5.3}%
+\contentsline {section}{\numberline {6.6}Arithmetic in NFU}{188}{section.6.6}%
+\contentsline {subsubsection}{A message from Ali Enayat}{188}{section*.37}%
+\contentsline {subsubsection}{Yet another message}{189}{section*.38}%
+\contentsline {chapter}{\numberline {7}Models in the Ordinals}{197}{chapter.7}%
+\contentsline {subsection}{\numberline {7.0.1}Making the ordinals look like $L$}{199}{subsection.7.0.1}%
+\contentsline {subsection}{\numberline {7.0.2}Nonstandard Models of $Z + V= L$}{200}{subsection.7.0.2}%
+\contentsline {subsubsection}{Secret Agenda}{201}{section*.39}%
+\contentsline {subsection}{\numberline {7.0.3}A message from Adrian}{201}{subsection.7.0.3}%
+\contentsline {chapter}{\numberline {8}The Full Symmetric Group on $V$}{203}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Some more random tho'rts on $\in $-automorphisms, from May 2008, in the form of a letter to Nathan Bowler}{208}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Perhaps $J_2$ has very few conjugacy classes \ldots ?}{210}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Dodgy Characteristic Subgroups}{210}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Yet Another thing to sort out}{211}{subsection.8.1.3}%
+\contentsline {section}{\numberline {8.2}Letter to Nathan}{211}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Partitions into pairs}{213}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}An automorphism without AC$_2$}{214}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Antimorphisms, a Jumble}{217}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Introductory Patter}{218}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}First Impressions of an Antimorphism}{218}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}The Duality Scheme}{219}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Permutation Methods: getting embroiled with AC$_2$}{220}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}Existence of antimorphisms is independent}{223}{section.9.2}%
+\contentsline {section}{\numberline {9.3}\mbox {T$\mathbb {Z}$T}}{226}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Barwise Approximants}{228}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Implications between the approximants}{231}{subsection.9.4.1}%
+\contentsline {subsubsection}{The first approximant}{232}{section*.43}%
+\contentsline {subsection}{\numberline {9.4.2}The second approximant}{234}{subsection.9.4.2}%
+\contentsline {subsubsection}{The Obvious Permutation}{235}{section*.44}%
+\contentsline {section}{\numberline {9.5}Some more recent tho'rts on Ehrenfeucht games for duality}{237}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Internal Antimorphisms in Models of NF$_3$?}{237}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Self-dual formul{\ae }}{238}{subsection.9.6.1}%
+\contentsline {section}{\numberline {9.7}A conversation with Nathan}{239}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}Can we construct an antimorphism by permutations?}{242}{subsection.9.7.1}%
+\contentsline {chapter}{\numberline {10}Randall's Proof of Con(NF)}{243}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Boise Diary Aug 2014}{243}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Peter Lumsdaine on Randall's new proof}{245}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Boisediary May 2024}{247}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Leftovers from the Boffa festschrift paper}{249}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Lifts}{251}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Lifts for strict partial orders}{251}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}Lifts of quasiorders}{254}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}Totally ordering term models}{255}{subsection.11.1.3}%
+\contentsline {section}{\numberline {11.2}Lifting quasi-orders: fixed points and more games}{258}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Fremlin: A transitive ordering on the class of relations}{261}{subsection.11.2.1}%
+\contentsline {section}{\numberline {11.3}The Equality Game}{263}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Prologue on Aczel-Hintikka Games}{263}{subsection.11.3.1}%
+\contentsline {subsubsection}{Hintikka games}{264}{section*.52}%
+\contentsline {subsubsection}{What Aczel did to Hintikka games}{264}{section*.53}%
+\contentsline {chapter}{\numberline {12}Arithmetic and Wellfounded Sets}{269}{chapter.12}%
+\contentsline {subsubsection}{Discussion}{276}{section*.54}%
+\contentsline {section}{\numberline {12.1}Sideshow: Hereditarily Dedekind-finite sets}{277}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Discussion}{278}{section.12.2}%
+\contentsline {subsubsection}{Eight propositions about wellfounded sets: second version}{278}{section*.55}%
+\contentsline {subsubsection}{Eight propositions about wellfounded sets}{279}{section*.56}%
+\contentsline {subsubsection}{A funny translation task}{284}{section*.57}%
+\contentsline {section}{\numberline {12.3}Infinite WF sets consis wrt NF?}{284}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}}{289}{subsection.12.3.1}%
+\contentsline {chapter}{\numberline {13}Miscellaneous Cardinal Arithmetic}{293}{chapter.13}%
+\contentsline {subsection}{\numberline {13.0.1}Some factoids useful in connection with \mbox {T$\mathbb {Z}$T}\ and Bowler-Forster}{293}{subsection.13.0.1}%
+\contentsline {subsection}{\numberline {13.0.2}Other Stuff to fit in}{294}{subsection.13.0.2}%
+\contentsline {section}{\numberline {13.1}Wellfounded extensional relations}{294}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Inhomogeneous wellfounded extensional relations on $V$}{297}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}A message from Richard Kaye}{299}{subsection.13.1.2}%
+\contentsline {subsubsection}{Wellfounded sets all over the place!}{299}{section*.58}%
+\contentsline {section}{\numberline {13.2}Does the universe have a wellordered partition into finite sets?}{300}{section.13.2}%
+\contentsline {section}{\numberline {13.3}A theorem of Tarski's}{302}{section.13.3}%
+\contentsline {section}{\numberline {13.4}The Attic}{302}{section.13.4}%
+\contentsline {section}{\numberline {13.5}$NCI$ finite}{305}{section.13.5}%
+\contentsline {subsection}{\numberline {13.5.1}How many socks?}{307}{subsection.13.5.1}%
+\contentsline {subsection}{\numberline {13.5.2}The Oberwolfach Cardinal}{311}{subsection.13.5.2}%
+\contentsline {subsubsection}{Let's try to get a contradiction}{311}{section*.59}%
+\contentsline {subsubsection}{A bit of fun}{312}{section*.60}%
+\contentsline {subsubsection}{leftovers}{313}{section*.61}%
+\contentsline {subsection}{\numberline {13.5.3}$\alpha $ of infinite rank or $2^{T\alpha } \leq \alpha $}{313}{subsection.13.5.3}%
+\contentsline {section}{\numberline {13.6}How many sets are there of any given size?}{316}{section.13.6}%
+\contentsline {subsection}{\numberline {13.6.1}The smallest $\sigma $-Ring and an old Question of Boffa's}{321}{subsection.13.6.1}%
+\contentsline {subsection}{\numberline {13.6.2}Small Sets}{327}{subsection.13.6.2}%
+\contentsline {subsection}{\numberline {13.6.3}Union of a low Set of low Sets}{328}{subsection.13.6.3}%
+\contentsline {subsection}{\numberline {13.6.4}How many Dedekind-finite sets are there?}{328}{subsection.13.6.4}%
+\contentsline {section}{\numberline {13.7}A message from Nathan Bowler: a construction showing there aren't all that many sets $x$ such that AC$_{|x|}$ and $|x| \leq ^* T|V|$}{328}{section.13.7}%
+\contentsline {subsection}{\numberline {13.7.1}A construction showing that $|\{S : |S| \leq ^* T |V |\}| \leq ^* T|V |$}{330}{subsection.13.7.1}%
+\contentsline {section}{\numberline {13.8}Retraceable You}{331}{section.13.8}%
+\contentsline {subsection}{\numberline {13.8.1}A theorem of Specker}{331}{subsection.13.8.1}%
+\contentsline {section}{\numberline {13.9}Kirmayer on moieties}{333}{section.13.9}%
+\contentsline {subsection}{\numberline {13.9.1}My attempt at proving Kirmayer's second theorem}{333}{subsection.13.9.1}%
+\contentsline {section}{\numberline {13.10}Stuff to fit in}{335}{section.13.10}%
+\contentsline {subsubsection}{A message from Jeff Egger}{337}{section*.62}%
+\contentsline {subsubsection}{A message from Greg Kirmayer}{338}{section*.63}%
+\contentsline {subsubsection}{A message from Daniel Mahler}{339}{section*.64}%
+\contentsline {chapter}{\numberline {14}The Universal-Existential Problem}{341}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Stuff to be put in the right place}{342}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Distinguishing between sets by points, a note from Arran Fernandez}{345}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Does every finite set have an extensional finite superset?}{346}{subsection.14.2.1}%
+\contentsline {section}{\numberline {14.3}A jumble of versions of the clever proof}{349}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Injections and Surjections}{353}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}Embedding the canonical model into every model}{355}{subsection.14.4.1}%
+\contentsline {subsubsection}{Distinguishing between sets by points}{355}{section*.66}%
+\contentsline {subsection}{\numberline {14.4.2}Surjections again}{361}{subsection.14.4.2}%
+\contentsline {subsection}{\numberline {14.4.3}Boolean injections}{361}{subsection.14.4.3}%
+\contentsline {subsection}{\numberline {14.4.4}Earlier Stuff}{362}{subsection.14.4.4}%
+\contentsline {subsection}{\numberline {14.4.5}Can there be a $\forall $-elementary embedding ${\mathfrak M}\DOTSB \lhook \joinrel \rightarrow {\mathfrak M}^+$?}{364}{subsection.14.4.5}%
+\contentsline {section}{\numberline {14.5}The direct limit construction}{368}{section.14.5}%
+\contentsline {subsection}{\numberline {14.5.1}Try to show that $\forall ^*\exists ^*$ sentences generalise {\sl downwards} in models of \mbox {T$\mathbb {Z}$T}}{369}{subsection.14.5.1}%
+\contentsline {section}{\numberline {14.6}The Conjectures}{372}{section.14.6}%
+\contentsline {section}{\numberline {14.7}A note on the first two conjectures}{373}{section.14.7}%
+\contentsline {section}{\numberline {14.8}A note on Conjecture ~\ref {conj:universalexistential2} and Conjecture ~\ref {conj:universalexistential3}}{375}{section.14.8}%
+\contentsline {subsection}{\numberline {14.8.1}Some other observations that might turn out to be helpful}{378}{subsection.14.8.1}%
+\contentsline {subsection}{\numberline {14.8.2}An old theorem, revived}{380}{subsection.14.8.2}%
+\contentsline {section}{\numberline {14.9}Conjecture ~\ref {conj:universalexistential5}: finding permutation models}{382}{section.14.9}%
+\contentsline {section}{\numberline {14.10}Positive results obtained by permutations}{383}{section.14.10}%
+\contentsline {subsection}{\numberline {14.10.1}The size of a self-membered set is not a concrete natural}{383}{subsection.14.10.1}%
+\contentsline {subsubsection}{Can we spice this up to lattices generated by free bases for $V$?}{391}{section*.68}%
+\contentsline {subsection}{\numberline {14.10.2}Bases for the irregular sets}{391}{subsection.14.10.2}%
+\contentsline {subsection}{\numberline {14.10.3}Membership restricted to ideals and their filters}{391}{subsection.14.10.3}%
+\contentsline {subsection}{\numberline {14.10.4}a bit of duplication here}{393}{subsection.14.10.4}%
+\contentsline {section}{\numberline {14.11}Some provable special cases or weak versions}{393}{section.14.11}%
+\contentsline {section}{\numberline {14.12}Some Consequences of Conjecture ~\ref {conj:universalexistential1}}{395}{section.14.12}%
+\contentsline {section}{\numberline {14.13}Some $\forall ^*\exists ^*$ sentences true in all term models}{398}{section.14.13}%
+\contentsline {subsubsection}{Item 3}{398}{section*.69}%
+\contentsline {subsubsection}{item 1}{398}{section*.70}%
+\contentsline {section}{\numberline {14.14}Strengthening the conjecture}{401}{section.14.14}%
+\contentsline {subsubsection}{$\forall ^*\exists ^*$ witnesses?}{402}{section*.71}%
+\contentsline {subsection}{\numberline {14.14.1}Extending the conjecture to sentences with more blocks}{403}{subsection.14.14.1}%
+\contentsline {subsection}{\numberline {14.14.2}Perhaps the key is to doctor the logic}{404}{subsection.14.14.2}%
+\contentsline {section}{\numberline {14.15}Remains of some failed proofs of conjecture ~\ref {conj:universalexistential3}}{405}{section.14.15}%
+\contentsline {subsection}{\numberline {14.15.1}A failed proof}{405}{subsection.14.15.1}%
+\contentsline {subsection}{\numberline {14.15.2}Another failed proof}{406}{subsection.14.15.2}%
+\contentsline {subsection}{\numberline {14.15.3}A third failed proof}{407}{subsection.14.15.3}%
+\contentsline {section}{\numberline {14.16}stuff to fit in}{408}{section.14.16}%
+\contentsline {subsection}{\numberline {14.16.1}A Message from Franco Parlamento}{408}{subsection.14.16.1}%
+\contentsline {section}{\numberline {14.17}The term model of NF0}{409}{section.14.17}%
+\contentsline {section}{\numberline {14.18}More thoughts about NF0}{414}{section.14.18}%
+\contentsline {subsection}{\numberline {14.18.1}The Universal-Existential conjecture in TC$_n$T}{414}{subsection.14.18.1}%
+\contentsline {subsection}{\numberline {14.18.2}Nathan has made me see some things..}{415}{subsection.14.18.2}%
+\contentsline {chapter}{\numberline {15}The Model Companion of $T$}{417}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Friederike K\"orner on Model Companions of Stratified Theories: notes by Thomas Forster}{417}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}The set of universal consequences of $T$}{417}{subsection.15.1.1}%
+\contentsline {chapter}{\numberline {16}The General Hierarchy}{423}{chapter.16}%
+\contentsline {section}{\numberline {16.1}end-extension}{423}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}Natural models}{424}{subsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.1.2}Other models}{425}{subsection.16.1.2}%
+\contentsline {subsection}{\numberline {16.1.3}The NF Case}{425}{subsection.16.1.3}%
+\contentsline {section}{\numberline {16.2}Normal Forms}{426}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}remaining junk}{429}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}messages from james about reflection principles}{430}{subsection.16.2.2}%
+\contentsline {subsubsection}{another message}{431}{section*.72}%
+\contentsline {chapter}{\numberline {17}Stratification and Proof Theory}{433}{chapter.17}%
+\contentsline {subsection}{\numberline {17.0.1}Marcel writes}{433}{subsection.17.0.1}%
+\contentsline {subsubsection}{Where do the axioms of typical ambiguity fit in?}{435}{section*.74}%
+\contentsline {section}{\numberline {17.1}Analogues for other syntactic disciplines}{439}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Acyclic Analogues}{439}{subsection.17.1.1}%
+\contentsline {subsubsection}{A Message from Marcel in 1993}{440}{section*.76}%
+\contentsline {subsubsection}{Jan Ekman says there is no normal proof of the nonexistence of $V$}{441}{section*.77}%
+\contentsline {section}{\numberline {17.2}leftovers}{441}{section.17.2}%

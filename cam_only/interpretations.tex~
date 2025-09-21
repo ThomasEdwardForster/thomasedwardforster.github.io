@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+ \usepackage{amsfonts}
+
+ \newcounter{EssayNumber} \setlength{\parindent}{0 pt}
+ \newcommand{\EssayTitle}[2]{\refstepcounter{EssayNumber}
+
+  \addcontentsline{toc}{section}{\arabic{EssayNumber}. #1\dotfill}}
+ \newcommand{\Header}[1]{\subsubsection*{#1}}
+
+ \begin{document}
+
+  
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % % % Start editting here. % % % 
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \EssayTitle{Interpretations and Synonymy}{Dr Forster}
+
+
+
+
+``A logician is that kind of mathematician who thinks that a formula is 
+a mathematical object'' my {\sl Doktorvater} once said.  Mathematical 
+objects can be described in formal languages, and the descriptions can 
+be studied as mathematical objects in their own right.  Interpretations 
+between them can give rise to relative consistency results. There will
+be a category of descriptions (theories) and interpretations between 
+them.  It turns out that the notion of interpretation-between-theories 
+is much more fine-grained than people used to assume (there is more 
+than one notion of interpretation) and there is quite a lot of recent 
+work on this set of ideas that has not been systematised.  Collating 
+it will be a useful scholarly discipline.
+
+Thinking about what kind of interpretability holds between two
+mathematical theories (the two theories of partial order and of strict
+partial order are in some (pretty obvious) sense the same; Boolean
+rings and boolean algebras are demonstrably the same, and that's
+slightly less banal (and less obvious) tho' unproblematic. But what
+about the equivalence of bit strings and natural numbers?  Waves and
+particles??---that's another thing altogether.  Thinking about these
+equivalences will put your background mathematical knowledge to good
+use, and challenge your understanding of it.
+
+Bibliography:
+
+Visser Oxford Slides
+
+
+\url{https://www.cambridge.org/core/books/logic-in-tehran/categories-of-theories-and-interpretations/4BD83A2F040957076D0C7ABF52DF65A8}

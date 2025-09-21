@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Nondeterministic Machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>Chapter 4</h2>
+<h1>Nondeterministic Machines</h1>
+<p>A nondeterministic machine is just like a deterministic machine except that its
+transition behaviour isn't deterministic. If you know the state a deterministic
+machine &#8499; is in then you know what state it will go to when you give it character
+<i>a</i> (or <i>b</i> or whatever). With a nondeterministic machine you only know the set of
+states that it <i>might</i> go to next. Notice that a deterministic machine is simply a
+nondeterministic machine where this set-of-states-that-it-might-go-to is always
+a singleton.</p>
+<p> Nondeterministic machines (hereafter <b>NFAs</b> - "<b>nondeterministic</b> finite automata") are a conceptual nightmare. The fact that they are nondeterministic
+makes for a crucial difference between them and deterministic machines. In
+the deterministic case you don't have to distinguish in your mind between its
+behaviour in principle and its behaviour in practice, since its behaviour in practice is perfectly reproducible. That means that you can think of a deterministic
+machine either as an abstract machine - a drawing perhaps - or as a physical
+machine, according to taste. With NFAs there is a much stronger temptation
+to think of them as actual physical devices whose behaviour is uncertain, rather
+than as abstract objects. And the difficulty then is that NFAs are not physically
+realisable in the way one would like.</p>
+<p>So if NFAs are so nasty, why do we study them? The answer is that they
+tie up some loose ends and enable us to give a smooth theoretical treatment
+that improves our understanding and appreciation. So let us get straight what
+they are for. We started this course with a connection between machines and
+languages. A machine accepts strings and recognises a language. A (physical)
+nondeterministic machine can accept strings in exactly the same way that a
+(physical) deterministic one does. You power it up, and feed in the characters
+one-by-one and when it's finished reading the string its either in an accepting
+state or it isn't. The subtlety is that a nondeterministic machine, on having read
+a string, might be in any of several states, perhaps some of which are accepting
+and perhaps some not. The only sensible definition we can give of an (abstract)
+nondeterministic machine recognising a language is this:<br><b>The language recognised by a nondeterministic machine &#8499;
+is the set of strings that one of its physical realisations might
+accept.
+</b></p>
+<p>The task of remembering and understanding this definition is made much
+easier for you once you notice that the definition for recognition of languages
+by deterministic machines is simply a special case of this.
+</p>
+<p>Nondeterministic machines are useful to us because of the combination of
+two facts.</p>
+<p><b>(i) If <i>L</i> is a language recognised by a nondeterministic machine &#8499; then there is a deterministic machine &#8499; which can
+be obtained in a systematic way from &#8499; that also recognises <i>L</i>.</p>
+<p>(ii) There are circumstances in which it is very easy to produce a nondeterministic machine that recognises a language
+but no obvious easy way to produce a deterministic one.
+</b></p><p>
+Let us now prove (i) and illustrate (ii).</p>
+<h3>(i): Finding a DFA that emulates an NFA</h3>
+<p>(i) Suppose I have a nondeterministic machine &#8499;, presented to me in its start
+state. I have a handful of characters {<i>c</i><sub>1</sub> , <i>c</i><sub>2</sub> , <i>c</i><sub>3</sub> . . .} that I feed to the machine
+one by one. Initially I know the machine is in the start state. But after I've
+given it <i>c</i><sub>1</sub> I know only that it is in one of the states that it can go to from
+the start state on being given <i>c</i><sub>1</sub>. And after I've given it <i>c</i><sub>2</sub> I know only that it
+is one of those states it can reach from the start state in two hops if given <i>c</i><sub>1</sub>
+followed by <i>c</i><sub>2</sub> and so on. We seem to be losing information all the time. But
+all is not lost. Although I do not have certain knowledge of the state &#8499; is in, I
+do nevertheless have certain knowledge of the set of states that it might be in.
+And this is something I can keep track of, in the following sense. I can say "If
+it's in one of the states <i>s</i> or <i>s'</i> or <i>s''</i> and I give it character <i>c</i> then either it was
+in <i>s</i> in which case it's now in <i>s'''</i> or <i>s''''</i> or it was in <i>s'</i> in which case it's now in
+. . . . In other words<ol>
+     <li>if I know the set of states that it might be in now (and that it must be in
+         one of them) and</li>
+     <li>I know the character it is being given, then I know</li>
+     <li>the the set of states that it might be in next (and it must be in one of
+         them).</li></ol>
+<p>Now comes the trick. Think of the set-of-states-that-it-might-be-in as a state
+of a new machine! One way of seeing this is to think of the states of the
+new deterministic machine as the states of uncertainty you might be in about
+the state of the nondeterministic machine. We have seen something like this
+before: in the discussion of the thought-experiment we were viewing states of the
+machine as states of knowledge of the string-so-far; this time we are thinking of
+states of the new (deterministic) machine as states-of-knowledge-of-what-state-
+the-nondeterministic-machine-might-be-in.</p>
+<p><i>If we take seriously the empty set of states in the power set construction for states then we can make sense of the convention that missing arrows take you to a fail state.</i></p>
+<h3>(ii) An application of NFAs</h3>
+<p>I mentioned earlier that the concatenation of two regular languages is regular. Suppose I have a deterministic machine &#8499;<sub>1</sub> that recognises <i>L</i> and a deterministic machine &#8499;<sub>2</sub> that recognises <i>K</i>. The idea is to somehow "stick &#8499;<sub>2</sub> on the end of &#8499;<sub>1</sub>".</p>
+<p>    The difficulty is that if <i>w</i> is a string in <i>LK</i>, it might be in <i>LK</i> for more
+than one reason, since it might be decomposible into a string-from-<i>K</i> followed
+by a string-from-<i>L</i> in more than one way. So one can't design a machine for
+recognising <i>LK</i> by saying "I'll look for a string in <i>K</i> and then - when I find one - 
+swap to looking for a string in <i>L</i>". You have to start off imagining that you
+are in &#8499;<sub>1</sub>; that much is true. However when you reach an accepting state you
+have to choose between (i) staying in &#8499;<sub>1</sub> and (ii) making an instantaneous hop
+through a trap-door to the start-state of &#8499;<sub>2</sub>. That is where the nondeterminism
+comes in. These instantaneous hops are called "&#949;-<b>transitions</b>". You do them
+<i>between</i> the clock ticks at which you receive new characters. I don't like &#949;-<b>transitions</b> and I prefer theoretical treatments that don't use them. However,
+they do appear in the literature and you may wish to read up about them.</p>
+<p>For those who do like &#949;-transitions, here is a description of a nondeterministic
+machine that recognises <i>LK</i>. It looks like the disjoint union &#8499;<sub>1</sub> &#10758; &#8499;<sub>2</sub> of &#8499;<sub>1</sub>
+and &#8499;<sub>2</sub>. Transitions between the states of &#8499;<sub>1</sub> are as in &#8499;<sub>1</sub> and transitions
+between the states of &#8499;<sub>2</sub> are as in &#8499;<sub>2</sub> . In addition for each accepting state of
+&#8499;<sub>1</sub> there is a &#949;-transition to the start state of &#8499;<sub>2</sub>.</p>
+<p>For those of you who - like me - do not like &#949;-transitions, here is a different
+nondeterministic machine that recognises <i>LK</i>. Like the last one, it looks like
+the disjoint union &#8499;<sub>1</sub> &#10758; &#8499;<sub>2</sub> of &#8499;<sub>1</sub> and &#8499;<sub>2</sub>. Transitions between the states
+of &#8499;<sub>1</sub> are as in &#8499;<sub>1</sub> and transitions between the states of &#8499;<sub>2</sub> are as in &#8499;<sub>2</sub>.
+In addition, whenever <i>s</i> is a state of &#8499;<sub>1</sub> and <i>c</i> a character such that &#948;(<i>s</i>, <i>c</i>) is
+an accepting state of &#8499;<sub>1</sub> , we put in an extra arrow from s to the start state
+of &#8499;<sub>2</sub> , and label this new arrow with a '<i>c</i>' too. The effect of this is that when
+you are in <i>s</i> and you receive a <i>c</i>, you have to guess whether to stay in &#8499;<sub>1</sub> (by
+going to an accepting state in &#8499;<sub>1</sub> ) or make the career move of deciding that
+the future of the string lies with <i>K</i>, in which case you move to the start state
+of &#8499;<sub>2</sub>.</p>
+<p>The manner in which we got rid of &#949;-transitions in this case is perfectly
+general. You can always get rid of them by introducing a bit of nondeterminism
+in the way we have just done. (And you can go in the other direction too.)
+</p>
+<a href="5-0.html">Next: 5 A Coursework</a><br>
+<a href="3-2.html">Back: 3.2 Exercises</a>
+
+</body>
+</html>

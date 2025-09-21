@@ -1,0 +1,246 @@
+
+
+
+
+<HTML>
+<HEAD>
+        <FONT SIZE="+2">Part III Mathematics  </FONT></TD>
+</HEAD>
+<BODY >
+
+<head>
+<title>
+
+</title>
+
+
+</head>
+
+<hr>
+
+
+
+ <FONT SIZE="+2"> A Part III <b> Reading</b> course
+ on Computability and Logic in 20/21</FONT></TD> <br> <FONT SIZE="+1">
+ 
+
+
+
+<hr>Gerald Sacks on
+Mathematical Logic: <p> <i>``Good afternoon, ladies and gentlemen. The
+subject of Mathematical Logic splits fourfold into: Recursive
+Functions, the heart of the subject; Proof Theory, which includes the
+best theorem in the subject; Sets and Classes, whose romantic
+appeal far outweigh their mathematical substance; and Model
+Theory, whose value is its applicability to, and roots in, Algebra.''</i>
+<hr>
+
+When i reached 70 I vowed I would not lecture Part III again, but
+there has been a call for a reading course in computability, and I
+have agred to sponsor one.
+<br>
+In the coming weeks I shall draw up a reading list., and submit a formal proposal to the Faculty Office.  I intend to support this course to the extend of organising zoom meetings (of a frequency to be determined... fortnightly..?  Three-weekly..?) which will serve as examples-classes/supervisions subject to the approval of your college.  (They'd better).
+
+
+<hr><b>Content</b> <br> <A HREF="partiiicomputability2020.pdf">Here</A> is the current
+version of the notes from which I had been proposing to lecture this course, when i was going to lecture it before COVID.  You are
+welcome to read them if you want to hit the ground running but 
+you should <b>not download them</b>.  The single most
+important respect in which they will change is in deletion of
+material.  There is far more stuff in that folder than it is fair to specify for a reading course and I haven't yet decided which bits to leave out.  This
+leaves you time to lobby me to cover (or omit) specific topics.
+
+<hr>
+<b>Background</b><br>
+Much of what you might expect to find under a heading like this is in the Prolegomenon to the online notes from which I would have lectured  and which are linked above.<br>
+
+My intended audience is people who did Set Theory and Logic <i>and</i>
+ Languages and Automata at Part II.  The point, really, is that if you
+ are a Cambridge student doing Part III who did Part II last year and
+ who now wants to do Computability-and-Logic at Part III then you
+ would have chosen those courses when you did Part II, so it is a
+ reasonable assumption for me to make that you attended them.  For
+ your amusement and instruction i post here my <A HREF="blog.pdf">
+ blog </A> of thoughts and opinions on issues that came up in my
+ supervisions of those courses.  <br> With that in mind you might like
+ to look at the material on my <A HREF = "partiimaterials.html">
+ Materials for Part II Mathematics page </A>.  <br> I am guilty of two
+ pdfs which contain most (if not all) the basic logic and discrete
+ maths that in my not-so-humble opinion should be in the backpack of
+ every young mathematician about town.  One on <A
+ HREF="countability.pdf"> Countability</A> and another on <A
+ HREF="CUPdiscretelectures.pdf"> Discrete Mathematics</A>.  
+ They were designed for 1a's but Gareth tells me they are far too advanced for 1a's. They contain elementary material that may have escaped your notice, and which&mdash;if you going to do logic&mdash;you will find agreeable.   Read through them quickly, it won't take long.
+
+ <hr>
+ I've had a look down the back of the 
+sofa and i've come up with <br> <A HREF="partiii2009.pdf"> My lecture Notes from 2009 
+</A> and <br> <A HREF="partiii2004.pdf"> My lecture notes from 2007 </A>;<br> <A
+HREF="partiiicomputability.pdf"> My lecture notes from 2015/6</A>; <br>  <a HREF =
+"comp.pdf">Henk-Jaap Wagenaar's notes from my lectures from 2015</A><br> 
+<A HREF ="https://dec41.user.srcf.net/notes/III_L/logic.pdf">Dexter Chua's Notes of my lectures from 2016/7</A>.
+
+<p> <hr> in 2016
+Maurice Chiodo gave a couple of guest lectures on Automatic groups.  I
+am putting <a HREF = "baumslag.pdf"> here</A> the Introduction to
+hyperbolic and automatic groups by Baumslag, and the <a HREF =
+"batty.pdf"> Notes on Hyperbolic and Automatic Groups</A> by Batty and
+Papasoglu, both kindly provided by Chiodo.  I am almost certainly not going to lecture this stuff in 2021 but i'm going to leave the links up anyway. <hr>
+ <hr><p> 
+I am leaving  <A HREF="chapter1.pdf"> here
+</A> the notes from which I lectured the first part of the course in 2017, on constructive logic; and <A HREF="partiiilogic2017.pdf"> here
+</A> the notes from which I lectured the second part of the course, on model theory.
+
+
+
+ <hr><p> 
+I have linked from my <A HREF = "partiimaterials.html">
+Materials for Part II Mathematics </A> page a lot of nice stuff about
+computable functions, lambda calculus etc. [Scroll down to ``Languages 
+and Automata''].  Some of it is a bit basic for Advanced Lifeforms such 
+as your good selves, and of course the links are on that Part II page 
+beco's they are aimed primarily at Part II students, but there is some 
+material there (mainly the lambda calculus) which is not lectured at 
+Part II, and in any case a bit of revision will do you no harm.<br>
+Speaking of lambda-calculus, <A HREF="churchEquals.pdf">here</A> is
+Toby Miller's nice lambda term that tests equality of Church numerals.
+And I found <A HREF="http://www.itu.dk/people/sestoft/lamreduce/index.html"> 
+this </A> rather nice lambda-calculus reduction workbench.  I hope you will find it
+fun.
+
+<hr> Among other things I shall be discussing Turing machines.  So, if
+you want a foretaste of how they work, click <A HREF
+="http://robotzeitgeist.com/2010/03/model-turing-machine.html"> here
+</A>. (It's a shame about the voice-over but the video is dead cute.)
+ <hr><p> 
+Here are Frank Stephan's <A HREF ="Stephan-on-recursiontheory.pdf">Notes on computation theory</A> whence I lifted the proof of Kleene-Post.
+<hr>
+
+
+<hr> <A HREF ="mendelson.pdf">Here</A> is the appendix to
+the first edition of Mendelson, wherein he shows how to use induction
+up to &epsilon;<sub>0</sub> to prove the consistency of PA.
+
+
+<hr> 
+        <FONT SIZE="+2">Books you might want to read</FONT></TD>
+<hr>
+Nigel Cutland's <b>Computability</b> is worth reading and may be worth actually  <i>buying</i>.
+Boolos-and-Jeffrey ditto, tho' the current edition no longer has the appendix that explains Tennenbaum's theorem. I
+am putting <a HREF = "20140318103925177.pdf"> here</A> a scan of that appendix.<p>
+
+Another book possibly worth getting is Peter Smith's <A HREF
+="http://www.cambridge.org/gb/knowledge/isbn/item7137024/"> G&ouml;del
+book </A>.  <p> In 2016 we had
+a couple of guest lectures from Maurice Chiodo (who is here for a
+couple of years on a Marie Curie postdoc) on Automatic groups. Readers
+might like to look at <i> Automatic Sequences, theory, applications,
+generalizations</i> by Allouche and Shallit. I shall be pillaging
+material from it, but I don't know how much!  You might like to be
+ahead of the game, and have a look at it.  It certainly looks like fun.  
+<p> I may cover some constructive arithmetic and possibly some constructive
+Analysis (much harder!), with the intention that my students will look at
+familar Part I material In A New Light. I have just (re)discovered the
+entirely delightful <i>A Primer of Infinitesimal Analysis</i>  
+ by John Bell. Worth a look, tho' perhaps not worth buying.<p> 
+
+Wilfrid Hodges: Model Theory (either the five minute argument or the
+full half-hour) is something the Logician-About-Town should have on
+their shelves.<p>All the above books are Cambridge University Press
+and so you can get 15% off the list price at the Cambridge University
+Press bookshop in Trinity street [allegedly the oldest bookshop in the
+world] by brandishing your wee blue card.  <p> Also by John Bell
+(co-authored with Alan Slomson) but not published by CUP (it's from
+Dover) is <b>Models and Ultraproducts</b>.  It was the first book on
+model theory that I read, and I loved it.  And it's just the right
+level for you lot, too.
+
+
+<hr>
+        <FONT SIZE="+3"> Part III Essays</FONT></TD>
+<hr>
+ <FONT SIZE="+1">
+
+
+
+There are several Logic-related essays that I sponsor, so if you want
+one come and talk to me.  Subject to confirmation by the Part III
+committee the following Part III essays will be available in 2020/21:<p> 
+
+Several are old warhorses and proposals for them exist already, and have been approved in previous years.  These are
+<br>
+
+<A HREF ="FMessay.pdf">Fraenkel-Mostowski Models</A>;<br>
+<A HREF="nonstandardanalysisessay.pdf">Nonstandard Analysis</A>; and <br>
+<A HREF = "NFessay.pdf">Quine's Set Theory ``NF''</A>.<p> I welcome enquiries
+about them.  
+<p>
+Cambridge students who have read my Part II lecture notes from
+2016/7 will have encountered a rudimentary form of Fraenkel-Mostowski
+models in my proof of the independence of the Axiom of Choice.
+I promote Fraenkel-Mostowski models partly because the final step in
+<A HREF="http://math.boisestate.edu/~holmes/"> Randall Holmes'</A>
+proof of the consistency of Quine's <i>New Foundations</i> is a
+[diabolical] FM construction, and it is a medium-term project of
+mine to <i>really</i> understand it.  I am most of the way there,
+but the one part I have not yet fully mastered is precisely that
+final step. So I am always happy to talk to anyone about FM
+constructions! That diabolical FM construction is of course beyond
+the scope of a Part III essay [and i use the word <i>diabolical</i>
+advisedly: Holmes had to sell his soul to The Auld Ane to get the
+proof, and we owe it to him to ensure that his sacrifice is not in
+vain] but the general idea of an FM construction is a very good topic
+for a Part III essay.  If we have several takers we could have a
+reading group and that could be Serious Fun.
+
+<p> The two essays on countable ordinals and on BQOs and WQOs were
+tackled in 2019/20 and are accordingly not available in 20/21.
+<p> I am trying to get off the ground an essay on
+<A HREF = "interpretations.pdf">Synonymy</A>; the proposal linked
+here is formatted like an official proposal but it is as yet only
+in draught form.   If you like the look of it, and think you might
+want to do it, by all means contact me and i shall work it up into
+a proposal acceptable to the committee.
+<hr>
+Part III students should remember that if the essay they
+want to write is not listed, it is entirely in order for them to ask
+for someone to set it.  That is how i ended up setting the essay on
+Nonstandard Analysis!  Try your luck.
+<!--With their permission I am putting links to three Part III essays on 
+Fraenkel-Mostowski models by the 2012/3 cohort:<p>
+<A HREF = "http://www.dpmms.cam.ac.uk/~tf/millwood-FM-essay-2013.pdf"> Ben Millwood's essay</A>. This 
+essay concentrates on the application of FM models to alpha-conversion in lambda calculus.
+<br>
+<A HREF = "http://www.dpmms.cam.ac.uk/~tf/newstead-FM-essay-2013.pdf"> Clive Newstead's essay</A>.<br>
+
+<A HREF = "http://www.dpmms.cam.ac.uk/~tf/yuan-yuan-FM-essay2013.pdf"> Yuan Yuan Zheng's essay </A>.<br>
+tho' i can see that i shall have to take those links down....  I shall do that as soon as i learn the html command for commenting stuff out.-->
+
+
+</h3>
+
+<FONT SIZE="+1">
+<hr><hr>
+<A HREF = "1bCSmaterials.html">  Materials for 1b Computer Science</A>.
+<br>
+<A HREF = "1aCSmaterials.html"> Materials for 1a Computer Science </A>.
+<br><A HREF = "logicforlinguistsmaterials.html"> Materials for Logic-For-Linguists</A>.
+<br> <A HREF = "partiimaterials.html"> Materials for Part II Mathematics </A>.
+<br> <A HREF = "partivmaterials.html"> Materials for Part IV Mathematics </A>.
+<br> <A HREF = "CSlogiccoursematerials.html"> Materials for the Computer Science M. Phil </A>.
+  </FONT></TD>
+</body>
+
+
+
+</BODY>
+
+</HTML>
+
+
+
+
+
+
+
+

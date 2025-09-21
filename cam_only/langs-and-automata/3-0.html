@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Grammars</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>Chapter 3</h2>
+<h1>Grammars</h1>
+<p>So far we have encountered two ways of thinking about regular languages:
+(i) through finite state machines; (ii) through regular expressions. These approaches have their roots in the study of machines, rather than - as you had
+probably been expecting - the study of natural languages. The third approach,
+you will be relieved to hear, is one that has its roots in the study of natural
+languages after all.
+</p>
+<p>Many years ago (when I was at school) children were taught <i>parsing</i>. We
+were told things like the following. Sentences break down into <b>subject</b> followed
+by verb followed by object. Or perhaps they break down into <b> Noun Phrase</b>
+followed by <b>verb</b> followed by Noun Phrase. These constituents break down
+in turn: noun phrases being composed of <b>determiner</b> followed by <b>adjective</b>
+followed by <b>noun</b>.</p>
+<p>This breaking-down process is important. The idea is that the way in which
+we assemble a sentence from the parts into which we have broken it down
+will tell us how to recover the meaning of a sentence from the meanings of its
+constituents.
+</p>
+<p>If we start off with an alphabet &#931; = {dog, cat, the, some, walk, swim, all,
+some . . . } then</p>
+<p>Rules like<br>
+      <i>sentence &#8594; Subject verb object<br></i>
+   and<br>
+      <i>Noun phrase &#8594; determiner adjective noun<br></i>
+   have the potential, once equipped with further rules like<br>
+      <i>determiner &#8594; the a some many<br>
+      verb &#8594; swim<br>
+      verb &#8594; walk<br>
+                            noun &#8594; dog<br>
+                            noun &#8594; cat<br></i>
+                         to generate words in a language <i>L</i> &#8838; &#931;*. This time 'language' really does
+                     mean something like 'language' in an ordinary sense (and 'word' now means
+                     something like sentence'). But the "words" that we generate are actually things
+                     that in an ordinary context would be called <i>sentences</i>. And this time we think
+                     of 'dog' not as a string but as a character from an alphabet, don't we!</p>
+                         <p>The languages that we have seen earlier in this coursework can be generated
+                     by rules like this. For example<br><i>
+                            S &#8594; aS<br>
+                            S&#8594;&#949;<br></i>
+                         generates every string in the language <i>L</i>(<i>a</i>*) and a set of rules like<br><i>
+                            S &#8594; aSa<br>
+                            S &#8594; bSb<br>
+                            S&#8594;&#949;<br></i>
+                     generates the language of palindromes over the alphabet &#931; = {<i>a</i>, <i>b</i>}.</p>
+                         <p>These bundles of rules are called <b>grammars</b> and the rules in each bundle
+                     are called <b>productions</b>.</p>
+                         <p>There are two sorts of characters that appear in productions. There are
+                     <b>nonterminals</b> which appear on the left of productions (and sometimes on the
+                     right). These are things like 'noun' and 'verb'. <b>Terminals</b> are the characters
+                     from the alphabet of the language we are trying to build, and they only ever
+                     appear on the right-hand-side of the production. Examples here are 'swim',
+                     'walk', 'cat' and 'dog'.</p>
+                         <p>Notice that there is a grammar that generates the language of palindromes
+                     over &#931; = {<i>a</i>, <i>b</i>} even though this language is not regular. Grammars that
+                     generate regular languages have special features that mark them off. One can
+                     ascertain what these features are by reverse-engineering the definition of regular
+                     language from regular expressions or finite state machines, but we might as well
+                     just give it straight off.</p>
+                         <p>A Regular grammar is one in which all productions are of the form<br><br>
+                                                         <i>N</i> &#8594; <i>TN</i>'<br><br>
+                         or<br><br>
+                                                           <i>N</i> &#8594;<i>T</i><br><br>
+                         Where <i>N</i> and <i>N</i>' are nonterminals and <i>T</i> is a string of terminals.</p>
+<p>The other illustrations I have given are of grammars not having this restriction. They are context-free. Reason for this nomenclature is <i>[Details missing here]</i>
+</p>
+<a href="3-0-1.html">Next: 3.0.1 Exercises</a><br>
+<a href="2-3.html">Back: 2.3 Arden's rule and some stuff like that</a>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+
+
+
+<TITLE>Computer Science M. Phil. Teaching Materials</TITLE>
+
+
+<HTML>
+<HEAD>
+<TITLE>Computer Science M. Phil. Teaching Materials</TITLE>
+
+
+</HEAD>
+
+<BODY >
+
+
+        <TR ALIGN="center" VALIGN="middle">
+        <TD ALIGN="center" BGCOLOR="#FFFFFF">
+        <FONT SIZE="+2">Computer Science M.Phil. Teaching Materials for the Michaelmas Term Logic Module </FONT></TD>
+
+
+<head>
+<title>
+
+</title>
+
+
+</head>
+<p>
+<hr>
+
+
+
+ <FONT SIZE="+1">
+
+</h3>
+
+<FONT SIZE="+1"> The notes from which I shall lecture this course are
+to be found <A HREF = "CSlogiccourse.pdf"> here</A>.  They are not
+guaranteed to be bug-free: the file represents work-in-progress.  I am
+not certain at this stage how much of the material in it will actually
+be covered, and there is no suggestion that possession of hard copy of
+it is a substitute for attending the course and taking notes!
+Nevertheless I am expecting it to be very useful to students following
+this course.<br>
+
+This is, as the lab's page says, a course in Logic.  Nevertheless
+there are two areas that are not covered at all.  One is set theory,
+and the other is computability theory, the theory of computable
+functions.  They were not in the original specification for this
+course, but - more to the point - there is a set theory course for the
+CS M.Phil. course that is lectured in Lent term by Professor Winskel,
+and there is a Part III Maths course in computable functions lectured
+by me, also in Lent.  There is no administrative structure for CS
+M.Phil. students to be examined on it, but it may well be suitable for
+them.
+<hr>
+
+<A HREF = "oldtriposquestions.pdf> Here </A> are four model questions for the
+Part II Mathematics logic course, which you might like to try.
+<hr>
+
+
+<A HREF = "1bCSmaterials.html">  Materials for 1b Computer Science</A>.
+<br>
+<A HREF = "1aCSmaterials.html"> Materials for 1a Computer Science </A>.
+<br> <A HREF = "partiiimaterials.html"> Materials for Part III Mathematics </A>.
+<br><A HREF = "logicforlinguistsmaterials.html"> Materials for Logic-For-Linguists</A>.
+<br> <A HREF = "partiimaterials.html"> Materials for Part II Mathematics </A>.
+<br> <A HREF = "partivmaterials.html"> Materials for Part IV Mathematics </A>.
+
+  </FONT></TD>
+</body>
+
+
+
+</BODY>
+
+</HTML>
+
+
+
+
+
+

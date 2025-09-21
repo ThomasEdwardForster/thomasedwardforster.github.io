@@ -1,0 +1,93 @@
+Hi Thomas,
+
+Here are the title and an abstract of my talk.
+
+Title: Dharmakirti, Frege and Kant on the Nature of Logic
+
+Abstract:
+Kant held that (pure general) logic is a maximally general science. He
+took this to mean that logic is concerned with understanding (and
+thought) as such. Moreover, he inferred from this that logic deals with
+abstractions from the objects that we sense (as oppose to
+conceptualise). Frege rejected this inference of Kant and argued that
+logic does tell us something, in fact a lot, about  objects (i.e.,
+numbers), etc., though his argument isn't as strong as one might hope.
+Now, the major Buddhist logician (from a Tibetan point of view),
+Dharmakirti, seems to have held a view of logic very similar to Frege's.
+His view seems to be that, though logic is concerned with understanding
+(and thought) as such, it can tell us objective truths about the objects
+that we perceive (though logic isn't grounded in the objects). Thus, by
+demonstrating that Dharmakirti's view of logic is coherent and arguing
+for the view, we can show that Frege's refutation of Kant's view is
+successful. It is envisioned that this will lead to a reinvigoration of
+Frege's conception of logic which has given way to Tarski's
+metamathematical approach to logic.
+
+
+Koji
+
+
+***********
+Koji Tanaka
+Philosophy Department
+Macquarie University
+Sydney NSW 2109
+Australia
+Tel: +61 2 9850 8826
+Fax: +61 2 9850 8892
+
+>>> Thomas Forster <T.Forster@dpmms.cam.ac.uk> 10/24/05 9:12 PM >>>
+
+
+Very provisional. You will notice there is a blank spot in case i have 
+forgotten anyone!
+
+Please tell me if you want me to change anything.
+
+(And please tell me if i need to change the accomodation arrangements i 
+have made)
+
+             tf
+
+
+########################################################################
+
+
+Saturday
+
+0915	D'Amato
+1030	Dhawan
+1145	Barendregt
+1300		lunch
+1415	Siderits
+1530	Raymond
+1645	Tanaka
+1800	Deguchi
+1930		dinner
+
+Sunday  
+0915	Westerhoff
+1030	Mortensen
+1145	Garfield
+1300		lunch
+1415	Priest
+1530	Tillemans
+1645	Read
+1800	???
+
+1930 dinner
+
+
+
+     
+
+-- 
+
+  URL: www.dpmms.cam.ac.uk/~tf   Tel: +44-1223-337981
+  (U Cambridge); +44-20-7882-3659 (QMW); +32-2-650-5853 (ULB)
+
+
+
+  
+
+

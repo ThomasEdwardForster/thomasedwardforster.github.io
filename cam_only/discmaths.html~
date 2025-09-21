@@ -1,0 +1,80 @@
+
+<HTML>
+<HEAD>
+
+<TITLE>Discrete Maths  Materials</TITLE>
+
+</HEAD>
+
+<BODY >
+
+
+
+<head>
+<title>
+
+</title>
+
+
+</head>
+
+Here are my <A HREF ="ODL116.html">Discrete Mathematics course
+materials for Queen Mary</A> in html format.  Of course some of the
+figures don't come out properly so it might be hand to have the same
+stuff <A HREF ="ODL116coursemat.pdf"> in .pdf format. </A> People who
+are having trouble making sense of the curly bracket notation for set
+abstraction may find <A HREF ="brackets.pdf"> Curly Brackets </A> helpful.
+ <hr>
+<p> Here are my <A HREF ="RLFA.pdf">Regular Languages and
+Finite Automata </A> materials for Queen Mary, in pdf format.  If you
+peruse them you will notice that this file should really be in html
+with links to the answers-to-the-exercises. Any student who can turn
+the whole thing into html and set up wee files with the answers and
+link them to the html file will be covered in gold, or something like
+that.  In sticky buns, at the very least.
+<p> 
+ <hr>
+<p> Here are my <A HREF ="logicforlinguists.pdf">  Logic for linguists </A> notes.
+ <hr>
+<p> Here are my <A HREF ="chchlectures.pdf">  Canterbury lectures on Logic </A> notes.
+ <hr>
+
+<p> 
+
+
+
+<A HREF ="compsci_notes.pdf"> Here </A> are my
+supervision notes for assorted CS topics.  They are messages to
+myself, and come with no guarantees....
+ <hr>
+
+<p>
+
+
+<A HREF ="keeping_out_of_mischief.htm"> Here </A> is Gary Jackson's html-ised
+illustrated discussion of the handshaking riddle. <hr>
+
+<p>
+
+Part II Set theory people might like to have a look at my notes (soon
+to be published by CUP on <A HREF = "axiomsofsettheory.pdf"> the
+axioms of set theory</A>
+
+<p>
+
+ <hr>
+<A HREF = "modelquestion.pdf"> This </A> is a model tripos question for Part II Set Theory and Logic.
+<p>
+<A HREF = "dualityquestion.pdf"> This </A> is a model tripos question for ....  well, i'm not sure.  It just might be a teeny bit hard for 1a discrete maths but is probably too easy for 1b.
+
+<p>
+
+</h3>
+
+</body>
+
+
+
+</BODY>
+
+</HTML>

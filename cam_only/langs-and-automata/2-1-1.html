@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>More about bombs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>2.1.1 More about bombs</h2>
+<h3>2.1.1.1 Palindromes do not form a regular language</h3>
+<p>You may recall that a palindrome is a string that is the same read backwards or
+forwards. If you ignore the spaces and the punctuation then the strings 'Madam,
+I'm Adam' and 'A man, a plan, a canal - Panama!' are palindromes.
+<p>(Even better: A man, a plan, a canoe, pasta, heros, rajahs, a coloratura,
+maps, snipe, percale, macaroni, a gag, a banana bag, a tan, a tag, a banana bag
+again (or a camel), a crepe, pins, Spam, a rut, a Rolo, cash, a jar, sore hats, a
+peon, a canal - Panama!!)</p>
+<p>The thought-experiment swiftly persuades us that the set of palindromes
+over an alphabet &#931; is not regular (unless &#931; contains only one character of
+course!). After all - as you will have found by looking first at "Madam, I'm
+Adam" and then the two longer examples - to check whether or not a string is
+a palindrome one finds oneself making several passes through it, and having to
+compare things that are arbitrarily far apart.</p>
+<p>Let <i>L</i> be the language of palindromes over {<i>a</i>, <i>b</i>}. It isn't regular, but there is
+no obvious bomb. However, if <i>L</i> were regular then so too would be the language
+<i>L</i> &#8745; <i>L</i>(<i>a</i>*<i>ba</i>*). (The intersection of two regular
+languages is regular.) This new language is just the language {<i>a<sup>n</sup>b<sup>n</sup></i> : <i>n</i> &#8714; &#8469;}.</p>
+<h3>2.1.1.2 The language {<i>ww</i> : <i>w</i> &#8714; &#931;*} is not regular</h3>
+I don't see how to use a bomb to show that {<i>ww</i> : <i>w</i> &#8714; &#931;*} is not regular,
+though it's obvious from the thought-experiment. However, we do know that
+the language <i>L</i>(<i>a</i>*<i>b</i>*<i>a</i>*<i>b*</i>) is regular so if our candidate were regular so too
+would be the language {<i>ww</i> : <i>w</i> &#8714; &#931;*} &#8745; <i>L</i>(<i>a</i>*<i>b</i>*<i>a</i>*<i>b*</i>). Now this language is
+{<i>a<sup>n</sup>b<sup>m</sup>a<sup>n</sup>b<sup>m</sup></i> : <i>m</i>, <i>n</i> &#8714; &#8469;} and it isn't hard to find bombs to explode machines
+purporting to recognise this language. You might like to complete the proof by
+finding such a bomb.</p><br><br>
+<a href="answer15.html">Click for answer</a><br><br>
+<a href="2-2.html">Next: 2.2 Kleene's theorem</a><br>
+<a href="2-1.html">Back: 2.1 Regular Expressions</a>
+
+</body>
+</html>

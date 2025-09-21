@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Answer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>Answer</h2>
+<p><i>a<sup>k</sup>b</i><sup>(<i>k</i>−|<i>w</i>|)</sup><i>b</i><sup>(|<i>w</i>|&#183;<i>n</i>)</sup>
+</p>
+<a href="1-4-1.html">Back to notes</a>
+
+<!-- Sign and date the page, it's only polite! -->
+<address>Notes: 12th May 2008, Thomas Forster<br>
+		 HTML: August 2009, Chloe Brown</address>
+</body>
+</html>

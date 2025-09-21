@@ -1,0 +1,20 @@
+
+
+For a prime power "q congruent to 1 modulo 4", a Paley graph is the graph
+with vertex set the finite field on q elements, "F_q", and an edge between
+two of its vertices if and only if their difference is a non-zero square
+in "F_q".
+
+A key feature of Paley graphs is that they mimic the typical behaviour of
+a random graph "G(q,1/2)", that is the graph on q vertices where each
+possible edge is present or absent equiprobably, independent of all other
+edges.
+
+A particular reason for interest in Paley graphs is the long-standing
+suspicion that some of them may provide better lower bounds for diagonal
+Ramsey numbers than the current best graphs "G(q,1/2)".
+
+The aim of this talk will be the discussion of Paley graphs, their
+connection with Ramsey numbers and the theory of Extremal Ramsey graphs.
+
+

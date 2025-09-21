@@ -1,0 +1,14 @@
+Pernicious logical metaphors
+
+	   Edwin Coleman
+	         October 2006
+
+My real position is that logic is a mere sub-branch of rhetoric, but in this
+paper I only try to show an area of overlap. Certain usages in logical work
+are metaphorical, and I argue that this has pernicious effects in a
+discipline assumed strictly literal. Among these pernicious effects are the
+bizarre and fruitless focus of philosophy of mathematics on the
+pseudo-problems of foundations and objects. I mostly examine the locution
+'logical construction' and a range of associated metaphors. Some sketchy
+remarks on the history of rhetoric are offered in explanation.
+

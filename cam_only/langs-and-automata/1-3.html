@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>The Pumping Lemma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>1.3 The Pumping Lemma</h2>
+<p>The pumping lemma starts off as a straightforward application of the pigeonhole
+principle. If a machine &#8499; has <i>n</i> states, and accepts even one string that is of length greater than <i>n</i>, then in the course of reading (and ultimately accepting) that string it must have visited one of its states - <i>s</i>, say - twice. (At least twice:
+quite possibly more often even than that). This means that if <i>w</i> is a string
+accepted by &#8499;, and its length is greater than <i>n</i>, then there is a decomposition
+of <i>w</i> as a concatenation of three strings <i>w<sub>1</sub></i><i>w<sub>2</sub></i><i>w<sub>3</sub></i> where <i>w<sub>1</sub></i> is the string of
+characters that takes it from the start state to the state <i>s</i>; <i>w<sub>2</sub></i> is a string that
+takes it from <i>s</i> on a round trip back to <i>s</i>; and <i>w<sub>3</sub></i> is a string that takes it from
+<i>s</i> on to an accepting state.</p>
+
+<p>This in turn tells us that &#8499; - having accepted <i>w<sub>1</sub></i><i>w<sub>2</sub></i><i>w<sub>3</sub></i> - must also accept
+<i>w<sub>1</sub></i>(<i>w<sub>2</sub></i>)<sup><i>n</i></sup><i>w<sub>3</sub></i> for any <i>n</i>. &#8499; is a finite state machine and although it "knows" at
+any one moment which state it is <i>in at that moment</i> it has no recollection of
+its history, no recollection of how it got into that state nor of how often it has
+been in that state before.</p>
+<p>Thus we have proved</p><br>
+<b>The Pumping Lemma:</b><br>
+If a finite state machine &#8499; has <i>n</i> states, and <i>w</i> is a string of length
+> <i>n</i> that is accepted by &#8499;, then there is a decomposition of <i>w</i> as a concatenation of three strings <i>w<sub>1</sub></i><i>w<sub>2</sub></i><i>w<sub>3</sub></i> such that &#8499; also accepts all
+strings of the form <i>w<sub>1</sub></i>(<i>w<sub>2</sub></i>)<sup><i>n</i></sup><i>w<sub>3</sub></i> for any <i>n</i>.
+<p>It does not imply that if <i>w</i> is a string of length > <i>n</i> that is accepted by &#8499;,
+and <i>w<sub>1</sub></i><i>w<sub>2</sub></i><i>w<sub>3</sub></i> is <i>any old</i> decomposition of <i>w</i> as a concatenation of three strings
+then &#8499; also accepts all strings of the form <i>w<sub>1</sub></i>(<i>w<sub>2</sub></i>)<sup><i>n</i></sup><i>w<sub>3</sub></i> for any <i>n</i>: it says merely
+that <i>there is at least one</i> such decomposition.</p>
+<p>You need to be very careful when attempting to state the pumping lemma
+clearly, as it has so many alternations of quantifiers: There is a number <i>s</i>
+(actually the number of states in the machine) which is so large that for all
+strings <i>w</i> with |<i>w</i>| > <i>s</i> that are accepted by &#8499; there are substrings <i>x</i>,<i>w'</i>, and
+<i>y</i> of <i>w</i>, so that <i>w</i> = <i>xw'y</i> such that for all <i>n</i>, <i>x(w')<sup>n</sup>y</i> is also accepted by &#8499;.
+That's four blocks of quantifiers: a lot of quantifier alternations!!</p>
+<p>The pumping lemma is very useful for proving that languages aren't regular.</p>
+<p>In order to determine whether a language is regular or not you need to form
+a hunch and back it. Either guess that it is regular and then find a machine that
+recognises it or form the hunch that it isn't and then use the pumping lemma.
+How do you form the hunch? Use the thought experiment. If the thought
+experiment tells you: "a finite amount of information" you immediately know
+it's a finite-state machine, and if you think about it, it becomes clear what the
+machine is. What do we do if the thought-experiment tells you that you need
+infinitely many states (beco's there appears to be no bound on the amount of
+information you might need to maintain)? This is where the pumping lemma
+comes into play. You use it to build <i>bombs</i>.</p>
+<p>Bombs?! Read on.</p>
+
+<a href="1-4.html">Next: 1.4 Bombs</a><br>
+<a href="1-2.html">Back: 1.2 The Thought-experiment</a>
+
+</body>
+</html>

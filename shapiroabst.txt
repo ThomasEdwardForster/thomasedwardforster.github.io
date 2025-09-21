@@ -1,0 +1,12 @@
+
+I consider the raging issue concerning the extent to which is it 
+possible to rigorously prove (or disprove) that a function is 
+computable if and only if it is recursive.  It makes for an 
+interesting case study for the relationship between formal and 
+informal proof, and for the relationship between mathematics and 
+non-mathematical reality.  I examine the extent to which Friedrich 
+Waismann's notion of open texture applies to mathematics, using Imre 
+Lakatos's thesis of proofs and refutations, and his historical 
+examples, as a backdrop.  The ramifications for the philosophical 
+understanding of Church's thesis are then examined.
+

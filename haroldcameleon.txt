@@ -1,0 +1,83 @@
+
+Thomas,
+
+> > My notes can be found at on my website in the unlinked directory TEMP
+> > as OrdNotes.pdf.
+
+
+> Excellent.  Thanks.  I'll tell the lads here too.
+
+The notes are more or less finished now. I might do a bit of
+tinkering, but there won't be any sbstantial changes.
+
+
+> I've had a look at the abstract/summary you have sent Sam, and it sounds 
+> as if the best thing might be for you to take over from me somewhere in 
+> the middle of Veblen.  That way my meagre offering is not completely 
+> pointless, and you have more time to concentrate on the hard stuff - and 
+> the lads will find it hard.   Does that sound sensible..?
+
+Yes, that sound Ok. When I start I will backtrack a little, so it
+won't matter if you don't do everything you plan to.
+
+
+> > About speaking at Cameleon: I can if it will make things easier. I
+> > have a talk about the classical content and difference between
+> > Monotone Bar Induction and the Fan Principle, which might interest a
+> > few people. It joint work with Nicola Gambino (and it enables me to
+> > put the boot into Brouwerian Bollocks).
+
+
+> Sounds fine.  Please send me a title and an abstract for me to post on
+> www.dpmms.cam.ac.uk/~tf/decmeeting.html
+
+Here is a title and abstract.
+
+   The topological content of Monotone Bar Induction and the Fan
+   Principle
+
+                Harold Simmons   University of Manchester
+
+   Both MBI and FP are techniques used in some variant of constructive
+   mathematics. They also have some interest for proper
+   mathematics. They are often only aplied only to the Baire tree and
+   the Cantor tree, respectively, but in a suitable form can be applied
+   to any tree. In the classical context they are choice principles
+   related to Dependent Choice. The two principles are not equivalent
+   and the difference can be measure using a tological ranking
+   technique.
+
+   I will describe some of the older work on the techniques, and then
+   throw in a new observation.
+
+>> 
+>> I am hoping to bring Susan with me to the meeting. She has never been
+>> to Cambridge. So I need a bit of advice.
+>> 
+>> It's the parking problem. If we stay in one of the colleges, will it
+>> have parking. Or is it reasonable to leave the car somewhere else for a
+>> few days. If not we'll come by train. (I think we can both get
+>> pensioners tickets.)
+>
+
+
+> My guess is that the simplest thing to do is to take a train.  If you book 
+> on a direct cross-country train well in advance it is actually quite 
+> cheap.   If you tell me which days you want i'll try to book a double 
+> guest room in one of my colleges.
+
+We will probably travel down by train on Tuesday 28th, so I will be
+there for your talks. I don't yet know whether to come back on the
+Sunday or the Monday. I'm investigating the possiblities.
+
+Harold
+
+PS  Some seems to have gone wrong with my pine system, so I will send
+two version of this: one by pine and one by old fashioned mail.
+
+
+
+
+
+
+

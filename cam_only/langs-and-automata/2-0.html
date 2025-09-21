@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Operations on machines and languages</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>Chapter 2</h2>
+<h1>Operations on machines and languages</h1>
+<p>Languages are sets, and there are operations one can perform on them simply in
+virtue of their being sets. If <i>K</i> and <i>L</i> are languages, so obviously are <i>K</i>&#8746;<i>L</i>, <i>K</i>&#8745;<i>L</i>
+and <i>K</i> \ <i>L</i>. There is one further operation that we need which is defined only
+because languages are sets of strings and there are operations we can perform
+on strings, specifically concatenation. This concatenation of strings gives us a
+notion of concatenation of languages. <i>KL</i> = {<i>wu</i> : <i>w</i> &#8714; <i>K</i> &#8743; <i>u</i> &#8714; <i>L</i>}, and the
+reader can probably guess what K* is going to be. It's the union of <i>K</i>, <i>KK</i>, <i>KKK</i> . . .
+</p>
+<p>Exercise: If <i>K</i> = {<i>aa</i>, <i>ab</i>, <i>bc</i>} and <i>L</i> = {<i>bb</i>, <i>ac</i>, <i>ab</i>} what are (i) <i>KL</i>, (ii) <i>LK</i>, (iii) <i>KK</i>, (iv) <i>LL</i>?<br><br>
+<a href="answer13.html">Click for answer</a></p>
+<p>Exercise: Can you express |<i>KL</i>| in terms of |<i>K</i>| and |<i>L</i>|?<br><br>
+<a href="answer14.html">Click for answer</a></p>
+<p>The following fact is fundamental.<br>
+If <i>K</i> and <i>L</i> are regular languages so are <i>K</i> &#8745; <i>L</i>, <i>K</i> \ <i>L</i>, <i>KL</i> and <i>K</i>*.</p>
+<p>So every language you can obtain from regular languages by means of any of the operations we have just seen is likewise regular.</p>
+<p>Let's talk through this result.</p>
+
+<h3><i>K</i> &#8745; <i>L</i></h3>
+<p>The thought-experiment shows very clearly that the intersection of two regular
+languages is regular : if I have a machine &#8499;<sub>1</sub> that recognises <i>L</i><sub>1</sub> and a machine &#8499;<sub>2</sub> that recognises <i>L</i><sub>2</sub> I obviously run them in parallel, giving each new
+incoming character to both machines and accept a string if they both accept it.
+Using the imagery of the thought-experiment, the clipboard of information that
+I hand on to you when I go for my coffee break has become a pair of clipboards,
+one for &#8499;<sub>1</sub> and one for &#8499;<sub>2</sub>.
+</p><p>But although this makes it clear that the intersection of two regular lan-
+guages is regular, it doesn’t make clear what the machine is that recognises the
+intersection. We want to cook up a machine &#8499;<sub>3</sub> such that we can see running-&#8499;<sub>1</sub>-and-&#8499;<sub>2</sub>-in-parallel as merely running &#8499;<sub>3</sub>. &#8499;<sub>3</sub> is a sort of composite of
+&#8499;<sub>1</sub> and &#8499;<sub>2</sub>. What are the states of this new composite machine?</p>
+<p>The way to see this is to recall  the idea that a state of a
+machine is a state-of-knowledge about the string-seen-so-far. What state-of-
+knowledge is encoded by a state of the composite machine? Obviously a state
+of the composite machine must encode your knowledge of the states of the two
+machines that have been composed to make the new (composite) machine. So
+states of the composite machine are ordered pairs of states of &#8499;<sub>1</sub> and &#8499;<sub>2</sub>.
+</p><p>What is the state transition function for the new machine? Suppose &#8499;<sub>1</sub> has a transition function &#948;<sub>1</sub> and &#8499;<sub>2</sub> has a transition function &#948;<sub>2</sub>, then the
+new machine has the transition function that takes the new state &#12296;<i>s</i><sub>1</sub>, <i>s</i><sub>2</sub>&#12297; and a
+character <i>c</i> and returns the new state &#12296;&#948;<sub>1</sub>(<i>s</i><sub>1</sub>, <i>c</i>), &#948;<sub>2</sub>(<i>s</i><sub>2</sub>, <i>c</i>)&#12297;.</p>
+
+<h3><i>K</i>&#8746;<i>L</i> and <i>K</i> \ <i>L</i></h3>
+<p>The proofs that a union or difference of two regular languages is regular is
+precisely analogous.</p>
+<p>People sometimes talk of the <i>complement</i> of a language <i>L</i>. <i>L</i> is a language
+over an alphabet &#931;, and its complement, relative to &#931;, is &#931;* \ <i>L</i>. It's easy to see
+that the complement of a regular language <i>L</i> is regular: if we have a machine
+&#8499; that recognises <i>L</i>, then we can obtain from it a machine that recognises the
+complement of <i>L</i> just by turning all accepting states into non-accepting states
+and vice versa.</p>
+<p>(A common mistake is to assume that every subset of a regular language
+is regular. I think there must be a temptation to assume that a subset of a
+language recognised by &#8499; will be recognised by a version of &#8499; obtained by
+throwing away some accepting states.)
+</p>
+
+<h3><i>KL</i></h3>
+<p>It's not obvious that the concatenation of two regular languages is regular, but
+it's plausible. We will explain this later. For the moment we will take it as read
+and press ahead. This leads us to . . .</p>
+
+<a href="2-1.html">Next: 2.1 Regular Expressions</a><br>
+<a href="1-4-2.html">Back: 1.4.2 A few more corollaries</a>
+
+</body>
+</html>

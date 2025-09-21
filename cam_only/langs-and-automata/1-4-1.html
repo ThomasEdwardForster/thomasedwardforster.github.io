@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>One-step refutations using bombs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>1.4.1 One-step refutations using bombs</h2>
+<h3>The language {<i>a<sup>n</sup>b<sup>n</sup></i> : <i>n</i> &#8714; &#8469;} is not regular</h3>
+<p>Suppose the Spiv shows us &#8499;, a finite state machine that - according to him - recognises the language {<i>a<sup>n</sup> b<sup>n</sup></i> : <i>n</i> &#8805; 0}. The thought-experiment tells us immediately that this language is not regular so we
+embark on the search for a bomb with high expectations of success. In the first
+instance the only information we require of the Spiv is the number of states of
+&#8499;, though we will be back later for some information about the state diagram.
+For the moment let <i>k</i> be any number such that 2<i>k</i> is larger than the number of
+states of &#8499;. Think about the string <i>a<sup>k</sup> b<sup>k</sup></i>. What does &#8499; do when fed <i>a<sup>k</sup> b<sup>k</sup></i>? It
+must go through a loop of course, because we have made <i>k</i> so large that it has
+to. In going through the loop it is reading a substring <i>w</i> of <i>a<sup>k</sup> b<sup>k</sup></i>. What does the substring consist of? We don't know the exact answer to this, but we can narrow it down to one of the three following possibilities, and in each case we can design a bomb.
+</p>
+
+<ol><li><i>w</i> consists entirely of <i>a</i>s. Then we can take our bomb to be the string
+obtained from <i>a<sup>k</sup></i> by putting <i>n</i> copies of <i>w</i> instead of just one. Using
+our notation to the full, we can notate this string <i>a</i><sup>(<i>k</i>-|<i>w</i>|)</sup> <i>a</i><sup>(|<i>w</i>|&#183;<i>n</i>)</sup> <i>b<sup>k</sup></i><br>
+Explain why this is correct.<br><br>
+<a href="answer10.html">Click for the answer</a></li><br>
+
+<li><i>w</i> consists entirely of <i>b</i>s. Then our bomb will be the string obtained from
+<i>a<sup>k</sup> b<sup>k</sup></i> by putting in several copies of <i>w</i> instead of just one. &#8499; will accept
+this string, but this string contains more <i>b</i>s than <i>a</i>s, and &#8499; shouldn't
+have accepted it. Exercise: how do we notate this bomb, by analogy with
+the bomb in the previous case?<br><br>
+<a href="answer11.html">Click for the answer</a></li><br>
+
+<li><i>w</i> consists of some <i>a</i>s followed by some <i>b</i>s. In this case, when we insert
+<i>n</i> copies of <i>w</i> to obtain our bomb, we compel &#8499; to accept a string that
+contains some as followed by some <i>b</i>s and then some <i>a</i>s again (and then
+some <i>b</i>s). But - by saying that &#8499; recognised {<i>a<sup>n</sup>b<sup>n</sup></i> : <i>n</i> &#8714; &#8469;} - the Spiv
+implicitly assured us that the machine would not accept any string containing <i>a</i>s after <i>b</i>s. Exercise: how do we notate this bomb, by analogy
+with the bomb in the previous case?
+<br><br>
+<a href="answer12.html">Click for the answer</a></li></ol><br>
+
+<p>So we know we are going to be able to make a bomb whatever <i>w</i> is. However,
+if we are required to actually exhibit a bomb we will have to require the Spiv
+to tell us what <i>w</i> is.</p>
+
+<h3>The language {<i>a<sup>k</sup>ba<sup>k</sup></i> : <i>k</i> &#8805; 0} is not regular</h3>
+<p>Suppose the Spiv turns up with &#8499;, a finite state machine that is alleged to
+recognise the language {<i>a<sup>k</sup>ba<sup>k</sup></i> : <i>k</i> &#8805; 0}. Notice that every string in this language
+is a palindrome (a string that is the same read backwards as read forwards).
+We will show that &#8499; will accept some strings that aren't palindromes, and
+therefore doesn't recognise {<i>a<sup>k</sup>ba<sup>k</sup></i> : <i>k</i> &#8805; 0}.
+</p><p>As before, we ask the Spiv for the number of states the machine has, and
+get the answer <i>m</i>, say. Let <i>n</i> be any number bigger than <i>m</i> and consider what happens when we give &#8499; the string <i>a<sup>n</sup>b<sup>n</sup></i>. This will send &#8499; through a loop.
+That is to say, this string <i>a<sup>n</sup>b<sup>n</sup></i> has a substring within it which corresponds to
+the machine's passage through the loop. Call this string <i>w</i>. Now, since we have
+force-fed the machine <i>n</i> <i>a</i>'s, and it has fewer than <i>n</i> states, it follows that <i>w</i>
+consists entirely of <i>a</i>'s. Now we take our string <i>a<sup>n</sup>b<sup>n</sup></i> and modify it by replacing
+the substring <i>w</i> by lots of copies of itself. Any number of copies will do, as long
+as it's more than one. This modified string (namely <i>a</i><sup>(<i>k</i>+|<i>w</i>|)</sup><i>ba<sup>k</sup></i>) is our bomb.</p><p>
+Thus &#8499; accepts our bomb, thereby demonstrating - as desired - that it doesn't
+recognise {<i>a<sup>k</sup>ba<sup>k</sup></i> : <i>k</i> &#8805; 0}.</p>
+
+<a href="1-4-2.html">Next: 1.4.2 A few more corollaries</a><br>
+<a href="1-4.html">Back: 1.4 Bombs</a>
+
+</body>
+</html>

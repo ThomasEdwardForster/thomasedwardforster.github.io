@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Bombs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>1.4 Bombs</h2>
+<p>Let <i>L</i> be a language, and suppose that although <i>L</i> is not regular, there is nevertheless someone who claims to have a machine &#8499; that recognises it: i.e., they claim to have a machine that accepts members of <i>L and nothing else</i>. This person is the <b>Spiv</b>. This machine is fraudulent of course, but how do we prove it? What we need is a <i>bomb</i>.</p>
+<p><b>bomb</b> (for &#8499;) is a string that is either (i) a member of <i>L</i> not
+accepted by &#8499; or (more usually) (ii) a string accepted by &#8499; that
+isn't in <i>L</i>. Either way, it is a certificate of fraudulence of the machine
+&#8499;, and therefore something that <b>explodes</b> those fraudulent claims.</p>
+
+<p>How do we find bombs? This is where the pumping lemma comes in handy.
+The key to designing a bomb is feeding &#8499; a string <i>w</i> from <i>L</i> whose length is
+greater than the number of states of &#8499;. &#8499; accepts <i>w</i>. &#8499; must have gone
+through a loop in so doing. Now we ascertain what substring <i>w'</i> of <i>w</i> sent &#8499;
+through the loop, and we insert lots of extra copies of that substring next to
+the one copy already there <i>and we know that the new "pumped" string will also
+be accepted by</i> &#8499;. With any luck it won't be in <i>L</i>, and so it will be a bomb.
+The key idea here is that <i>the machine has no memory of what has happened
+to it beyond what is encoded by it being in one state rather than another</i>. So
+it cannot tell how often it has been though a loop. We - the bystanders - know
+how often it has been sent through a loop but the machine itself has no idea.</p>
+<p>Examples are always a help, so let us consider some actual challenges to the
+bomb-maker.</p>
+
+<a href="1-4-1.html">Next: 1.4.1 One-step refutations using bombs</a><br>
+<a href="1-3.html">Back: 1.3 The Pumping Lemma</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Answer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>Answer</h2>
+<p>           The reason why we need a stack is to keep track of the number of
+unmatched left brackets we have accumulated. We don't need it for anything
+else so the stack alphabet has only one character (which might as well be a left
+bracket. I know we said the alphabets should be kept disjoint for reasons of
+hygiene but...!) The PDA starts in the accepting state with an empty stack.</p>
+<p>Transition rules are as follows:
+<ol><li>If you are in the dead state, stay there whatever happens.</li>
+<li>If you are in the accepting state<br>
+        (a) if you read a right bracket go to the dead state;<br>
+        (b) if you read a left-bracket push it onto the stack and go to the
+            wait-and-see state;</li>
+<li>If you are in the wait-and-see state then<br>
+        (a) if you read a left bracket push it on the stack and remain in the
+            wait-and-see state;<br>
+        (b) if you read a right bracket pop the top character off the stack and
+            stay in the wait-and-see state unless the stack is now empty, in
+            which case go to the accepting state.<br></li></ol>
+<p>Notice that if you are in the wait-and-see state then the stack is not empty,
+so we don't have to define the transition function for the case when the stack
+is not empty. Similarly when we are in the accepting state the stack must
+be empty. These two facts are not hard to see, but are a wee bit tricky to
+prove. You would have to prove by induction on the length <i>n</i> of possible input
+strings that for all strings <i>s</i> of length <i>n</i> when the machine has read <i>s</i> then if
+it's in the wait-and-see state then the stack is not empty and if it is in the
+accepting state then the stack is empty.</p>
+<p>The PDA you have just written is a deterministic PDA.
+</p>
+<a href="3-1.html">Back to notes</a>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Regular Expressions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>2.1 Regular Expressions</h2>
+<p>A regular expression is a formula of a special kind. Regular expressions provide
+a notation for regular languages. We can declare them in BNF (Backus-Naur
+form).</p>
+<p>We define the class of regular expressions over an alphabet &#931; recursively as
+follows.</p>
+<ol><li>Any element of &#931; standing by itself is a regular expression;</li>
+    <li>If <i>A</i> is a regular expressions, so is <i>A</i>*;</li>
+    <li>If <i>A</i> and <i>B</i> are regular expressions, so is <i>AB</i>;</li>
+    <li>If <i>A</i> and <i>B</i> are regular expressions, so is <i>A</i>|<i>B</i>.</li></ol>
+<p>For example, for any character <i>a</i>, <i>a</i>* is a regular expression.
+</p><p>The idea then is that regular expressions built up in this way from characters
+in an alphabet &#931; will somehow point to regular languages &#8838; &#931;* . Now we are
+going to recall the <i>L</i>() notation, where <i>L</i>(&#8499;) is the
+language recognised by &#8499;, and overload it to notate a way of getting languages
+from regular expressions. We do this by recursion using the clauses above.</p>
+<ol><li>If <i>a</i> is a character from &#931; (and thus by clause 1, a regular expression) then
+       <i>L</i>(<i>a</i>) = {<i>a</i>}.</li>
+    <li><i>L</i>(<i>A</i>|<i>B</i>) = <i>L</i>(<i>A</i>) &#8746; <i>L</i>(<i>B</i>).</li>
+    <li><i>L</i>(<i>AB</i>) = <i>L</i>(<i>A</i>)<i>L</i>(<i>B</i>). This looks a bit cryptic, but actually makes perfect
+       sense. <i>L</i>(<i>A</i>) and <i>L</i>(<i>B</i>) are languages. If <i>K</i><sub>1</sub> and <i>K</i><sub>2</sub> are languages, you already
+       know what <i>K</i><sub>1</sub><i>K</i><sub>2</sub> from before, so you know what <i>L</i>(<i>A</i>)<i>L</i>(<i>B</i>) is!
+       <i>L</i>(<i>A</i>*) is the set <i>L</i>(<i>A</i>) &#8746; <i>L</i>(<i>AA</i>) &#8746; <i>L</i>(<i>AAA</i>) . . . = &#8899;<sub><i>n</i>&#8714; &#8469;</sub> <i>A</i><sup><i>n</i></sup>.&nbsp;&nbsp;&nbsp;<i>A</i><sup><i>n</i></sup> is naturally
+       <i>AAAA</i> . . . <i>A</i> (<i>n</i> times).</li></ol>
+</p>
+
+<a href="2-1-1.html">Next: 2.1.1 More about bombs</a><br>
+<a href="2-0.html">Back: 2 Operations on machines and languages</a>
+
+</body>
+</html>

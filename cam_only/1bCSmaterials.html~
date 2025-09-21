@@ -1,0 +1,75 @@
+
+
+
+
+<TITLE>Teaching Materials</TITLE>
+
+
+<HTML>
+<HEAD>
+
+<TITLE>Computer Science 1b</TITLE>
+
+</HEAD>
+
+<BODY >
+
+
+        <TR ALIGN="center" VALIGN="middle">
+        <TD ALIGN="center" BGCOLOR="#FFFFFF">
+        <FONT SIZE="+2">
+Computer Science 1b  Teaching Materials </FONT></TD>
+        <FONT SIZE="+1">
+<hr><b>Logic and Proof</b><hr>
+
+
+Here 
+are some
+<A HREF ="logicandproofquestions.pdf"> assorted questions </A> on Logic and proof (mainly of my own devising) with answers.  It also contains assorted answers to old exam questions and exercises in Prof. Paulson's notes.
+
+<br><A HREF ="logicandproofFAQ.pdf"> Here </A> is a two-page file on the use of the various arrow and turnstile symbols used in that course.
+<br>
+
+Here is a file of useful material on a <A HREF ="unification.pdf"> unification algorithm </A>.
+
+<hr><hr><b>Foundations of Functional Programming</b><hr>
+Here are some discussions of old tripos questions in <A HREF ="foundFP.pdf"> Foundations of Functional Programming </A>.  In particular, here is a discussion of <A HREF = "scottdefinable.pdf"> 2015 paper 6 question 4</A>
+
+
+
+
+
+
+ <hr><hr><b>Computation Theory</b><hr>
+
+
+Here is a discussion of 
+<A HREF ="x10nonce.pdf"> the last part of Q 10 Prof Pitts' example sheet</A>.
+It concerns the subtle question of why the Ackermann function is not primitive recursive even th' its slices are.
+<br>Here is the pdf file of art of <A HREF ="2009p6q3.pdf"> 2009 paper 6 question 3 </A>.<br>Here is the pdf file of 
+the notes of Richard Crouch's second-year course at the University of Nottingham on <A HREF ="crouchnotes.pdf"> Languages, Computation and Automata</A> . They do not correspond directly to any one 1b course here, but students might find them useful: they are <i> very</i> meaty.
+<p> I found this rather nice <A HREF
+="http://www.itu.dk/people/sestoft/lamreduce/"> lambda-calculus reduction workbench</A>.  I hope you will find it
+fun.
+
+<hr><hr><b>Miscellaneous</b><hr>
+Here
+are my
+<A HREF ="compsci_notes.pdf"> 
+supervision notes for assorted CS topics </A> .  They are messages to
+myself, and come with no guarantees....
+ <hr><A HREF = "dualityquestion.pdf"> This </A> is a model tripos question for ....  well, i'm not sure.  It just might be a teeny bit hard for 1a discrete maths but is probably too easy for 1b.<hr>
+<A HREF = "1aCSmaterials.html"> Materials for 1a Computer Science </A>.
+<br> <A HREF = "partiiimaterials.html"> Materials for Part III Mathematics </A>.
+<br><A HREF = "logicforlinguistsmaterials.html"> Materials for Logic-For-Linguists</A>.
+<br> <A HREF = "partiimaterials.html"> Materials for Part II Mathematics </A>.
+<br> <A HREF = "partivmaterials.html"> Materials for Part IV Mathematics </A>.
+<br> <A HREF = "CSlogiccoursematerials.html"> Materials for the Computer Science M. Phil </A>.</BODY>
+
+</HTML>
+
+
+
+
+
+

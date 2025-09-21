@@ -1,0 +1,120 @@
+
+
+
+
+<TITLE>Part II Teaching Materials</TITLE>
+
+
+<HTML>
+<HEAD>
+
+<TITLE> Part II Teaching Materials</TITLE>
+
+</HEAD>
+
+<BODY >
+
+        <FONT SIZE="+2">
+Part II Mathematics</FONT></TD><hr>
+
+
+ <FONT SIZE="+2">
+Set Theory and Logic
+<hr>         <FONT SIZE="+1"> 
+
+Here are my <A HREF = "logic_supervision_notes.pdf"> supervision
+notes</A> for the example sheets. They have an appendix containing
+discussions of some tripos questions that people have asked me about
+in the past.  The link will be updated so that discussions of
+questions on each sheet will go live after all my supervisees have
+attempted that sheet. Hoewever for the moment they contain answers to <i>last</i> year's question!<hr> 
+
+
+
+Here are some <A HREF = "oldtriposquestions.pdf"> model tripos questions </A> 
+that you might find helpful for your revision, and 
+<A HREF = "hurkens.pdf"> here </A> is a question more in the style of an 
+example sheet question.  These all have model answers which i will show you if 
+you submit an answer of your own.
+<hr>
+I have stumbled upon <A HREF = "exsheet.pdf"> a spiced-up old example sheet for this course</A>.   Some of these questions i have forgotten how to do, so if you tackle them, warn me so i can do my homework!
+<hr>
+You might find my <A HREF = "TMStalk2012.pdf"> Tutorial on ordinals</A> helpful.
+It was a talk to the Trinity Mathematical Society. 
+
+
+<hr>
+
+
+
+The following puzzle came up in my research; you might like to try it.
+Fix a set U, and suppose we have a family X of n distinct subsets of
+U.  Show that we can find a family x of at most n-1 members of U, such 
+that, for any two distinct members of X, there is a member of x that belongs to one but not the other.
+ 
+<hr> 
+An answer to <A HREF = "cleverblass.pdf">  Hyland sheet 2 q 9 (2007/8 edition)</A>. 
+It is a proof that for any vector space all its bases are the same size. 
+It uses the prime ideal theorem. I think it comes from Rubin and Rubin but it was shown me by Andreas Blass.  
+ <hr>
+
+
+Here is a discussion of  <A HREF = "rickard.pdf"> Question 14 </A> on Prof Leader's 
+first example sheet from 2011.<br>
+Here is a discussion of  <A HREF = "peto.pdf"> Question 14 </A> on Prof Leader's 
+second example sheet from 2011.
+<hr>
+
+ <A HREF = "choice.pdf">Here</A> is the material on 
+Question 6 on sheet 4 of Professor Johnstone's 2012 Set Theory and Logic alluded to in my <A HREF = "logic_supervision_notes.pdf"> supervision
+notes</A>.
+
+<hr> 
+<A HREF = "axinfnonce.pdf"> Here </A> is
+a brief discussion of the subtleties of deducing the axiom of the
+empty set from the axiom of infinity.  <br>
+You might like to have a look at my notes (to be published
+one day, eventually! by CUP) on <A HREF = "axiomsofsettheory.pdf"> the
+axioms of set theory</A>.
+
+<br>
+These <A HREF ="fundamentalsequence.pdf"> notes on countable ordinals </A>might be useful.
+<br>
+I include here a shameless plug for <A HREF = "baby.html"> Logic
+Induction and sets </A>, the most wonderful introduction to --- well
+--- <i> Logic induction and sets </i> that the world has ever seen.
+I'm not suggesting for even one moment that you should <i> read </i>
+it: just <i> buy </i> it!  <hr>  <hr>
+
+
+
+
+</h3>
+
+
+<FONT SIZE="+1">
+
+<A HREF = "1bCSmaterials.html">  Materials for 1b Computer Science</A>.
+<br>
+<A HREF = "1aCSmaterials.html"> Materials for 1a Computer Science </A>.
+<br> <A HREF = "partiiimaterials.html"> Materials for Part III Mathematics </A>.
+<br><A HREF = "logicforlinguistsmaterials.html"> Materials for Logic-For-Linguists</A>.
+<br> <A HREF = "partiimaterials.html"> Materials for Part II Mathematics </A>.
+<br> <A HREF = "partivmaterials.html"> Materials for Part IV Mathematics </A>.
+<br> <A HREF = "CSlogiccoursematerials.html"> Materials for the Computer Science M. Phil </A>.
+  </FONT></TD>
+
+</body>
+
+
+
+</BODY>
+
+</HTML>
+
+
+
+
+
+
+

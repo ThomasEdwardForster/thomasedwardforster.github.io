@@ -1,0 +1,104 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Keeping Out of Mischief</title>
+</head>
+
+<body>
+
+<h1 align="center"><u><font color="#0000FF">Keeping Out of Mischief</font></u></h1>
+
+<h2 align="center">A solution to The Handshake Problem<br>
+by Gary Jackson - ODL Student Cohort 14</h2>
+
+<h3><u>The Problem</u></h3>
+
+<p>&nbsp;&nbsp;&nbsp; <b>Hilary and Jocelyn are married. They invite four
+couples for dinner, who all arrive at once. Handshakes all round, well almost
+all round, because nobody shakes hands with themselves or their partner. Later,
+Jocelyn asks everyone else how many hands they have shaken and everyone gives a
+different answer.</b></p>
+
+<p><b>&nbsp;&nbsp;&nbsp; The question is :- How many hands has Hilary shaken?</b></p>
+
+<h3><u>The Solution</u></h3>
+
+<p><b>&nbsp;&nbsp;&nbsp; Firstly we need to determine the entire list
+of answers given to Jocelyn. This is simple. The maximum number of
+people a person could shake hands with is 8. Remember there are 10
+people who can shake hands and you do not shake with yourself or your
+partner, so you are left with 8.  If Jocelyn asks 9 people then the
+nine different answers must be {0, 1, 2, 3, 4, 5, 6, 7, 8}.  (1 is of
+course the person who shook only one hand, 2 is the person who shook
+two hands etc etc).  The ten people can then be represented by using a
+graph with 
+{J, 0, 1, 2, 3, 4, 5, 6, 7, 8} the set of nodes, where J is
+Jocelyn (Graph 1) .</b></p> <p align="center"><b><img border="0"
+src="img_1.GIF" width="452" height="400"></b></p>
+
+<p><b>&nbsp;&nbsp;&nbsp; The rest can be determined by a simple
+process of elimination. We start with 8 (the person who shook hands
+with eight people). 8 could not have shaken hands with 0 as nobody
+could have shaken hands with the person who shook no hands! This means
+there can only be 8 other people whom 8 shook with. These 'shakes' are
+represented on the graphs as edges. Note these edges are 2 way (i.e. 8
+shakes with J so J must have shook with 8) and I have omitted the
+arrows for simplicities sake.&nbsp;</b></p>
+
+<p align="center"><b><img border="0" src="img_2.GIF" width="452" height="400"></b></p>
+
+<p><b>&nbsp;&nbsp;&nbsp; Here we can see that the shaking was (8, J),
+(8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (8, 7). This leaves us
+with 8 and 0 who have not shaken hands, and this gives us our first
+couple. We now move onto 7. 7 has shaken with 8 already and will be
+able to shake a further 6 hands. 7 cannot shake with 1 as 8 has
+already done it and thereby used up 1's sole handshake</b></p>
+
+<p align="center"><b><img border="0" src="img_3.GIF" width="452" height="400"></b></p>
+
+<p><b>&nbsp;&nbsp;&nbsp;The additional shaking here was (7, J), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6). The only other person 7 has not shaken with is 1,
+which gives us our next
+couple. (Remember that 8 and 0 are
+all ready accounted for ).</b></p>
+
+
+<p><b>&nbsp;&nbsp;&nbsp; 6 has already shaken with 8 and 7 so will be
+able to shake a further 4 hands. This time 1 and 2 have already had
+their allotted shakes.</b></p>
+
+
+<p align="center"><b><img border="0" src="img_4.GIF" width="452" height="400"></b></p>
+
+
+<p><b>&nbsp;&nbsp;&nbsp;6's additional shaking was (6, J), (6, 3), (6,
+4), (6, 5). From this we can determine, as we have done with 8-0 and
+7-1,&nbsp; that 6-2 are our 3rd couple.</b></p>
+
+
+
+<p><b>&nbsp;&nbsp; 5 has already shaken with 8, 7 and 6 so is only
+able to shake a further 2 hands. This time 1, 2 and 3 have already had
+their allotted shakes.</b></p>
+
+
+
+<p align="center"><b><img border="0" src="img_5.GIF" width="452" height="400"></b></p>
+
+<p><b>&nbsp;&nbsp; 5's extra shaking was (5, J) and (5 ,4). From this
+we see that 3 is the partner of 5. This then only leaves us with J and
+4, and we have now accounted for every handshake.  So 4 must be
+Hilary, the spouse of J. In other words 4 is the number of hands that
+Hilary has shaken.</b></p>
+
+
+
+
+<p>.</p>
+
+
+</body>
+
+</html>

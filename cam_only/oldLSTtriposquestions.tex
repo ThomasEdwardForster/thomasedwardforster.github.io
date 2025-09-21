@@ -1,0 +1,2932 @@
+\documentclass{book}
+ \usepackage{amssymb}
+ \usepackage{amsbsy}
+ \usepackage{amsmath}
+ \usepackage[english]{babel}
+ \usepackage{bussproofs}
+ \usepackage{boxedminipage}
+ \usepackage{latexsym}
+ \usepackage{graphicx}
+ \usepackage{makeidx}
+ \usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage{pifont}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{pgf}
+\usepackage{txfonts}%for \leftsquigarrow
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+\usepackage[latin1]{inputenc}
+\usepackage{dingbat}
+\usepackage{dingbat}
+\usepackage{lipsum}
+\DeclareSymbolFont{symbolsC}{U}{txsyc}{m}{n}
+\DeclareMathSymbol{\strictif}{\mathrel}{symbolsC}{74}
+\input newlogicmacr
+ \begin{document}
+ \title{Discussion-answers of Old Tripos Questions}
+ \author{Thomas Forster}
+  \maketitle
+
+% \tableofcontents
+
+
+
+
+\chapter{1995}
+\subsection*{95108} 
+
+Let $P,Q,R$ be three pairwise-disjoint sets of primitive propositions;
+for any set $S$, let ${\cal L}(S)$ denote the set of propositional
+formulae whose primitive propositions are all in $S$. Let $s\in {\cal
+  L}(P\cup Q)$ and $t\in{\cal L}(Q\cup R)$ be formul{\ae}\ such that
+$(s\to t)$ is a theorem of the propositional calculus. Show that there
+is a formula $u\in{\cal L}(Q)$ such that both $(s\to u)$ and $(u\to
+t)$ are theorems. 
+
+\subsubsection*{Discussion}
+
+PTJ says: consider the set $U=\{u\in{\cal
+    L}(Q):\ \vdash(s\to u)\}$. Suppose $U\cup\{\neg t\}$ is
+  consistent: take a suitable valuation $v$ of $Q\cup R$, and show
+  that the set $$\{s\}\cup\{q: q\in Q, v(q)=1\}\cup\{\neg q: q\in Q,
+  v(q)=0\}$$ is consistent. Deduce that $v$ can be extended to a
+  valuation of $P\cup Q\cup R$ making $s$ true and $t$ false, and
+  obtain a contradiction.
+
+\medskip
+
+Boo to that, I say. (This is Craig's Interpolation Theorem).  There 
+is a detailed constructive proof in {\sl Logic, Induction and Sets} 
+pp 91--92.
+
+(Here is another proof---that i nicked from Sam Buss. 
+
+Think of the literals (and let there be $k$ of them) from
+$Q$ that occur in $s$, and of the valuations of those $k$ literals
+which can be extended to valuations that make $s$ true. Let 
+$v_1 \ldots v_n$ be those valuations.  Now let $u$ be
+the\marginpar{This might need relettering} disjunction 
+$$\bigvee_{1 \leq i \leq n}({q_1}^{(i)} \wedge {q_2}^{(i)} \ldots {q_k}^{(i)})$$
+where ${q_j}^{(i)}$ is $q_j$ or $\neg q_j$ depending on whether or not
+$v_i$ believes $q_j$. $s \vdash u$ is immediate. To show $u
+\vdash t$ notice that a valuation on $Q$ that satisfies $u$ can be
+extended to a valuation on $P \cup Q$ that satisfies $s$.  Any such
+valuation also satisfies $t$ since $s \vdash t$.  Hence $u \vdash t$
+as desired.)
+
+
+
+\chapter{2002}
+\subsection*{2002 IIA paper 1 Q 7J}\label{implication}
+
+\url{http://www.maths.cam.ac.uk/undergrad/pastpapers/2002/Part_2/index.html}
+
+
+
+  The only part i'm going to answer is (ii)(b), since the earlier parts
+ are bookwork.  
+ 
+ I have to confess that I don't know what the subtext of this question
+ is: usually I know this kind of thing but I'm not omniscient.\footnote{I 
+now (2012) realise it's all about how to recover a Heyting algebra from a 
+possible world model. (At least, that's what i tho'rt! PTJ says: ``As far 
+as I was concerned, it was actually about constructing the subobject 
+classifier in a topos of sheaves.'' Well!!--he set the question and he should know)} 
+I'm going to have to fall back on appealing to background knowledge and
+ sniffing around suspicious features.  So what do I spot?
+ 
+ The first thing that catches my eye is the use of the symbol `$\Rightarrow$'
+ for this operation on sets.  ``Might it'', one wonders, ``be anything to
+ do with implication?''  Can we prove the inference
+\begin{equation}\label{three}
+\frac{T \subseteq B; \ \ \ \ \ \ \  T \subseteq (B \Rightarrow C)}{T \subseteq C}
+\end{equation}?
+
+ You will find it easy to prove this once your suspicions have been aroused.
+ 
+ The second unfamiliar---and therefore eyecatching---part of this
+ question is the condition `$(\forall t \in T)(\exists s \in S)(t \leq
+ s)$' in clause (ii) of the definition.  In the literature on
+ quasiorders this is sometimes written `$T \leq^+ S$''.  I shall use
+ it here, as it saves space: once you spot that this `+' is useful you
+ can prove some trivial but useful facts like:
+
+\begin{equation}\label{two}
+T \leq^+ S\ \wedge\ S \subseteq (B \Rightarrow C) \ \to\ \ T \subseteq (B \Rightarrow C)
+\end{equation}
+
+Now that we are armed with these I think it is safe to approach the
+question.  A work of warning before we jump in: overloading of `$\to$'
+for implication and the operation on sets defined in the question:
+read formul{\ae} carefully!   In fact, i think i'll doctor this file 
+by using `$\Rightarrow$' for the set operation.  It's obviously got 
+something to do with Heyting algebras, after all.
+
+\smallskip
+ 
+To show that $B\Rightarrow  C$ is $R$-closed whenever $B$ and $C$ are we 
+have to show that if $S \subseteq (B \Rightarrow C)$ and $\tuple{S,a} \in R$ 
+then $a \in (B \Rightarrow C)$.
+
+\smallskip
+
+So let $S \subseteq (B \Rightarrow C)$ and $a$ s.t. $\tuple{S,a} \in R$ be 
+arbitrary.   We will show that $a \in (B \Rightarrow C)$.
+
+\smallskip
+
+$S \subseteq B \Rightarrow C$ is 
+
+$(\forall a \in S)(\forall b \leq a)(b \in B \to b \in C)$
+
+We have assumed  $\tuple{S,a} \in R$.  Then we have to show that 
+$a \in (B \Rightarrow C)$.  To do this we have to show 
+$$(\forall b \leq a)(b \in B \to B \in C)$$
+
+\begin{equation}\label{one}
+(\forall b \leq a)(\exists T \subseteq A)(\tuple{T,b} \in R\ \wedge\ T \leq^+ S\ \wedge\ (\forall t \in t)(\tuple{\{b\},t} \in R))\end{equation}
+
+
+Now suppose $b \leq a$.  By formula \ref{one} we have
+$$(\exists T \subseteq A)(\tuple{T,b} \in R\ \wedge\ T \leq^+ S\ \wedge\
+(\forall t \in t)(\tuple{\{b\},t} \in R))$$
+
+Assume further that $b \in B$; we want $b \in C$.  We know that $b \in
+T$ and that $T \leq^+ S$ from formula \ref{one}; formula \ref{two}
+tells us that $T \subseteq (B \Rightarrow C)$, and then formula \ref{three}
+tells us that $T \subseteq C$.  But then $b \in C$ as desired.  But
+$b$ was arbitrary.  This establishes $(\forall b \leq a)(b \in B \to B
+\in C)$.  This is precisely the condition for $a$ to be in $B \Rightarrow C$.
+
+\chapter{2006}
+
+\subsection*{Paper 4 Question}
+
+In the first part they tell you to take your wellfounded relation $r$
+and define on it by recursion the obvious rank function to the
+ordinals.  This refines the wellfounded relation to a {\bf
+  prewellorder} (a wellordered partition). That was a bit cryptic, so
+let me be clearer. You have defined a rank function $\rho$ from the
+domain of $r$ to the ordinals.  This process partitions the domain
+into pieces $\rho^{-1}``\{\alpha\}$ for each ordinal $\alpha$. The
+relation $\{\tuple{x,y}: \rho(x)< \rho(y)\}$ is wellfounded and
+contains every ordered pair in $r$.  It's not a wellorder, beco's two
+things in the same piece are not related to each other, tho' it is
+what we call a {\sl prewellorder}.  AC tells us that everything can
+wordered, so in particular each piece of the partition can be
+wellordered, and we use AC to pick such a wellorder for each
+piece. Then we concatenate the wellorderings
+
+\smallskip
+
+That's the way the examiners expect you to do it.  However there is
+the clever way.  Consider the collection of wellorders that are
+compatible with $r$.  Partially order them by {\bf end-extension}.
+Then use Zorn.  The point is that a union of a chain {\bf under
+  end-extension} of wellorderings is another wellordering. (Look at
+question {2009-3-16G} below where end-extensions reappear.)
+
+\chapter{2007}
+\subsection*{2007-3-16G}
+
+Observe that if $\gamma \geq \omega \cdot \beta$ then $\beta + \gamma
+= \gamma$.  Contraposing we infer that if $\gamma$ does {\sl not}
+``absorb $\beta$ on the left'' then $\neg(\gamma \geq \omega \cdot
+\beta)$ whence $\gamma < \omega \cdot \beta$.  Analogously if $\beta$
+does {\sl not} ``absorb $\gamma$ on the left'' then $\beta < \omega
+\cdot \gamma$.  So, if $\beta$ and $\gamma$ are {\sl commensurable}
+(never heard this word used this way, but never mind) we have
+\begin{quote}
+$\gamma < \omega \cdot \beta$ and $\beta< \omega \cdot \gamma$.\end{quote}
+
+Now we use the division algorithm to find the largest power of $\omega$ 
+$\leq$ $\beta$.
+
+\subsection*{2007-4-II-16G}
+
+We say (for the purposes of this question) that a function $f:A \to
+{\cal P}(A)$ is {\bf recursive} if the relation $\{\tuple{a,b}: a \in
+f(b)\}$ is wellfounded.  Observe that any binary relation on a set $A$
+can be thought of as a map $f:A \to {\cal P}(A)$.  
+
+(That is the first of the two points made by this question. The other
+point is that not only is wellfoundedness of a relation $R$ a
+sufficient condition for definitions given by recursion-over-$R$ to
+have unique solutions, it is also necessary.  If every definition
+given by recursion over $R$ has a unique solution then $R$ is indeed
+wellfounded.  It is disconcerting---even if only slightly---that you
+are being invited to prove this converse while thinking of binary
+relations as functions-into-power-sets [as above].)
+
+Suppose $g:{\cal P}(B) \to B$.  We can attempt to define 
+a function $h$ recursively by:
+$$h(a) := g(\{h(a'): a' \in f(a)\}).$$
+
+Clearly we are going to be able to show (by an appeal to the recursion
+theorem) that this recursion has a unique solution---as long as the
+relation $\{\tuple{a,b}: a \in f(b)\}$ is wellfounded.  But what about
+a converse?
+
+Suppose $\{\tuple{a,b}: a \in f(b)\}$ is not wellfounded. We want to
+find a $B$ and $g:{\cal P}(B) \to B$ such that there is more than one
+$h$ satisfying
+
+$$(\forall a \in A)(h(a) = g(\{h(a'): a' \in f(a)\})).$$
+
+Let $B$ be a set with at least two members, and $b_1$ and $b_2$ be two
+members of $B$, and define $g:{\cal P}(B) \to B$ by \begin{quote}
+  $g(B') = $\verb# if# $(B' = \emptyset \vee B' = \{b_1\})$ \verb#then#
+  $b_1$ \verb#else# $b_2$\end{quote}
+
+Suppose now that $A'$ is a subset of $A$ with no minimal member under the
+relation $\{\tuple{a,b}: a \in f(b)\}$.  Notice that both
+\begin{quote}
+$h_1(a) := b_1$\end{quote}
+and
+\begin{quote}
+  $h_2(a) := $ \verb#if# $a \in A'$ \verb#then# $b_2$ \verb#else# $b_1$
+\end{quote}
+
+are solutions to 
+
+$$h(a) = g(\{h(a'): a' \in f(a)\}).$$
+
+
+\chapter{2008}
+\subsection*{2008-3-16G}
+Obviously the rank of ${\cal P}(x)$ has to be one greater than the
+rank of $x$.  The rank function is $\subseteq$-monotone ($u \subseteq
+v \to \rho(u) \leq \rho(v)$) so the rank of $x$ is maximal among ranks
+of members of ${\cal P}(x)$.  So $\rho({\cal P}(x))$ must be $\rho(x)
++ 1$, so it is successor.
+
+\medskip
+
+The fun starts when you ask about the ordinals that can be ranks of
+${\cal P}_{\aleph_0}(x)$ (the set of finite subsets of $x$)
+or ${\cal P}_{\aleph_1}(x)$ (the set of countable subsets of $x$).
+Either of those could be a fair tripos question, i think\ldots
+
+\chapter{2009}
+\subsection*{2009-2-16G}
+
+Suppose there were an axiomatisation $T$ of the theory of groups all
+of whose elements have finite order. Add, for each $n$, the axiom
+$(\forall x)(x^n = 1 \to x = 1)$.  This theory has no models, but all
+its finite fragments do.
+
+\subsection*{2009-3-16G}\label{2009-3-16G}
+
+Let $x \subseteq y \subseteq$ the ordinals below $\alpha$.  $x$ and
+$y$ both inherit an ordering.  Why do we know that the length of $x$
+in the inherited ordering is $\leq$ the length of $y$?  It looks
+obvious, but we have to be careful.  The ordering on ordinals arises
+from ``$A$ is iso to an an initial segment of $B$'' rather than from
+``$A$ injects into $B$ in an order preserving fashion'', and it is the
+second one that we want here.  However these two relations are the
+same!  This was an example sheet question in the year this question
+was set, so i'll provide a proof:
+
+\begin{rem}
+A total order is a well order iff every subordering is iso to an
+initial segment.\end{rem}
+
+\Proof Let $\tuple{A,<_A}$ be a total order where every subordering 
+is iso to an initial segment.  Consider a one-point subordering.  It 
+is iso to an initial segment so $\tuple{A,<_A}$ has a bottom element.  
+But now every subordering is iso to an initial segment, and so has a 
+least element, so $\tuple{A,<_A}$ is a well order.
+
+For the other direction, every suborder of a well order is a well order.
+So, if $\tuple{A,<_A}$ is a well order and $\tuple{A',<_A}$ a suborder of
+it, then one of $\tuple{A,<_A}$ and $\tuple{A',<_A}$ is iso to an initial
+segment of the other.  (The two might be iso of course).  We must establish
+that $\tuple{A,<_A}$ cannot be iso to a proper initial
+segment of $\tuple{A',<_A}$.  But this is easy: such an isomorphism
+would be a $<_A$-decreasing injective function $A \to A$, so that
+there will be sets $\{f^n(a): n \in \Nn\} \subseteq A$ with no
+$<_A$-least member, contradicting wellfoundedness of $<_A$. \endproof
+\label{original}
+
+\medskip
+
+The second paragraph requires care.  Observe that, at any rate, the
+length of the union of the $x_n$ must be at least the sup of the
+lengths; that much is obvious.  It's the other direction that can
+fail.
+
+The operation that sends each $x \subseteq \alpha$ to an ordinal
+$\mu(x)$ does its work by sending each member of $x$ to an ordinal;
+$\mu(x)$ is then the least ordinal not used.  A member $a$ of $\alpha$
+can appear in lots of $x$'s. {\bf The point of the end-extension condition
+is that it ensures that $a$ gets sent to the same ordinal whatever $x$
+we are considering}; that ordinal is then the ordinal it is given in
+the computation of $\mu(\bigcup_n x_n)$.  To illustrate the importance
+of the end-extension condition consider the following family of
+subsets of the ordinals below $\omega + 1$:
+
+$$\{[0,n] \cup\{\omega\}: n < \omega\}$$
+
+so that $x_n$ is the ordinals below $n$ with $\omega$ whacked on the
+end.  Each subordering is of finite length, and the lengths are
+unbounded so the sup of the lengths is $\omega$.  However the union of
+the subsets is the set of ordinals below $\omega +1$ which of course
+is of length $\omega + 1$.
+
+Observe that in this case the ordinal that the point $\omega$ gets
+sent to in the calculation of $\mu(x_n)$ is not constant but depends
+on $n$.
+
+It may be worth noting that {\sl any countable linear order type whatever}
+can be obtained as a union of an $\omega$-chain of finite total orders.
+Come to think of it that might make a good exercise for next year.
+
+
+\smallskip
+
+For the final part let $x_n$ be $\Nn \setminus [0,n]$.  Each $x_n$ is
+a terminal segment of the finite ordinals and has length $\omega$, but
+their intersection is empty.
+
+\chapter{2010}
+\subsection*{2010-2-16G}
+
+Show that an ordinal is indecomposible iff it is a power of $\omega$.
+
+\smallskip
+
+One direction is easy: if $\alpha$ is not a power of $\omega$ then it
+is decomposed by applying the division algorithm to the function
+$\beta \mapsto \omega^\beta$, which give us the largest power of
+$\omega \leq \alpha$.
+
+\smallskip
+
+The other direction is easy if $\beta + \gamma = \omega^\lambda$ with
+$\lambda$ limit. Then $\beta$ and $\gamma$ are both $< \omega^\alpha$
+with $\alpha < \lambda$.  But then
+$$\beta+\gamma\leq\omega^\alpha\cdot 2< \omega^{\alpha+1} < \omega^\lambda$$
+
+We are left with the successor case.  So suppose $\beta + \gamma =
+\omega^{\alpha + 1} = \omega^\alpha \cdot \omega$.  
+
+Use the division algorithm to obtain $\beta = \omega^\alpha \cdot \beta_1 + \beta_2$ with $\beta_2 < \omega^\alpha$ and
+
+$\gamma = \omega^\alpha \cdot \gamma_1 + \gamma_2$ with $\gamma_2 < \omega^\alpha$.
+
+Then $$\omega^\alpha \cdot \beta_1 + \beta_2 + \omega^\alpha \cdot \gamma_1 + \gamma_2 = \omega^\alpha \cdot \omega$$
+
+Now $\beta_2 < \omega^\alpha$ so we can simplify
+ 
+$$\omega^\alpha \cdot \beta_1 + \omega^\alpha \cdot \gamma_1 + \gamma_2 = \omega^\alpha \cdot \omega$$
+
+Clearly $\gamma_2 = 0$ so we simplify again
+
+$$\omega^\alpha \cdot \beta_1 + \omega^\alpha \cdot \gamma_1 = \omega^\alpha \cdot \omega$$
+
+This tells us that $\beta_1 + \gamma_1 = \omega$ so one of them is $\omega$, from which the result follows.
+
+
+\subsection*{2010-3-16G}
+
+I do only the hard part
+
+\medskip
+
+Suppose $x$ is a transitive set, of rank $\alpha$.  We will show that,
+for all $\beta < \alpha$, $x$ has a member of rank $\beta$.  That is
+to say, $\{\beta\in\,On:x$ has a member of rank $\beta\}$ is a proper
+initial segment of $On$.  It must be a set beco's it is bounded above
+by the rank of $x$.
+
+\smallskip
+
+Observe the following:
+
+\smallskip
+
+(i) If $x$ has a member $y$ of rank $\beta +1$ then $y$ has a member
+$y'$ of rank $\beta$.  But $x$ is transitive, so $y' \in x$ and $x$
+has a member of rank $\beta$.
+
+\smallskip
+
+(ii) If $x$ has a member $y$ of rank $\lambda$ (where $\lambda$ is
+limit) then $(\forall \beta < \lambda)(\exists \gamma < \lambda)(\beta
+< \gamma \wedge y$ has a member of rank $\gamma)$.  But $x$ is
+transitive, so the same goes for $x$: $(\forall \beta <
+\lambda)(\exists \gamma < \lambda)(\beta < \gamma \wedge x$ has a
+member of rank $\gamma)$.
+
+\smallskip
+
+(i) and (ii) together mean that the collection of ordinals $\beta$
+such that $x$ does not have a member of rank $\beta$ is closed under
+successor (beco's of (i)) and limits (beco's of (ii)), so it must be a
+terminal segment of On.  So its complement must be a proper initial
+segment of $On$.  But that is what we wanted.
+
+\bigskip
+
+The other thing one can try is to prove by $\in$-induction on $x$ that
+$TC(x)$ has members of all ranks less than $\rho(x)$.  Suppose that,
+for all $y \in x$, $TC(y)$ has members of all ranks less than
+$\rho(y)$. $TC(x) = x \cup \bigcup_{y\in x} TC(y)$.  Now let $\alpha$
+be an ordinal less than the rank of $x$.  Then $\alpha \leq \rho(y)$
+for some $y \in x$.  If we have equality then $y$ is the thing we are
+looking for that is in $TC(x)$ and has rank $\alpha$. If we have $<$
+then we have our witness by induction hypothesis.
+
+\chapter{2011}
+\subsection*{2011 Paper 2 Q 16H}
+
+The first two parts are bookwork.  For the third part i'm assuming
+that each element of the space is a {\bf finite} sum of multiples of
+basis-element--times--a-real.  There are $\aleph_1$ basis elements and
+$2^{\aleph_0}$ reals, making $\aleph_1 \cdot 2^{\aleph_0}$ such
+pairs. How many finite sets of such pairs?  The cardinality of ${\cal
+  P}_{\aleph_0}(X)$ (the set of finite subsets of $X$) can be quite
+hard to compute in terms of $|X|$, whereas $|X^{<\omega}|$ (the set of
+finite sequences-without-repetitions of members of $X$) is just $|X| +
+|X|^2 + |X|^3 \ldots$.  Evidently $X^{<\omega}$ surjects onto ${\cal
+  P}_{\aleph_0}(X)$ and, since any set $X$ of size $\aleph_1 \cdot
+2^{\aleph_0}$ admits a total ordering, we can use that total order to
+uniformly order each finite set and thus inject ${\cal
+  P}_{\aleph_0}(X)$ into $X^{< \omega}$.  Evidently (whatever $X$ is)
+and---certainly in this case---each of the summands in $|X^{<\omega}|
+= |X| + |X|^2 + |X|^3 \ldots$ is $|X|$ (which is to say $\aleph_1
+\cdot 2^{\aleph_0}$) so (with the help of Cantor-Bernstein) we arrive
+at $\aleph_1 \cdot 2^{\aleph_0}\cdot \aleph_0 = \aleph_1 \cdot
+2^{\aleph_0}$ such finite sets, and therefore $\aleph_1 \cdot
+2^{\aleph_0}$ vectors.  
+
+All that was without any use of AC.  If we allow ourselves even mere
+countable choice we can infer $\aleph_1 \leq2^{\aleph_0}$, so there
+are $2^{\aleph_0}$ such pairs and $2^{\aleph_0}$ finite sets of such
+pairs, so there are $2^{\aleph_0}$ vectors.
+
+\smallskip
+
+That seems like a lot of work, and maybe the examiners didn't expect
+that much detail (you have only about half an hour per question after
+all) but it can't do you any harm to see it done properly.  My guess
+is that you'd've got the brownie points simply for getting the correct
+answer and waving your hands artistically.
+
+\smallskip
+
+If an element of the space can be an {\bf arbitrary} sum of multiples
+of basis-element--times--a-real then the sums are subtly different.
+There are still $2^{\aleph_0}$ pairs, but now we are interested in
+subsets of the collection of pairs of sizes up to $\aleph_1$, which
+gives us $(2^{\aleph_0})^{\aleph_1}$ elements.  Now
+$(2^{\aleph_0})^{\aleph_1} = 2^{\aleph_0 \cdot \aleph_1}$.  Now
+$\aleph_1 \leq \aleph_0 \cdot \aleph_1 \leq \aleph_1 \cdot \aleph_1 =
+\aleph_1$, so $(2^{\aleph_0})^{\aleph_1} = 2^{\aleph_1}$, which won't
+simplify any further (in case you were wondering).  The continuum
+hypothesis implies that $2^{\aleph_1} = 2^{2^{\aleph_0}}$, and Luzin's
+hypothesis [don't ask] is that $2^{\aleph_1} = 2^{\aleph_0}$.  Both
+are consistent with ZFC---tho' of course not jointly!
+
+\subsection*{2011 Paper 3 Q 16H}
+\ \ \ \ (i)  The theory of dense linear orderings is axiomatisable, and the axioms are what you think they are.
+
+\medskip
+
+(ii) The theory of countable dense linear orderings is not
+axiomatisable in the language of posets.  For suppose it were, and $T$
+were an axiomatisation.  We could expand the language of $T$ by adding
+uncountably many constants, and add to $T$ axioms to say that the
+constants all point to distinct things.  That would be a theory with
+uncountable models---all of which would be models of $T$---contradicting 
+the assumption that all models of $T$ are countable. Note that there is 
+a first order theory which is true in each and every countable DLO; the 
+problem is that it has uncountable models as well.
+
+\medskip
+
+(ii) The theory of uncountable dense linear orderings is axiomatisable
+{\sl if you are allowed to add uncountably many constants}.  (If the
+axiom of choice holds then every uncountable set has a subset of size
+$\aleph_1$, so we add $\aleph_1$ constants.)  However, that takes you
+out of the language of posets, so it's not allowed; downward
+Skolemheim tells us that any theory of uncountable dense linear orders
+{\sl in the language of posets, which is countable} will have
+countable models.
+
+\medskip
+
+(iv)  There cannot be a first-order theory $T$ of wellorderings in the
+language of posets beco's if there were one could add constants
+$\tuple{a_i: i \in \Nn}$ to the language, and axioms $a_i > a_{i+1}$
+for each $i \in \Nn$.  The result would be a theory all of whose models are
+wellorderings (since they are models of $T$) while not being
+wellorderings after all beco's of the $a_i$.
+
+\smallskip 
+
+Here is another proof\ldots one that you could conceivably be expected to find
+given the material you have been lectured, at least in a PTJ year \ldots 
+
+Every substructure of a wellorder is a wellorder.  So \commentblock{, by the
+discussion on p \pageref{universaltheory},} the first-order theory of
+wellorders (if there is one) is a universal theory. Now if $T$ is a
+universal theory then---by part (iv) of sheet 3 q10 2015 (for
+ example!)---the union of a $\subseteq$-chain of models of $T$
+is another model of $T$; so a union of a $\subseteq$-chain of
+wellorderings would have to be a wellordering.  But---for
+example---every terminal segment of $\Z$ is a wellorder and the union
+of all of them is not. (A union of a chain of wellorderings is a
+wellordering if it is a chain under end-extension.)
+
+\smallskip
+
+\ldots but that looks quite hard to me.
+
+\subsection*{Paper 4 question}
+
+This is mostly bookwork.  To prove that every set belongs to a
+$V_\alpha$ you are clearly going to have to use the foundation axiom
+somehow, since if foundation fails you can have silly things like
+Quine atoms that do not belong to any $V_\alpha$.  The usual way to
+use foundation is to do an $\in$-induction.  This is a case in point:
+you prove by $\in$-induction that every set belongs to a $V_\alpha$.
+Suppose this is true for every member $y$ of $x$.  To each such $y$
+associate $\alpha_y$, the least $\alpha$ s.t. $y \in V_\alpha$. We
+form the set of those $\alpha_y$ and take the sup.  Probably worth
+pointing out that in so doing we are using the axiom scheme of
+replacement.
+
+\chapter{2012}
+\subsection*{2012 paper 3 Q 16H}
+
+All bookwork.  Part (v) looks scary but it's actually easy.  Let
+$\alpha$ be any ordinal at all.  Use the division algorithm on the
+function $\beta \mapsto \omega_1\cdot \beta$ to obtain the largest
+multiple of $\omega_1$ that is less than or equal to $\alpha$.  If
+that number is $\alpha$ itself then $\alpha$ is a multiple of
+$\omega_1$; if it isn't then there is a remainder.  This remainder is
+countable and so has cofinality $\omega$ (if it is limit) or is
+successor (in which case there is a cofinal map within the meaning of
+the act.).
+
+
+\chapter{2013}
+\subsection*{2013-2-16G}\label{2013-2-16G}
+
+{\sl Explain what is meant by a {\sl chain-complete} poset. State the
+Bourbaki--Witt fixed-point theorem for such posets.
+
+A poset $P$ is called {\sl directed} if every finite subset of $P$
+(including the empty subset) has an upper bound in $P$; $P$ is called
+{\sl directed-complete} if every subset of $P$ which is directed (in the
+induced ordering) has a least upper bound in $P$ . Show that the set
+of all chains in an arbitrary poset $P$ , ordered by inclusion, is
+directed-complete.
+
+Given a poset $P$, let $[P \to P]$ denote the set of all
+order-preserving maps $P \to P$ , ordered pointwise (i.e. $f \leq g$
+if and only if $f (x) \leq g(x)$ for all $x$). Show that $[P \to P]$ is
+directed-complete if $P$ is.
+
+Now suppose $P$ is directed-complete, and that $f : P \to P$ is
+order-preserving and inflationary. Show that there is a unique
+smallest set $C \subseteq P \to P$ satisfying
+\begin{quote}
+(a) $f \in C$;\\
+(b) $C$ is closed under composition (i.e. $g, h \in C \to g \cdot h \in C$); and\\
+(c) $C$ is closed under joins of directed subsets.\end{quote}
+
+Show that
+\begin{quote}
+\begin{tabbing}
+(i)\ \ \ \ \= all maps in $C$ are inflationary;\\
+(ii) \> $C$ is directed;\\
+(iii) \> if $g = \bigvee C$, then all values of $g$ are fixed points of $f$ ;\\
+(iv) \>for every $x \in  P$ , there exists $y \in P$ with $x\leq y = f(y)$.\end{tabbing}\end{quote}
+}
+\subsubsection*{Discussion}
+
+`Directed' is an important notion.  Cast your mind back to the proof
+that the class of models for a $\forall^*\exists^*$ (``inductive'')
+theory is closed under unions of chains.  Look carefully at that proof.
+You will notice that you didn't really need chains: if $T$ is
+inductive then a union of a directed set of models of $T$ is another
+model of $T$.
+
+We have to show that the chains of an arbitrary poset form a
+directed-complete poset.  Not a {\sl directed} poset!  That's clearly
+not going to happen unless the poset is a toset!  If i have a directed
+family $F$ of chains in a poset $\tuple{P, \leq_P}$ then that family
+has a sup, namely $\bigcup F$.  We have to check that $\bigcup F$ is a
+chain.  Suppose $x$ and $y$ are both elements of $\bigcup F$.  They
+belong to two chains $c_x$ and $c_y$, but---by directedness---there is
+now a chain $\supseteq c_x \cup c_y$ to which both $x$ and $y$ belong.
+So $x$ and $y$ are $\leq_P$-comparable.
+
+\smallskip
+
+The set $C$ we want is defined inductively: it's the intersection of
+the collection ${\cal C}$ of all the subsets of $P \to P$ satisfying
+conditions (a--c). ${\cal C}$ is a subset of ${\cal P}(P \to P)$ so it
+is a set, and it is nonempty, since $P \to P$ itself is such a subset. 
+We need also to check that conditions (a--c) are {\sl intersection-closed} 
+(that is to say, an arbitrary intersection of sets satisfying (a--c) also 
+satisfies (a--c)) but that is evident, beco's (a--c) are {\sl closedness} 
+properties.  So the intersection $\bigcap{\cal C}$ of all such subsets 
+satisfies (a--c) and is the set $C$ that we want.
+
+Clearly $C$ is going to be the family of all iterates of $f$.  
+
+\bigskip
+
+(i) Since $C$ has an inductive definition it supports induction.  So
+we should expect to be able to prove (i) by induction.  If the set of
+all inflationary maps $P \to P$ is a member of ${\cal C}$ then we are
+home and hosed.  Just check that it satisfies (a--c).  It satisfies
+(a) beco's $f$ is inflationary, it satisfies (b) beco's a composition
+of two inflationary functions is inflationary, and it satisfies (c),
+since the [pointwise] sup of a lot of inflationary maps is
+inflationary.
+
+  \medskip
+
+(ii) Suppose $D \subseteq [P \to P]$ is directed.  Define $h: P \to P$
+by $h(x) =\bigvee\{g(x): g \in D\}$.  For this definition to succeed we need
+$\{g(x): g \in D\}$ to be directed.  So let $U$ be a finite subset of
+$\{g(x): g \in D\}$.  We want $U$ to have an upper bound.  Now $U$ is
+$\{g(x): g \in D'\}$ for some finite $D' \subseteq D$.  But this $D'$
+has an upper bound by the assumption that $D$ is directed.
+
+\medskip
+
+(iii) We have to show that every value of $\bigvee C$ is a fixed point
+for $f$.  For $p \in P$, $\bigvee C(p)$ is the sup of $f(p)$ for all
+$f \in C$.  We must compute $f(\bigvee C(p))$ for arbitrary $p \in P$
+and hope that it evaluates to $\bigvee C(p)$.
+
+
+What is $\bigvee C$ applied to $p$?  It's $\bigvee$ of the set $\{g(p):
+g\in C\}$ of iterates of $f$ applied to $p$.  Now everything in $C$ is
+inflationary (that was (i)) so $\bigvee\{g(p): g\in C\} \leq_P \bigvee\{f(g(p)):
+g\in C\}$.  The other direction, namely $\bigvee\{f(g(p)): g\in C\} \leq_P
+\bigvee\{g(p): g\in C\}$,  we get beco's $\{f(g(p)): g\in C\} \subseteq
+\{g(p): g\in C\}$, whence
+\begin{equation}\tag{A}
+\bigvee\{g(p): g\in C\} =  \bigvee\{f(g(p)): g\in C\}\end{equation}
+At this point we have to use the fact (unused so far, i think) that $f$ is order-preserving, to infer
+\marginpar{I don't think this works \ldots oops}
+$$f(\bigvee\{g(p): g\in C\}) \leq  \bigvee\{f(g(p)): g\in C\}.$$
+
+Substituting using the equation (A) we obtain
+
+$$f(\bigvee\{g(p): g\in C\}) \leq  \bigvee\{g(p): g\in C\}.$$
+
+The equality in the other direction
+
+$$\bigvee\{g(p): g\in C\} \leq f(\bigvee\{g(p): g\in C\})$$
+
+follows from $f$ being inflationary, so we infer
+
+$$\bigvee\{g(p): g\in C\} = f(\bigvee\{g(p): g\in C\})$$
+
+so $\bigvee C(p)$ is a fixed point for $f$ as desired.
+
+\medskip
+
+(iv) This challenge reminds me very strongly of the fact that one can
+infer ``In every chain complete poset every element has a maximal
+element above it'' from ``Every chain-complete poset has a maximal
+element''.  That hint was enough for me to know what to do, and it
+should work for you too.  So you run the preceding constructions on $P
+\uparrow x$, the substructure of $\tuple{P, \leq_P}$ that is its
+restriction to the elements that are $\geq_P x$: replace `$f$' by
+`$f\restric (P \uparrow x)$'.
+
+\subsection*{2013-3-16G}
+
+
+
+
+{\sl Suppose $P$ , $Q$ and $R$ are pairwise disjoint sets of primitive
+  propositions, and let $\phi\in L(P \cup Q)$ and $\psi \in L(Q \cup
+  R)$ be propositional formulae such that $\phi \to \psi$ is a theorem
+  of the propositional calculus. Consider the set $X = \{\chi \in L(Q)
+    : \phi \vdash \chi\}$ .  Show that $X \cup \{\neg \psi\}$ is
+    inconsistent, and deduce that there exists $\chi \in L(Q)$ such
+    that both $\phi \to \chi$ and $\chi \to \psi$ are
+    theorems.\begin{small} [Hint: assuming $X \cup \{\neg \psi\}$ is
+      consistent, take a suitable valuation $v$ of $Q \cup R$ and show
+      that $\{\phi\} \cup \{q \in Q | v(q) = 1\} \cup \{\neg q : q \in
+    Q, v(q) = 0\}$ is inconsistent. The Deduction Theorem may be
+    assumed without proof.]\end{small}}
+
+
+\subsubsection*{Discussion}
+
+Take the hint. If $X \cup \{\neg \psi\}$ is {\sl not} inconsistent,
+then there is a valuation (call it `$v$') making $X$ true and $\psi$
+false.  This valuation $v$ is defined on letters in $Q \cup R$. The
+plan now is to extend $v$ to a valuation $v'$ defined on all the
+letters in $P$ as well, so that $v'$ makes $\phi$ true too.  Now every
+valuation making $\phi$ true makes $\psi$ true, by assumption; so $X
+\cup \{\neg \psi\}$ will be inconsistent as desired.  So how do we
+extend $v$ to a $v'$ making $\phi$ true?  $\phi$ has propositional
+letters in it that come from $P$ and from $Q$. Doctor $\phi$ by
+setting to $\top$ every $q$-letter that $v$ makes true, and setting to
+$\bot$ every $q$-letter that $v$ makes false, and then simplify (using
+rewrites such as $\alpha \wedge \bot \mapsto \bot$, $\alpha \vee \top
+\mapsto \top$, that sort of thing) obtaining a formula in $L(P)$. If
+this formula hasn't simplified to $\bot$ then it has some $p$-letters
+in it and we can find a valuation making it true, and then we are
+happy.  But what if we can't?  Can that happen?  That would mean that
+the stuff in $X$ prevented $\phi$ being true. There may be stuff that
+prevents $\phi$ being true, but the stuff in $X$ consists of {\bf
+  consequences} of $\phi$.  So $\phi$ is prevented from being true by
+some of its consequences.  But that must mean that $\phi$ is the
+negation of a truth-table tautology and that case isn't interesting.
+
+\subsection*{2013-4-16G}
+
+
+
+{\sl State the Axiom of Foundation and the Principle of $\in$-Induction,
+and show that they are equivalent in the presence of the other axioms
+of ZF set theory. [You may assume the existence of transitive
+closures.]  Given a model $\tuple{V, \in}$
+for all the axioms of ZF except
+Foundation, show how to define a transitive class $R$ which, with the
+restriction of the given relation $\in$, is a model of ZF.  Given a model
+$\tuple{V, \in}$ of ZF, indicate briefly how one may modify the relation $\in$ so
+that the resulting structure $\tuple{V, \in'}$ fails to satisfy Foundation,
+but satisfies all the other axioms of ZF. [You need not verify that
+all the other axioms hold in $\tuple{V, \in'}$.]}
+
+The first part is bookwork.
+
+The second part, too, is bookwork but it's possible to get it wrong.
+Indeed i was contacted by a Trinmo(!) who had got into a tangle, He
+wanted the class of all $x$ s.t.
+$(\exists y \in x)(x \cap y = \emptyset)$ (which is {\sl not} what
+you want: suppose you had $x = \{x,\emptyset\}$; then $x$ is disjoint
+from one of its members but is not wellfounded).  The class you want
+is the union of all the $V_\alpha$ where $V_0 = \emptyset$ and thereafter
+$V_\alpha = {\cal P}(\bigcup_{\beta < \alpha}V_\beta)$.
+
+For the final part look up permutation models in my 2017 lecture notes.
+\chapter{2014}
+
+\subsection*{Paper 2 question}
+
+{\sl Ordinals less than a power of $\omega$ are closed under $+$; ordinals
+less than $\omega^{\omega^\alpha}$ are closed under $\times$; ordinals
+below an $\epsilon$-number are closed under exponentiation.}
+
+\subsubsection*{Discussion}
+
+Let's prove that the ordinals less than a power of $\omega$ are closed
+under addition.  Suppose not, and let $\omega^\alpha = \beta+ \gamma$.
+Then both $\beta$ and $\gamma$ are below $\omega^\delta \cdot n$ for
+some $\delta < \alpha$.  But then $\omega^\alpha = \beta + \gamma \leq
+\omega^\delta \cdot n + \omega^\delta \cdot n \leq \omega^\delta \cdot
+n\cdot 2 < \omega^{\delta + 1} \leq \omega^\alpha$.
+
+\medskip
+
+Closure under multiplication
+
+\smallskip
+
+Suppose $\alpha$ and $\beta$ are both less than $\omega^{\omega^\gamma}$.  
+Then there is a $\delta < \omega^\gamma$ such that both $\alpha$ and 
+$\beta$ are below $\omega^\delta$.  But then $\alpha \cdot \beta$ is 
+below $\omega^\delta \cdot \omega^\delta = \omega^{\delta + \delta}$ and 
+now we appeal to the fact that the ordinals below $\omega^\gamma$ are 
+closed under addition!
+
+\medskip
+
+Closure under exponentiation
+
+\smallskip
+
+Suppose $\omega^\epsilon = \epsilon$, and $\alpha, \beta < \epsilon$.
+Then $\alpha^\beta \leq (\omega^\alpha)^\beta =^{(1)} \omega^{\alpha \cdot \beta}$.  
+
+Now $\epsilon = \omega^{\omega^\epsilon}$ so ordinals below $\epsilon$
+are closed under multiplication (see above) giving $\alpha\cdot\beta <
+\epsilon$, whence $\omega^{\alpha \cdot \beta} <^{(2)} \omega^\epsilon
+= \epsilon$.
+\begin{quote}
+  (1) It can't do any harm to think about why this equation holds. You
+  could prove it from the synthetic definition of exponentiation
+  (which you were presumably not lectured) or you could prove it by
+  fixing $\alpha$ (``universal generalisation'') and doing an
+  induction on $\beta$.
+
+(2) holds beco's $\gamma \mapsto \omega^\gamma$ is normal.
+\end{quote}
+
+\chapter{2015}
+
+
+\subsection*{Paper 1, Section II 13I}
+{\sl State and prove the Completeness Theorem for Propositional Logic.
+
+[You do not need to give definitions of the various terms
+  involved. You may assume the Deduction Theorem, provided that you
+  state it precisely.]
+
+State the Compactness Theorem and the Decidability Theorem, and deduce them from the Completeness Theorem.
+
+Let $S$ consist of the propositions $p_{n+1} \to p_n$ for $n = 1, 2,
+3 \ldots$. Does $S$ prove $p_1$?  Justify your answer. [Here $p_1$,
+  $p_2$, $p_3$ \ldots are primitive propositions.]}
+
+\medskip
+
+Bookwork
+
+\subsection*{Paper 2, Section II 13I}
+
+{\sl (a) Give the inductive and synthetic definitions of ordinal addition, 
+and prove that they are equivalent. Give the inductive definitions of 
+ordinal multiplication and ordinal exponentiation.  
+
+(b) Answer, with brief justification, the following: 
+\begin{quote}
+(i) For ordinals $\alpha$, $\beta$ and $\gamma$ with $\alpha < \beta$, must
+we have $\alpha + \gamma <\beta + \gamma$?  Must we have $\gamma+\alpha
+< \gamma + \beta$?
+
+(ii) For ordinals $\alpha$ and $\beta$ with $\alpha < \beta$ must we
+have $\alpha^\omega <\beta^\omega$ ?
+
+(iii) Is there an ordinal $\alpha > 1$ such that $\alpha^\omega = \alpha$ ?  
+
+(iv) Show that $\omega^{\omega_1} = \omega_1$. Is $\omega_1$ the least
+ordinal $\alpha$ such that $\omega^\alpha = \alpha$ ?  
+\end{quote}
+[You may use standard facts about ordinal arithmetic.]}
+
+\bigskip
+
+This is mostly bookwork.  However there is a subtlety to part (iv).
+$\omega^{\omega_1}$ is of course sup$\{\omega^\alpha: \alpha <
+\omega_1\}$ and we want this to be no more than $\omega_1$.  It's
+clearly no {\sl less} than $\omega_1$ because $\alpha \leq
+\omega^\alpha$ always and the $\alpha$ we are summing over are
+unbounded below $\omega_1$; for it to be no {\sl greater} than
+$\omega_1$ we need $\omega^\alpha$ to be countable whenever $\alpha$
+is.  If we try to do this by induction on $\alpha$ we have no problem
+at successor ordinals of course, co's we're just multiplying by
+$\omega$, but at limit stages we are liable to find ourselves appealing
+to the principle that a union of countably many countable sets is
+countable.  Why is $\omega^\lambda$ countable?  Well, if $\lambda$ is
+countable limit it is sup$\tuple{\lambda_n: n\in \Nn}$ and each (von
+Neumann ordinal) $\omega^{\lambda_n}$ is [a] countable [set] by induction 
+hypothesis, so the (von Neumann ordinal) $\omega^{\lambda}$ is [a] 
+countable [set] by countable-union-of-countable-sets-is-countable.  
+This use of countable choice seems to be unavoidable.
+
+However, if we use the synthetic definition of ordinal exponentiation
+we obtain a set (the set of all those functions from a wellordering of 
+length $\alpha$ to $\Nn$ that take the value $0$ at all but finitely 
+many arguments) equipped with a natural wellordering that is of order
+type $\omega^\alpha$.  This set can be shown to be countable, as follows.  
+Each such function can be thought of as a finite set of ordered pairs 
+of ordinals-below-$\alpha$ paired with naturals.  There are countably 
+many such pairs and therefore only countably many finite sets of such pairs.
+
+\medskip
+
+You probably don't care about such things (and i bet the examiners
+didn't) but i didn't get where i am today by being the Old Man of Thermopyl{\ae} who never did
+anything properl{\ae}.  As for whether or not you can prove the
+analogous result for the next operation after exponentiation (namely
+that the countable ordinals are closed under it) without using
+countable choice i have to confess that i'd never thought about it.  I
+have an awful feeling that the answer might be `no'.
+
+\subsection*{Paper 3, Section II 13I}
+
+{\sl (i) State and prove Zorn's Lemma.  [You may assume Hartogs' Lemma.]  
+
+Where in your proof have you made use of the Axiom of Choice?
+
+(ii) Let $<$ be a partial ordering on a set $X$.  Prove carefully that
+$<$ may be extended to a total ordering of $X$.  What does it mean to
+say that $<$ is well-founded?  If $<$ has an extension that is a
+well-ordering, must $<$ be well-founded?  If $<$ is well-founded, must
+every total ordering extending it be a well-ordering?  Justify your
+answers.}
+
+\subsubsection*{Discussion}
+
+
+The first part is bookwork.  However they want you to say (and *I*
+want to hear you say it, too) that The Axiom of Choice says that every
+set $X$ has a choice function blah, and that in this case the set $X$
+that has a choice function is that set that contains, for each $p$ in
+your poset, the set $\{p' \in P: p \leq p'\}$.
+
+
+\smallskip
+
+If you discard ordered pairs from a wellfounded relation the result is
+still a wellfounded relation. (If you remove ordered pairs you
+perforce remove descending sequences so you are certainly not going to
+{\sl add} any new infinite descending sequences!)  So: if $<$ has an
+extension that is a well-ordering, $<$ must be well-founded.  The
+converse is clearly not going to be true. Consider the empty relation
+on $\QQ$.  It's wellfounded, but you can extend it to the usual order
+on $\QQ$, and that is not wellfounded.
+
+\subsection*{Paper 4, Section II 13I}
+{\sl State the Axiom of Foundation and the Principle of $\in$-Induction,
+and show that they are equivalent (in the presence of the other axioms
+of ZF). [You may assume the existence of transitive closures.]
+
+Explain briefly how the Principle of $\in$-Induction implies that
+every set is a member of some $V_\alpha$.
+
+Find the ranks of the following sets:
+\begin{quote}
+(i) $\{\omega+1, \omega+2, \omega+3\}$;\\
+(ii) the Cartesian product $\omega \times \omega$;\\
+(iii) the set of all functions from $\omega$ to $\omega^2$.
+\end{quote}
+
+[You may assume standard properties of rank.]}
+
+\subsubsection*{Discussion}
+
+The first part is bookwork.  For the second we'll assume that the
+ordinals are von Neumann ordinals and that ordered pairs are
+Wiener-Kuratowski, and that will give the answers
+\begin{quote}
+(i) $\omega + 4$ (since the rank of the von Neumann ordinal $\alpha$ is $\alpha$); 
+
+(ii) $\omega$, because every member of $\omega \times \omega$ is an ordered
+pair of two things of finite rank, and W-K pairs lift rank by
+$2$\ldots and 
+
+(iii) $\omega^2 + 1$, beco's every function $\omega \to \omega^2$ is a
+subset of $\omega \times \omega^2$ and is therefore of rank at least
+$\omega$ (since its arguments ore of unbounded finite rank) and
+possibly as much as $\omega^2$ (since its values can have any rank
+below $\omega^2$) by analogy with (ii).\end{quote}
+
+In connection with (iii) it might be worth reflecting that if we were
+considering functions $\omega \to \omega_1$ then the answer would be
+$\omega_1$ not $\omega_1 + 1$.  This is because a map $f:\omega \to
+\omega_1$ is a set of ordered pairs of
+a-finite-ordinal-with-a-countable-ordinal, so the ranks of all its
+members are countable.  But this $f$ is a countable set, so its rank
+is the least ordinal strictly bigger than evereything in a {\sl
+  countable} set of ordinals, and by countable choice this upper bound
+is countable.
+
+
+
+\chapter{2016}
+
+
+\subsection*{Paper 1 section II 15F}
+
+\subsubsection*{Part (b)}
+
+\subsubsection*{Part (c)}
+I don't know how to make it obvious that the answer is `yes', and of
+course one needs the answer to be obvious if one is to know which way
+to jump.  My thought for this one is that one should remember that
+$\alpha \mapsto \omega^\alpha$ is a normal function, and just give it
+a whirl.  Low cunning would suggest that the mention of the Division
+algorithm at the end of the question is a hint that you should be
+using it.  Given $\alpha = \omega\cdot\alpha$ one looks for the
+largest $\beta$ (and there will be a largest $\beta$ beco's
+$\alpha \mapsto \omega^\alpha$ is a normal function and we invoke the
+division algorithm for normal functions) s.t. $\omega^\beta \leq \alpha$.
+
+That should crack it, so i'm leaving the details to you.
+
+Perhaps the moral is to always remember the division algorithm for normal functions.
+
+\medskip
+
+Actually, on second thoughts i think i owe it to you to provide a
+worked answer.  [Thanks to Hanna G\'al for pushing me.] One shows that $\alpha = \omega^n\cdot\alpha$ for
+every $n$ by induction on $n$ so certainly $\alpha \geq
+\omega^\omega$.  One then uses the division algorithm to find $\beta$
+the largest multiple of $\omega^\omega \leq \alpha$.  So
+$$\omega^\omega\cdot \beta + \gamma = \alpha$$
+where $\gamma < \omega^\omega$.  What now?  The only fact we have is that $\alpha =
+\omega\cdot\alpha$ so the obvious thing is to multiply both sides on
+the left by $\omega$ getting
+
+$$\omega \cdot (\omega^\omega\cdot \beta + \gamma) = \omega\cdot \alpha = \alpha$$
+But the LHS simplifies to
+$$\omega^\omega\cdot \beta + \omega\gamma$$
+
+which (by uniqueness of subtraction) gives us $\omega\cdot \gamma = \gamma$, contradicting $\gamma < \omega^\omega$.
+
+\smallskip
+
+A nice proof.  Not sure whether i'd find it in the heat of the exam.
+
+
+\subsubsection*{Part (e)}
+This is a trick question.  Since $\alpha < \alpha^\omega$ always, the 
+conditional has a false antecedent and is therefore true!
+
+\section*{Paper 2 14F}
+
+An alternative equivalent definition of transitive set is $x \subseteq {\cal P}(x)$ which makes rthe induction a lot easier.
+
+
+\subsection*{Paper 3, Section II 14F}
+
+This looks scary but it's actually a piece of cake.  We appeal to the
+banal obvious fact\ldots.  If $T$ is a universal theory then every
+substructure of a model of $T$ is another model of $T$.  So in
+particular the package of closed $T$-terms must be a model of $T$.
+
+\commentblock{Now the thing we are trying to prove looks very much
+  like the output of a compactness argument.  So clearly the way to
+  get there is to derive an inconsistency from $T$ plus the scheme
+  $\neg \psi(t_i)$ of all terms $t_i$.  Suppose we could not derive
+  this inconsistency.  Then there would be a model $\M$ of $T$ plus
+  this scheme.  But then consider the substructure of $\M$ consisting
+  of the denotations of all the terms $t_i$.  This is a model of $T$
+  plus the scheme---since none of the formul{\ae} in the scheme have
+  any quantifiers.  But this substructure is a model of $T$ and
+  therefore believes $(\exists x)\psi(x)$.  This contradicts the fact
+  that nothing in the ``term model'' has $\psi$}.
+
+For the last part we of course use compactness. Suppose $T \vdash
+(\exists x)\psi$.  Suppose further that $T$ does not prove any finite
+disjunction of the indicated flavour.  Then we can consistently add to
+$T$ any finite collection of expressions of the form $\{\neg
+\psi[t_i/x]: i \in I\}$.  So, by compactness, we can consistently add
+all negations $\neg \psi[t_i/x]$.  This theory will have a model $\M$.
+Think about the substructure of $\M$ consisting of closed terms.  It
+is a substructure of a model of $T$ and is therefore a model of
+$T$. So it believes $\exists x \psi$ \ldots except that there is no
+term available to witness the `$x$'.
+
+\section*{Paper 4, Section II 15F}
+
+Part (a) gave me a bit of a fright.  Obviously you are meant to
+consider the chain-complete poset of partial homomorphisms
+$L\rightharpoondown \{0,1\}$.  But why is a maximal element of this
+poset a total homomorphism---one defined on the whole of $L$?  Suppose
+it isn't, and that there is a maximal element $f$ and a rogue element
+$b$ on which $f$ is not defined.
+
+
+If we cannot send $b$ (for ``bad'') to $1$ it is beco's there is an
+$a_0$ with $f(a_0) = 0$ and $f(b\vee a_0) = 1$; and if we cannot send
+it to $0$ it is beco's there is an $a_1$ with $f(a_1) = 1$ and
+$f(b\wedge a_1) = 0$.  We have to show that these cannot both happen,
+and we have to use distributivity to do it.
+
+Distributivity gives us
+
+$$a_1 \wedge (b\vee a_0) = (a_1 \wedge b) \vee (a_1 \wedge a_0)$$
+and the fact that $f$ is a homomorphism gives us
+$$f(a_1 \wedge (b\vee a_0)) = f((a_1 \wedge b) \vee (a_1 \wedge a_0))$$
+Using the equations $f(a_0) = 0$, $f(b\vee a_0) = 1$, $f(a_1) = 1$
+and $f(b\wedge a_1) = 0$ we can simplify the  LHS to $1$ and the RHS
+to $f(a_1 \wedge b)$ getting
+$$1 = f(a_1 \wedge b)$$
+Now we also have (analogously)
+ $$a_0 \vee (b \wedge a_1) = (a_0 \vee b) \wedge (a_0 \vee a_1)$$
+and---as before---the fact that $f$ is a homomorphism gives us
+ $$f(a_0) \vee f(b \wedge a_1) = f(a_0 \vee b) \wedge f(a_0 \vee a_1)$$
+Similarly the LHS is $0$ and the RHS is $f(a_0 \vee b)$ giving
+$$f(a_0 \vee b) = 0$$
+So we have both
+\begin{center}
+$f(a_0 \vee b) = 0$ and $1 = f(a_1 \wedge b)$\end{center}
+But we have $$a_1 \wedge b\, \leq\, a_0 \vee b$$
+contradicting the fact that $f$ of the LHS of this inequality
+is $1$ and $f$ of the RHS is $0$.
+
+\medskip
+
+There must be a simpler way of doing it, but i am an elderly
+wally and can't see it.
+
+O Wally wally, the water is wide
+and you can't get o'er.
+
+
+
+\chapter{2017}
+
+
+\subsection*{Paper 2 section II 14H}
+
+
+Which of the following assertions about ordinals are true?  Justify your answers
+
+\begin{tabbing}
+(i) \ \ \ \= $\alpha + \beta = \beta + \alpha$;\\
+
+(ii)   \>$(\alpha + \beta)\cdot \gamma = \alpha \cdot \gamma + \beta \cdot \gamma$;\\
+
+(iii)   \>$\alpha\cdot(\beta+\gamma) = \alpha \cdot \beta + \alpha \cdot \gamma$;\\
+
+(iv)   \> $\alpha\beta = \beta\alpha$  $\to$  $\alpha^2\beta^2 = \beta^2\alpha^2$;\\
+
+(v)      \> $\alpha^2 = \beta^2$  $\to$ $\alpha\beta = \beta\alpha$.
+
+\end{tabbing}
+
+\subsection*{Discussion Answer}
+
+I address (iv) and (v) only.  (It's the least i can do, since it was
+i who set the questions).  Observe that addition, multiplication and
+exponentiation preserve inequalities both ways round, and one way
+round they preserve {\sl strict} inequality as well.  Thus, if
+$\alpha < \beta$ then $\alpha + \gamma \leq \beta+ \gamma$ and
+$\gamma + \alpha < \gamma + \beta$.  Multiplication and exponentiation
+similarly. We will exploit this fact in what follows.
+
+\smallskip
+
+(iv) is true. Suppose $\alpha\beta = \beta\alpha$.  Multiply both
+sides by $\alpha$ on the left and $\beta$ on the right to obtain
+$\alpha^2\beta^2 = \underline{\alpha\beta}\alpha\beta$.  Now permute
+the underlined bits to obtain
+
+$$\alpha^2\beta^2 = \beta\alpha\underline{\alpha\beta}$$  and permute again to obtain
+
+$$\alpha^2\beta^2 = \beta\underline{\alpha\beta}\alpha$$ and yet  {\sl again} to obtain
+
+$$\alpha^2\beta^2 = \beta^2\alpha^2.$$
+
+Notice (and this has only just struck me) we haven't used the fact
+that $\alpha$ and $\beta$ are ordinals.  This works for any linear
+order types whatever---integers, rationals, reals, you name it.
+
+\smallskip
+
+(v)
+
+How about the converse to (iv)?  If $\alpha^2\beta^2 = \beta^2\alpha^2$
+must we have $\alpha\beta = \beta\alpha$?  (That was an old example
+sheet question from before the last ice age).
+\smallskip
+
+I am quite sobered by my student Micha\l{} Mruga\l{}a finding a mistake in my original model answer.
+(Sobered not just beco's it means i am fallible but also beco's it means that people haven't been reading it!!)
+
+
+Assume $\alpha^2\beta^2 = \beta^2\alpha^2$ and (for a contradiction) suppose $\alpha\beta < \beta\alpha$.
+
+You can multiply on the left by $\alpha$ to get $\alpha^2\beta < \alpha\beta\alpha$.  (Multiplication on the left preserves strict inequality).
+
+Now
+$$\alpha\underline{\alpha\beta}\beta \leq^{1} \underline{\alpha\beta}\alpha\beta \leq^{2} \underline{\beta\alpha}\alpha\beta <^{3} \beta\underline{\alpha\beta}\alpha \leq \beta\beta\alpha\alpha$$
+
+(1) swap the two underlined terms
+
+(2) swap the two underlined terms
+
+(3) $\alpha\beta < \beta\alpha$ by assumption and multiplication on the left preserves strict inequality.
+
+giving $\alpha^2\beta^2 < \beta^2\alpha^2$ contradicting assumption.
+
+\commentblock{
+You can multiply both on the left by $\alpha$ (which preserves the
+{\sl strict} inequality---this is key) and on the right by $\beta$
+(which just preserves the inequality) getting
+$$\alpha^2\beta^2\, <\, \alpha\beta\alpha\beta.$$
+Now
+$$\underline{\alpha\beta}\alpha\beta\, \leq\, \underline{\beta\alpha}\alpha\beta$$
+(beco's the underlined bit on the left is less than the underlined bit on the right) and then
+$$\beta\alpha\underline{\alpha\beta}\, \leq\, \beta\alpha\underline{\beta\alpha}$$
+(compare the two underlined bits again) and
+$$\beta\underline{\alpha\beta}\alpha\, \leq\, \beta\underline{\beta\alpha}\alpha$$
+(compare the two underlined bits again) finally giving
+$$\alpha^2\beta^2\, <\, \alpha\beta\alpha\beta\, \leq\, \beta\alpha\alpha\beta\, \leq\, \beta\alpha\beta\alpha\, \leq\, \beta^2\alpha^2$$
+
+contradicting assumption.}
+
+\medskip
+
+(v) is harder than (iv) beco's you can't do it the way you did
+(iv)---merely by manipulating equations; you {\sl have to} do it by
+contradiction.  Also, in (v) you need the fact that multiplication on
+the left preserves strict inequality and---if you think about it---you
+can see that this doesn't work for arbitrary linear order types:
+$2 <3$ but $\QQ\cdot 2 = \QQ\cdot 3$.
+  
+
+
+\subsection*{Paper 3 section II 14F}
+
+
+This seems to be the same as 2011 Paper 2, Section II 16H Logic and Set Theory
+
+
+\subsection*{Paper 1, Section II 15H}
+
+If every valuation satisfies precisely one of $A$ and $B$ then
+(assuming neither is empty) we must have $A \vee B \models \bot$
+whence $X \models \bot$ for some finite $X \subseteq A \cup B$.  Then
+set $A' = X \cap A$ and $B' = X \cap B$.  If $A$ and $B$ are to be
+finitely axiomatised one obviously looks for them to be axiomatised by
+$A'$ and $B'$ respectively.  Do we have $A' \vdash A$?  If not, then
+there is a valuation $v$ that satisfies $A'$ but does not satisfy $A$.
+But if $v$ does not satisfy $A$ then it must satisfy $B$, so it
+certainly must satisfy $B'$.  But then it satisfies $A' \cup B'$, and
+this contradicts the fact that $A' \cup B' \models \bot$.  So
+(contraposing) every valuation that satisfies $A'$ satisfies $A$, so
+$A'$ axiomatises $A$.  Similarly for $B$ and $B'$.
+
+\medskip
+
+Cute.  I wonder who came up with that?
+
+\subsection*{Paper 4, Section II 15H}
+
+I don't know who came up with {2017 Paper 1, Section II 15H} but this one was mine.
+
+\smallskip
+
+The last part is not actually difficult but it requires confidence.  I
+suppose one should start by asking what one wants the answer to be: is
+there a fixed point or not?  We know there is no set equal to the set
+of {\sl all} its subsets, but can there be a set equal to the set of
+its {\sl countable} subsets?  Well, if there is, one would obtain it
+by iteration---as in the question, indeed.  If one obtains the fixed
+point as a $C_\alpha$ then what can one say about the ordinal
+$\alpha$?  Every countable subset of $C_\alpha$ has to be a member of
+$C_\alpha$, but $C_\alpha$ is the union of all previous $C_\beta$.  So
+every countable subset of $C_\alpha$ is therefore a member of
+$C_\beta$ for some earlier $\beta$.  Now: what can you do with that?
+For $C_\alpha$ to be a fixed point it has to be that every countable
+set of ordinals below $\alpha$ is bounded below $\alpha$.  $\alpha$
+cannot have cofinality $\omega$.  If you have countable choice then
+$\omega_1$ is such an ordinal.
+
+There is a delightful discussion of this question in Jech's 1980
+Journal of Symbolic Logic article ``On hereditarily countable sets''.
+It has a very {\sl very} beautiful construction.  If you think you
+might do set theory at some point, read that paper.  It's v nice, and
+no-one else will tell you to read it.
+
+
+\chapter{2018}
+\subsection*{Paper 4, Section II 16G}
+(i) {\sl State and prove the $\in$-Recursion Theorem.  [You may assume the
+    Principle of $\in$-Induction.]}
+
+\smallskip
+
+\noindent (ii) {\sl What does it mean to say that a relation $r$ on a set $x$ is
+  well-founded and extensional ?  State and prove Mostowski's
+  Collapsing Theorem.  [You may use any recursion theorem from
+    the course, provided you state it precisely.]}
+
+\smallskip
+
+\noindent (iii) {\sl For which sets $x$ is it the case that every well-founded extensional relation on $x$ is isomorphic to the relation $\in$ on some transitive subset of $V_\omega$ ?}
+
+\medskip
+
+\subsubsection*{Answers}
+
+(i) and (ii) are bookwork
+
+\smallskip
+
+\noindent (iii)
+
+What is this condition on $x$?  It says: Think of $X$ as a bag of
+points.  Now decorate the points with directed edges (thought of as
+ordered pairs from a membership relation that you are making up as you
+go along.).  The result is a digraph that can be tho'rt of as a {\sl
+  set picture}.   Is this picture a picture of a transitive subset of $V_\omega$?
+
+Now clearly this project depends only on the size of $x$, since any
+decoration of $x$ can be copied over to any set in 1-1 correspondence
+with $x$.  So what can we say about the cardinality of $x$?  Clearly
+any finite set has this property. What about infinite sets?
+Well $x$ is going to have to be countable, co's it has
+to be the same size as a subset of $V_\omega$, and {\sl that's}
+countable.  But countability isn't sufficient, because i could inflict
+on $\Nn$ (for example) a wellordering of transfinite length, and that
+won't be iso to any subset of $V_\omega$.  (Any wellordering is an
+extensional wellfounded relation). It's going to have to be finite.
+
+Clev-ah!
+
+\smallskip
+
+Actually Pavel Turek has pointed out something that I had overlooked
+(and which I am sure the examiners expected you to overlook).  What
+happens if $x$ cannot be decorated by a wellfounded extensional
+relation?  Then it's vacuously true that every wellfounded extensional
+relation on $x$ is isomorphic to the restriction etc etc.  So, to
+deduce the intended answer (namely that $X$ has to be finite) we need
+to assume that every set can be decorated with a wellfounded
+extensional relation.  Now this is certainly a consequence of AC,
+since AC tells us that we can wellorder anything, and a wellordering
+is certainly a wellfounded extensional relation as noted above.  Quite
+what the strength is of the assertion ``every set supports a
+wellfounded extensional relation'' i don't know.  And i should.  But i
+am sure that the examiners were expecting you to assume it.
+
+\subsection*{Paper 3, Section II 16G}
+
+
+(1) {\sl State and prove the Compactness Theorem for first-order predicate
+logic.}
+
+\noindent (2) {\sl State and prove the Upward L\"owenheim-Skolem
+Theorem.  [You may assume the Completeness Theorem for first-order predicate logic.]}
+
+\noindent (3) {\sl For each of the following theories, either give
+  axioms (in the specified language) for the theory or prove that the
+  theory is not axiomatisable.
+
+
+
+\begin{quote}
+{\sl (i) The theory of finite groups (in the language of groups).}
+
+{\sl (ii) The theory of groups in which every non-identity element has
+infinite order (in the language of groups).}
+
+{\sl (iii) The theory of total orders (in the language of posets).}
+
+{\sl (iv) The theory of well-orderings (in the language of posets ).}
+\end{quote}
+
+If a theory is axiomatisable by a set $S$ of sentences, and also
+by a finite set $T$ of sentences, does it follow that the theory
+is axiomatisable by some finite subset of $S$ ?  Justify your answer.}
+
+\subsubsection*{Answers}
+
+(3)
+
+(i) is clearly not axiomatisable, by compactness.
+
+\smallskip
+
+(ii) is a recent example sheet question and is discussed in my notes on that sheet
+
+\smallskip
+
+(iii) Of course
+
+\smallskip
+
+(iv) One's first thought is that it can't be, beco's the theory is
+{\sl prima facie} second order. However that isn't a proof.  To obtain
+a proper proof add infinitely many constants $c_i: i \in \Nn$ and
+axioms $c_i > c_{i+1}$.
+
+
+The rider.  Yes, of course.  $T$ must follow from $S$, and if $S$ is
+infinite it must (by compactness) follow from some finite subset of
+$S$.
+
+There are two ways to write this down.  Either argue that for each
+$t \in T$ there is a finite subset $S_t$ of $S$ which entails it (by
+compactness).  Then take the union of the (finitely many) $S_t$ to
+obtain a finite axiomatisation $\subseteq S$.  Or consider the
+conjunction of all the members of $T$ and argue that that must follow
+from a finite subset of $S$---again, by compactness.
+ 
+\subsection*{Paper 2, Section  II 16G}
+
+{\sl (i) State and prove the Knaster-Tarski Fixed-Point Theorem.
+
+  (ii) Deduce the
+  Schr\"oder-Bernstein [{\sl sic}] Theorem.
+
+  (iii) Show that the poset $P$ of
+all countable subsets of $\Re$ (ordered by inclusion) is not complete.}
+
+(iv) {\sl Find an order-preserving function $f : P \to P$ that does not
+  have a fixed point.  [Hint: Start by well-ordering the reals.]}
+
+\subsubsection*{Answers}
+
+(iii) Well of course it's not complete: it hasn't got a top element.  Duh!
+
+  Annoying question: is it {\sl countably} complete?  Is a union of
+  countably many countable sets of reals a countable set of reals?
+  Normally one needs countable choice to show that a countable family
+  of countable sets has a countable sumset, but what if you are given
+  the additional information that each countable set in the family is
+  a set of reals?  Does that help?  I think it is known that if AC
+  fails badly enuff then $\Re$ can be a union of countably many
+  countable sets---so the extra information {\sl doesn't} help\ldots
+  as it happens, and we {\sl do} need countable choice to show that
+  $P$ is countably complete.  But it's good to get into the habit of
+  asking questions like that.
+
+Another annoying question: is it chain-complete?  No, it isn't even
+chain-complete.  It shouldn't be hard to come up with a nested
+sequence of countable subsets of $\Re$ whose union is uncountable.
+
+And it isn't {\sl directed-complete} either.  But now we are straying
+too far into poset stuff \ldots which you have been told not to worry
+about.
+\medskip
+
+
+(iv) I had to think a bit about this last one.  If you wellorder $\Re$ by
+some wellordering $<<$ then you can extend any countable subset of
+$\Re$ by inserting the $<<$-first real not in it.  That is to say:
+$F(A)$ is to be $A \cup \{$the $<<$-first thing in $X \setminus A\}$.
+(Notice that all we need is a wellordered uncountable subset $X$ of
+$\Re$, beco's no countable subset of $\Re$ can contain all of $X$ so
+we just add to $A$ the first thing in $X\setminus A$).
+
+However, in a discussion with my supervisee John Dawson he brought
+home to me that---although it's obvious that this function is
+inflationary---it's not {\sl quite} so obvious that it is
+order-preserving.  But it is, nevertheless. Suppose $A$ is a proper
+subset of $B$.  We want the $<<$-first thing in $\Re \setminus A$ to be
+in $F(B)$. If it is in $B$ then it is certainly in $F(B)$ so we're
+happy.  If it is not in $B$ then it must be the first thing not in
+$B$. Thank you jad200!
+
+Can one find such a function without any use of choice?  Not the way
+we have done it, beco's we need at least {\sl some} AC to show that
+$\Re$ has an uncountable wellordered subset.  More formally: $\aleph_1
+\leq 2^{\aleph_0}$ is not a theorem of ZF without AC. I would expect
+that we can, but i can't see how to do it offhand.  We do know, even
+without AC, that there is a surjection from $\Re$ to the set of
+countable sets of reals, but i can't see how to make good use of it.
+Dunno!  Pester me if you need an answer.
+
+\subsection*{Paper 1, Section II 16G}
+
+(i)  Give the inductive definition of ordinal exponentiation.
+Use it to show that $\alpha^\beta \leq \alpha^\gamma$ whenever
+$\beta \leq\gamma$ (for $\alpha \geq 1$), and also that
+$\alpha^\beta <\alpha^\gamma$ whenever $\beta < \gamma$ (for
+$\alpha \geq 2$).
+
+\smallskip
+
+\noindent(ii) Give an example of ordinals $\alpha$ and $\beta$ with
+$\omega < \alpha < \beta$ such that $\alpha^\omega = \beta^\omega$ .
+
+\smallskip
+
+\noindent (iii) Show that
+$\alpha^{\beta+\gamma}=\alpha^\beta \alpha^\gamma$, for any ordinals
+$\alpha$ $\beta$ $\gamma$,
+
+\smallskip
+
+\noindent(iv) Give an example to show that we need not have
+
+$(\alpha\beta)^\gamma = \alpha^\gamma \beta^\gamma$.
+
+\smallskip
+
+\noindent (v) For which ordinals $\alpha$ do we have $\alpha^{\omega_1} \geq \omega_1$?
+
+\smallskip
+
+And
+
+\noindent (vi)  for which $\alpha$ do we have $\alpha^{\omega_1} \geq \omega_2$?
+
+Justify your answers.
+[You may assume any standard results not concerning ordinal exponentiation.]
+
+\subsubsection*{Answers}
+
+(i) Bookwork. Pester me if you really want an answer.
+
+[Actually it may be p{\ae}dogogically worth spelling out that in order
+  to prove that $(\forall \alpha \beta \gamma)(\alpha^{\beta+\gamma} =
+  \alpha^\beta \cdot \alpha^\gamma)$ one fixes $\alpha$ and $\beta$
+  and proves by induction on $\gamma$ that $(\forall
+  \gamma)(\alpha^{\beta+\gamma}= \alpha^\beta \cdot \alpha^\gamma)$.
+  One does not prove by induction on $\gamma$ that $(\forall \alpha
+  \beta \gamma)(\alpha^{\beta+\gamma}= \alpha^\beta \cdot \alpha^\gamma)$.
+  This second induction is much stronger than the one we are doing:
+  it has $\forall \alpha \beta$ at the front.]
+
+\smallskip
+
+(ii) Try $\alpha = \omega^2$ and $\beta = \omega^3$.
+$\alpha^\omega =(\omega^2)^\omega = \omega^{2\cdot\omega} = \omega^\omega$;
+
+$\beta$ similarly.
+
+\smallskip
+
+(iv) For this last bit let $\alpha$ and $\beta$ be finite and let
+$\gamma = \omega$.
+
+\smallskip
+
+(v) All of them, or at least all of them bigger than 1.   You prove by
+induction that $\alpha^\beta \geq \beta$.  Fix $\alpha > 1$ and do an
+induction on $\beta$. (Do not induct on $\alpha$!)
+
+\smallskip
+
+(vi) This is a bit tricky, but since it is the rider that makes the
+difference between an $\alpha$ and a $\beta$ that is to be expected.
+That said, i do think it is really quite difficult if you are not
+allowed to wave your arms.
+
+The way in is to think about the cardinals associated with these
+ordinals.  (Thinking about cardinals being associated to ordinals is a
+good idea anyway since it helps you to remember that cardinals and
+ordinals are related things rather than identical things!)  If
+$\alpha$ is an ordinal it is the order type of some wellordering
+$\tuple{A,<_A}$, and the set $A$ has a cardinal---all sets do, after
+all.  Also the cardinal we get doesn't depend on our choice of $A$ but
+only on $\alpha$.  This cardinal-of function is well behaved:
+
+$\bullet$ cardinal-of$(\alpha + \beta)$ is clearly cardinal-of$(\alpha)+$ cardinal-of$(\beta)$, and
+
+$\bullet$ cardinal-of$(\alpha \cdot \beta)$ is clearly
+cardinal-of$(\alpha)\cdot$ cardinal-of$(\beta)$, and\footnote{Note the
+  overloading of `+' and `$\cdot$' to mean both ordinal and cardinal
+  multiplication: these are {\bf not} the same operations!} in both
+cases the answer is just the bigger of the two cardinals. (Sum and
+product of alephs is just max).  \smallskip Much less obviously
+
+$\bullet$ cardinal-of$(\alpha ^\beta)$ is max(cardinal-of$(\alpha)$,
+cardinal-of$(\beta)$) which can be seen by considering the definition
+of ordinal exponentiation, which was an example sheet question.
+Recall that $\alpha^\beta$ is the order type of the set of functions
+of finite support from $B$ to $A$, where $\tuple{A,<_A}$ is a worder
+of otype $\alpha$ and $\tuple{B,<_B}$ is a worder of otype $\beta$.
+We order the functions colex, but for present purposes all that
+matters is how many of the buggers there are.  And that is going to be
+the number of finite subsets of $A \times B$ which is going to be just
+max$(|A|,|B|)$, because all the cardinals involved are alephs.
+
+Notice that the answer is {\bf not}
+cardinal-of$(\alpha)^{(\mbox{\footnotesize{\rm cardinal-of}}\beta)}$; this time the ordinal operation doesn't get sent to the cardinal operation.
+
+\smallskip
+
+Back to the question.
+
+\smallskip
+
+What is cardinal-of($\alpha^{\omega_1}$)?  It's (cardinal-of$(\alpha)
+\cdot ($cardinal-of$(\omega_1$).  Since these cardinals are alephs,
+this product is simply the bigger of the two.  So we want the bigger
+of (cardinal-of$(\alpha$) and (cardinal-of$(\omega_1$) to turn out to
+be cardinal-of$(\omega_2)$---which is of course $\aleph_2$.  So
+cardinal-of$(\alpha$ had better be $\aleph_2$, whence we deduce
+$\alpha \geq \omega_2$.
+
+\smallskip
+
+As i say, i think this last bit is quite hard.
+
+
+\chapter{2019}
+
+
+\section*{Paper 4, Section II 16 I}
+
+(i) Define the cardinals $\aleph_\alpha$, and explain briefly why every infinite
+set has cardinality an $\aleph$.
+
+\smallskip
+
+\noindent (ii) Show that if $\kappa$ is an infinite cardinal then $\kappa^2=\kappa$.
+
+\smallskip
+
+\noindent (iii) Let $X_1, X_2,...,X_n$ be infinite sets. Show that $X_1\cup X_2\cup
+\ldots \cup X_n$ must have the same cardinality as $X_i$ for some $i$.
+
+\smallskip
+
+\noindent (iv) Let $X_1,X_2,...$ be infinite sets, no two of the same cardinality. Is
+it possible that $ X_1\cup X_2\cup...$ has the same cardinality as some
+$X_i$? Justify your answer.
+
+\subsubsection*{Answers}
+(i) An aleph is simply the cardinal of a(n infinite) wellordered set.
+The alephs are wellordered by the obvious order relation on cardinals
+(this is a nontrivial fact, which the examiners may or may not be
+expecting you to prove) so you can enumerate them in increasing order
+using the ordinals, starting with 0 (obviously!) so the first infinite
+aleph is $\aleph_0$.
+
+The stream of cardinals of wellordered sets is always there, and it's
+always wellordered by the natural order relation on cardinals and we
+always use the letter `$\aleph$' (with subscripts) to denote its
+members---whether we have AC or not.  The Axiom of Choice says that
+every set can be wellordered, so it tells us that every infinite
+cardinal is an aleph.
+
+\smallskip
+
+This is a question that reveals the extent to which the examinee is
+confused about cardinals.  People learning set theory are very liable
+to confuse two things:
+\begin{quote}
+$\bullet$ Q: What are cardinals?  A: cardinals are those things such that
+two things have the same cardinal iff there is a bijection between
+them.
+
+$\bullet$ (In set theory) Q: What is a cardinal?  This is a question
+about how to concretise/implement these abstract mathematical objects
+{\sl as sets}---given that you engaged in the fantasy of thinking that
+everything is a set.  You can use Scott's trick cardinals as long as
+you have foundation.  If you have replacement you can concretise every
+ordinal as a von Neumann ordinal. If you have AC then every set is
+wellordered and you can concretise its cardinal as the least ordinal
+(length) to which it can be wellordered.  However this tells you how
+to concretise cardinals {\sl if you have replacement and choice}.  It
+doesn't tell you what cardinals {\sl are} (You knew {\sl that} all
+along).  Do {\bf not} go away with the idea that if AC fails then
+certain sets do not have cardinals.  {\sl Every} set has a bloody
+cardinal.  It's just that if you don't have AC then you can concretise
+those cardinals in the way you have been led to expect.
+\end{quote}
+
+\noindent (ii)  This is bookwork\ldots bloody hard bookwork but bookwork.
+(Look at the discussion in my lecture notes for 2017, or my tutorial
+\url{www.dpmms.cam.ac.uk/~tf/ordinalsforwelly.pdf})
+
+\noindent For (iii) you exploit the fact that the sum of finitely many alephs is
+the biggest of them.  We are assuming AC, so every cardinal is an
+aleph.
+
+
+\noindent(iv)
+
+The question is vague about the size of the family of $X$s, perhaps
+deliberately so.  Is it finite?  Might it be infinite?  My guess is
+that they are expecting you to think it is countable.  If it's finite,
+then the size of the union is simply the biggest, beco's \ldots
+assuming AC (as one does) all cardinals are alephs, and the sum of
+finitely many alephs is simply the biggest of the summands. OTOH,
+suppose the family is infinite: alephs are wellordered by magnitude,
+so the countable many cardinals of these countably many sets will form
+a chain, and that chain will be wellordered by magnitude.  Might it
+have a top element?  Nothing to say it can't.  What happens if i take
+the union of countably many things, all but one of them smaller than
+$\alpha$?  Can the union be the size of the biggest?  Again, nothing
+to say that it can't.
+
+\smallskip
+
+I think this question is ridiculously hard. Granted, the correct
+answer is `yes', and it is plausible that it should be `yes', but a
+rigorous proof is beyond the resources of this course.  Showing that
+the sum of infinitely many alephs is the largest of them (if there is
+a largest, indeed) is quite a lot of work\ldots at least if you do it
+properly.  For a start, you need the axiom of choice if the concept of
+infinite sums of cardinals is to even make sense.  (You have to pick a
+set of each size and take the union\ldots)
+
+So: i think the answer they are expecting is that $|X_1| = \aleph_\omega$
+and thereafter $|X_n| = \aleph_n$.  Proving rigorously that that works
+is more work than there is space for under exam conditions, so you are
+expected to wave your arms artistically.
+
+
+\subsection*{Paper 3, Section II 16 I}
+
+Define the von Neumann hierarchy of sets $V_\alpha$. Show that each
+$V_\alpha$ is transitive, and explain why $V_\alpha \subseteq V_\beta$
+whenever $\alpha \leq \beta$.
+
+\smallskip
+
+Prove that every set $x$ is a member of some $V_\alpha$.
+
+\smallskip
+
+Which of the following are true and which are false? Give proofs or
+counterexamples as appropriate. [You may assume standard properties of
+  rank.]
+
+\smallskip
+
+(i) If the rank of a set $x$ is a (non-zero) limit then $x$ is infinite.
+
+(ii) If the rank of a set $x$ is countable then $x$ is countable.
+
+(iii) If every finite subset of a set $x$ has rank at most $\alpha$ then $x$ has rank at most $\alpha$.
+
+(iv) For every ordinal $\alpha$ there exists a set of rank $\alpha$.
+
+\subsubsection*{Answers}
+To prove that every $x$ belongs to a $V_\alpha$ you do an $\in$-induction.
+
+\medskip
+
+(i) Yes. If $x$ has infinite rank then the set of ranks of its members
+has no maximal element, so $x$ must have infinitely many members.
+
+\smallskip
+
+(ii)  {\sl Obviously} not:  $V_{\omega +1}$ has countable rank but its
+cardinality is $2^{\aleph_0}$
+
+\smallskip
+
+(iii) I had to think about this.  Hold on to your hat \ldots the rank
+of a set is the least ordinal bigger than all the ranks of its
+members.  If the rank of $x$ is successor---$\alpha+1$ for some
+$\alpha$---then it has at least one member of rank $\alpha$ so it has
+finite subsets of rank $\alpha + 1$.  So: yes.  What happens if the
+rank of $x$ is some limit ordinal $\lambda$?  Then the rank of any
+finite subset of $x$ is the sup of some finite set of ordinals below
+$\lambda$ and accordingly is below $\lambda$.  But the set of such
+ordinals is not bounded below $\lambda$. So the least $\alpha$
+s.t. every finite subset of $x$ has rank at most $\alpha$ is
+$\lambda$.
+
+Another take:
+
+
+The rank of a finite subset of $x$ is the sup of some ordinals of the
+form rank$(y) +1$ for various $y \in x$, and rank$(x)$ is the sup of
+all such ordinals, so rank$(x)$ is at least the sup of all the ranks
+of the finite subsets.  Can it be greater? No: every member of $x$
+appears in at least one such finite set.
+
+\smallskip
+
+(iv) Not hard to prove by induction on the ordinals that the von Neumann ordinal $\alpha$ has rank $\alpha$.
+
+A tangential p{\ae}dogogical point at this stage\ldots.  It is
+possible to worry about the legitimacy of the construction of the
+cumulative hierarchy of the $V_\alpha$s by recursion over the
+ordinals.  I mean, dammit, the ordinals are inhabitants of the
+cumulative hierarchy so they aren't initially there for us to do the
+recursion on!  This isn't a {\sl real} worry, but it does create an
+opening for one to make the point that the morally correct way to
+think of the recursive construction of the cumulative hierarchy is
+being run on ordinals-as-abstract-mathematical-objects, which exist in
+the wider world of mathematics quite independently of any set
+theoretic clothing they may or may not have.  You don't have to think
+of 17 or $\pi$ as sets, and you don't have to think of ordinals as
+sets either, and part (iv) is a good time to exercise that right.  I
+would answer (iv) with something like ``for every ordinal $\alpha$ its
+von Neumann concretisation is a set of rank (birthday!) $\alpha$.''
+
+You can think of this construction as a way in to Set Theory.  The
+narrative is: you start off not knowing about sets (tho' you do know
+about numbers, incl ordinals, which are the kind of number that
+measures the lengths of transfinite processes).  You then execute the
+Indian Rope Trick that is the cumulative hierarchy, and now you have
+got your hands on some sets!
+
+\subsection*{Paper 2, Section II  16I}
+
+Give the inductive and synthetic definitions of ordinal addition, and
+prove that they are equivalent.
+
+Which of the following assertions about ordinals $\alpha,\beta$ and
+$\gamma$ are always true, and which can be false?
+
+Give proofs or counterexamples as appropriate.
+\begin{quote}
+(i)  $\alpha+ (\beta+\gamma ) = (\alpha+\beta) +\gamma$.
+
+(ii) If $\alpha$ and $\beta$ are uncountable then $\alpha+\beta=\beta+\alpha$.
+
+(iii) $\alpha(\beta\gamma ) = (\alpha\beta)\gamma$ .
+
+(iv) If $\alpha$ and $\beta$ are infinite and $\alpha+\beta=\beta+\alpha$
+then $\alpha\beta=\beta\alpha$.
+\end{quote}
+
+\subsubsection*{Answers}
+
+(i) and (iii) are true for {\sl all} order types, not just ordinals, so use the synthetic definition.
+
+(ii)  is obviously false: try $\omega_1$ and $\omega_2$;
+
+(iv) brought me up short.  I had to think for a bit.
+$\alpha + \beta = \beta + \alpha$ happens only if the two ordinals are
+``close'': $\alpha < \beta\cdot \omega$ and
+$\beta < \alpha\cdot\omega$.  If they are further apart than that the
+bigger one will absorb the smaller one on the left.  So you might
+expect the answer to be `yes', but it ain't: try $\alpha = \omega$ and
+$\beta = \omega\cdot 2$.
+
+\subsection*{Paper 1, Section II 16I}
+
+
+(i) State the completeness theorem for Propositional Logic.  Explain briefly
+how the proof of this theorem changes from the usual proof in the case
+when the set of primitive propositions may be uncountable.
+
+\noindent (ii) State the compactness theorem and the decidability
+theorem, and deduce them from the completeness theorem.
+
+\noindent (iii) A poset $(X,<)$ is called {\sl two-dimensional} if there exist
+total orders $<_1$ and $<_2$ on $X$ such that $x < y$ if and only if
+$x <_1y$ and $x <_2y$. By applying the compactness theorem for
+Propositional Logic, show that if every finite subset of a poset is
+two-dimensional then so is the poset itself.
+
+[Hint: Take primitive propositions $p_{x,y}$ and $q_{x,y}$, for each distinct
+  $x,y \in X$, with the intended interpretation that $p_{x,y}$ is true if
+  and only if $x <_1y$ and $q_{x,y}$ is true if and only if $x <_2y$.]
+
+\subsubsection*{Answers}
+
+(i) and (ii) are bookwork.
+
+\smallskip
+
+\noindent (iii) This is a really {\sl really} nice question.  I could bore
+for Britain on all the cute points one can extract from it.
+
+\smallskip
+
+We start with a warning: `two dimensional' is a nonce notation, dreamt
+up specifically for this question.  You will not see it anywhere else.
+
+The question setter doesn't say whether the relation $<$ is a partial
+ordering or a strict partial ordering.  The use of `$<$' rather than
+`$\leq$' suggests that it is the strict version that they have in mind,
+but i suspect they mean the nonstrict (reflexive) version.  That's the
+assumption i would make, anyway.
+
+This is a cute illustration of how a Zorn proof of the existence
+of a maximal widget can sometimes be coded up inside propositional
+logic. There are some standard examples, but this one is new to me.
+
+
+The intersection of (the graphs of) two partial ordering relations
+on a given set is another partial ordering of that same set. (You
+don't need the partial orderings to be total orderings, as here)
+
+\begin{quote}
+The {\sl logician} in me wants to emphasise that this last fact is
+because of the very simple syntax of `$R$ is a partial order'.  In
+contrast the intersection of two total orderings is not a total
+ordering, for similar syntactic reasons.
+
+The {\sl amateur combinatorist} in me wants to say that there is a lot
+to be said about how the structure of the antichains in a partial
+ordering $R_1 \cap R_2$ is controlled by the structure of the
+antichains\footnote{$R_1$ and $R_2$ are two partial orderings of one
+  and the same set\ldots so we mean the intersection of the two
+  graphs, of the two relations\ldots} in $R_1$ and $R_2$.  You measure
+the complexity of the antichains with an ordinal, and the ordinal for
+the antichains in $R_1\cap R_2$ is the Hessenberg sum of the ordinals
+for $R_1$ and $R_2$\footnote{Look at
+  \url{www.dpmms.cam.ac.uk/~tf/ordinalsforwelly.pdf} if you want to
+  know about Hessenberg sum}.
+\end{quote}
+
+For another thing, assuming AC, every partial ordering is
+two-dimensional.  (The finite case of this is obvious).  This is a
+sexed-up version of OEP, the order extension principle, that says that
+every partial ordering can be extended (by adding ordered pairs) to a
+total ordering.  The sexed-up version will say that any partial order
+can be extended in two incompatible ways whose intersection is the
+partial order you started with.
+
+It's a standard result (it's probably an old example sheet question or
+old tripos question) that every {\sl wellfounded} partial order can be
+extended to a {\sl wellfounded} total order.  Can this be sexed-up
+too?  No: if a wellfounded partial order is an intersection of two
+wellorderings then it has no infinite antichains: the empty relation
+on an infinite set (for example) is not the intersection of two
+wellorderings. [Why not!?]
+
+\medskip
+
+With the hint and with the suggestion that you use propositional
+compactness this is really a piece of cake.  Contact me if you get
+stuck.  I promise not to tell your friends.
+
+\smallskip
+
+Oh, Ok, i suppose i should say {\sl something}.  The hint is good:
+``Take primitive propositions $p_{x,y}$ and $q_{x,y}$, for each distinct
+$x,y \in X$, with the intended interpretation that $p_{x,y}$ is true if
+and only if $x <_1 y$ and $q_{x,y}$ is true if and only if $x <_2y$.''
+\smallskip
+
+Then the theory that says that $<_X$ is two-dimensional (in virtue of
+$<_1$ and $<_2$) has the following axiom (schemes):\begin{quote}
+$\bullet$ $p_{x,y} \wedge q_{x,y}$ for all pairs $x <_X y$;\\
+$\bullet$ $p_{x,y} \wedge p_{y,z} \to p_{x,z}$ for all $x$, $y$, $z$ in $X$;\\
+$\bullet$ $q_{x,y} \wedge q_{y,z} \to q_{x,z}$ for all $x$, $y$, $z$ in $X$;\\
+$\bullet$ $p_{x,y} \vee p_{y,x}$ for all $x$, $y$ in $X$;\\
+$\bullet$ $q_{x,y} \vee q_{y,x}$ for all $x$, $y$ in $X$.
+\end{quote}
+
+$<_X$ is two-dimensional as long as this theory has a valuation.  By
+compactness it has a valuation iff every finite subset has a
+valuation.  But that is going to happen iff every restriction of $<_X$
+to a finite subset of $X$ is two-dimensional (in virtue of $<_1$ and
+$<_2$).  And we are told that every finite substructure of
+$\tuple{X,<_X}$ is two-dimensional.
+
+\smallskip
+
+I'm pretty sure that every finite poset is two-dimensional.
+
+\bigskip
+
+While we are about it, here are some standard examples of Zorn-like
+things you can prove using propositional compactness:
+\begin{quote}
+$\bullet$ A group is orderable if all its finitely generated subgroups are.
+
+$\bullet$ A graph is $k$-colourable if all its finite subgraphs are.
+
+$\bullet$ Every partial ordering can be extended to a total ordering
+  on the same carrier set.
+\end{quote}
+
+\chapter{2020}
+
+\section*{Paper 2 16H}
+
+Parts (a) and (b), (i) are bookwork.  The third part gave me a bad fright.
+It makes me realise i am becoming old and slow; time to retire.
+
+{\sl let $X$ be an infinite set.  For each $x \in X$, let $L_x$ be a
+  subset of $X$. Suppose that, for any finite $Y \subseteq X$, there is
+  a function $f_Y: X \to \{1,\ldots 100\}$ such that, for all $x \in Y$
+  and all $y \in Y \cap L_X$, $f_Y(x) \not= f_Y(y)$.
+
+  Show that there is a function $F:X \to \{1,\ldots 100\}$ such that,
+  for all $x \in X$ and all $y \in L_x$, $F(x) \not= F(y)$.}
+
+Answer:
+
+My first thought is that the condition that, ``for all $x \in Y$ and
+all $y \in Y \cap L_X$, $f_Y(x) \not= f_Y(y)$'' ensures that $x \not\in L_x$.
+
+It's also the case that $f_Y$ doesn't have to be defined on all of
+$X$, but only on $Y$: we never look at what it does to anything not in $Y$
+
+I still haven't got it \ldots.  there's something simple i'm missing
+\ldots Let try low cunning.  This is obviously a compactness question.
+In questions of this kind the plan is to set up a propositional
+language ${\cal L}$ with a propositional theory $T$ included in it in
+such way that a valuation making $T$ true contains a description of
+the object you are being invited to build.  Best bet is that
+${\cal L}$ has a propositional letter for every pair in
+$X \times [0,100]$ whose meaning is that $x \in X$ is joined to a
+number less than $100$.  For each $x \in X$, $T$ contains a disjunction
+of $100$ propositional letters that say that $x$ is connected to a
+number $\leq 100$, plus axioms to say that it isn't additionally
+connected to any others. Also, for each $x \in X$ you have (finitely
+many)---negated---letters saying that $x$ is not joined to the same
+number as any member of $L_x$.  Any finite set of these axioms is
+consistent in virtue of the existence of the $f_Y$ for finite
+$Y \subset X$.
+
+
+\section{Paper 3: 16H}
+
+{\sl Let $\tuple{V,\in}$ be a model of ZF.
+
+(i)  Give the definition of a class and  a function class in $V$.
+
+(ii)   Use the concept of function class to give a short,
+  informal statement of the Axiom of Replacement.
+
+(iii)   Let $z_0=\omega$ and, for
+  each $n\in\omega$, let $z_{n+1}={\cal P}(z_n)$.
+
+(iv)  Show that $y=\{z_n:n\in\omega\}$ is a set.
+
+We say that a set $x$ is small if there is an injection from $x$ to $z_n$
+for some $n\in\omega$.  Let HS be the class of sets $x$ such that every
+member of $TC({x})$ is small, where $TC({x})$ is the transitive closure
+of $\{x\}$.
+
+(v) Show that $n\in HS$ for all $n\in\omega$ and deduce that
+$\omega\in HS$. Show further that $z_n\in HS$ for all $n\in\omega$.
+
+(vi) Deduce that $y\in HS$. Is $\tuple{HS,\in}$ a model of ZF?
+
+(vii) Justify your answer. [Recall that $0 =\emptyset$ and that
+  $n+1=n\cup\{n\}$ for all $n\in\omega$.]}
+
+\subsubsection*{Answers}
+
+I can't think of anything particularly helpful to say about this.
+There are seven parts to this question, so the examiners can't be
+asking for anything very detailed.
+
+(ii)  ``The image of a set in a function is a set''.
+
+(v) Of course you use replacement.  I don't think he's expecting you to explain attempts.
+
+(vi) $\bigcup y$ is not in $HS$.  So $HS$ is witness to the
+independence of the axiom of sumsets from ZF.  It's the standard proof
+of this fact.
+
+\section*{Paper 4: 16H}
+
+{\sl (a) State Zorn's lemma.
+
+[Throughout the remainder of this question, assume Zorn's lemma.]
+
+(b) Let $P$ be a poset in which every non-empty chain has an upper
+bound and let $x\in P$.
+
+By considering the poset $P_x=\{y \in P :x \leq y\}$, show that $P$
+has a maximal element $\sigma$ with $x\leq\sigma$.
+
+(c) A filter is a non-empty subset $F \subseteq {\cal P}(\Nn)$
+  satisfying the following three conditions:\begin{quote}
+  $\bullet$ if $A,B \in F$ then $A\cap B \in F$;\\
+  $\bullet$ if $A \in F$ and $A \subseteq B$ then $B\in F$;\\
+$\bullet$ $\emptyset\not\in F$.
+\end{quote}
+An ultrafilter is a filter $\U$ such that, for all $A \subseteq \Nn$, we
+have either $A \in \U$ or $\Nn\setminus A \in \U$.
+
+(i) For each $n\in \Nn$, show that $\U_n= \{A \subseteq \Nn : n \in A\}$
+is an ultrafilter.
+
+(ii) Show that $F= \{ A \subseteq \Nn:\Nn\setminus A$ is finite$\}$ is
+a filter but not an ultrafilter, and that, for all $n\in \Nn$, we have
+$F\not\subseteq\U_n$.
+
+(iii) Does there exist an ultrafilter $\U$ such that $\U\not= \U_n$
+for any $n\in \Nn$?  Justify your answer.}
+
+\medskip
+
+This is all pretty routine. The only part that involves any work is
+(iii). It's an application of Zorn's lemma.  Fix any filter, and
+consider the set of filters that are supersets of it.  Clearly this is
+a chain-complete poset, so we get an ultrafilter extending the filter
+we started with.  If we start with a nonprincipal filter (such as the
+``cofinite'' (or {\sl Fr\'echet}) filter consisting of the elements
+with finite complement---called `$F$' in (ii) above) then the filter
+we get cannot be a $\U_n$. `$\U_n$' is not a standard notation BTW.
+
+Ultrafilters are dead cool; i use to lecture them but they aren't
+actually in the syllabus.  They should be. They lead to ultraproducts
+which are cooler still.
+
+\section{Paper 2 16H}
+
+Throughout this question, assume the axiom of choice.]
+
+  Let $\kappa, \lambda$ and $\mu$ be cardinals.  Define $\kappa +\lambda, \kappa\cdot \lambda$ and $\kappa^\lambda$.
+
+  What does it mean to say $\kappa \leq \lambda$ ?
+
+  Show that $(\kappa^\lambda)^\mu =\kappa^{ \lambda \cdot\mu}$ .
+  Show also that $2^\kappa > \kappa$ .
+
+  Assume  now  that $\kappa$ and $\lambda$ are  infinite.
+  Show  that $\kappa\cdot \kappa =\kappa$ .   Deduce  that
+  $\kappa +\lambda =\kappa\cdot\lambda =$max$\{\kappa ,\lambda \}$.
+  
+  Which of the following are always true and which can be false?
+  Give  proofs  or counterexamples as appropriate.
+\begin{quote}
+  (i)\ \ \ $\kappa^\lambda = 2^\lambda$ ;\\
+  (ii)\ \ $\kappa \leq \lambda \to \kappa^\lambda = 2^\lambda$ ;\\
+  (iii)\ $\kappa^\lambda =\lambda^\kappa$.\end{quote}
+
+  (i) is obviously false c's $\kappa$ can be as big as you like;
+  (iii) is obviously false---take the two cardinals to be $\aleph_0$ and $2^{\aleph_0}$. (ii), on the other hand, is true:
+
+  $$2^\lambda \leq \kappa^\lambda \leq (2^\kappa)^\lambda \leq 2^{\kappa\cdot \lambda} \leq 2^{\kappa^2} = 2^\kappa$$
+
+  \medskip
+
+  Quite a nice question\ldots
+
+
+  \chapter{2021}
+
+  These are mostly fairly routine.
+  
+  \subsection*{Paper 3, Section II 16G}
+
+  The first four lines of part (b) are stuff you should have done in
+  1a.  Part II students shouldn't be asked to write out proofs of
+  this sort of thing.  Get a 1a student to do it for you.  Does your
+  college still have fagging? Probably not. I don't know what the
+  world is coming to.
+
+  \smallskip
+  
+  The last part is an idiomatic piece of set theory, and recalls the
+  proof of Hartogs' Lemma.  On being given a relation on (the von Neuman
+  ordinal) $\omega_\alpha$---which is a set of size $\aleph_\alpha$.
+  send it to $0$ if it is not a wellordering.  If it is a wellordering
+  send it to (the von Neumann ordinal) of its order type.  This maps
+  the set of wellorderings of (the von Neuman ordinal) $\omega_\alpha$
+  onto the set of (von Neumann) ordinals $< \omega_{\alpha+1}$, which
+  last set is of course the (von Neumann) ordinal $\omega_{\alpha+1}$
+  itself, as desired.
+
+  Notice that---in particular---there is a map from $\Re$ onto the
+  second number class, the set of all countable ordinals, {\sl and we
+    know what that map is}.  Observe, in contrast, that there is no
+  obvious injection from the second number class into the reals.
+  There was an example sheet question about this, the question that
+  asked you to embed every countable ordinal in $\Re$.
+
+
+\subsection*{Paper 4, Section II 16G}
+
+The third part of this question has an interesting history.  Years ago
+i set it as an exercise on $\in$-induction in the form ``Show that any
+$\in$-automorphism of $V$ must be the identity''.  The proof is pretty
+routine, the only subtlety being the point that one might fix a
+function-class $f$ and then prove by $\in$-induction that $f$ is the
+identity, or prove it simultaneously for all function-classes.  This
+raises the question of whether or not the thing one is proving by
+means of $\in$-induction is allowed to contain quantifiers over
+function-classes.  But perhaps it's best not to think about that!
+
+Anyway, subsequent versions of this question were formulated without
+using the word `automorphism'; apparently it's scary.  So the question
+became something like: suppose $f$ is a function-class s.t., for all
+$x$ and $y$, $x \in y \bic f(x) \in f(y)$; prove that $f$ is the
+identity.  The problem is that to establish that it is the identity
+one needs the extra condition that $f$ be surjective.  If we drop that
+requirement then we can declare a counterexample recursively by
+\begin{quote}
+ $f(\emptyset) =: \{\emptyset\}$; thereafter $f(x) =: f``x$.
+\end{quote}
+
+My student August (he's a star) then says: it's obvious that $x \in y$
+implies $f(x) \in f(y)$, but what about the other direction??  Suppose
+$f(x) \in f(y) = \{f(z):z \in y\}$.  That doesn't tell us that
+$x \in y$ unless $f$ is injective!  After all we might have
+$x \not\in y$ but $f(x) = f(z)$ for some $z \in y$.  To my shame this
+possibility had never occurred to me!!  We'd better prove that $f$ is
+injective.  Presumably we do this by induction.
+
+Suppose, for all $x \in X$, that $(\forall u)(f(x) = f(u) \to x = u)$.
+We want to show $(\forall Y)(f(Y) = f(X) \to Y=X)$.  Accordingly
+suppose that $f(X) = f(Y)$.  Then
+$\{f(x): x \in X\} = \{f(y):y \in Y\}$ so every $f$ of a member of $X$
+is an $f$ of a member of $Y$ and {\sl vice versa}.  Perhaps a little
+detail wouldn't go amiss.  Suppose $u \in X$.  Then $f(u) \in f(X))$
+and {\sl vice versa} beco's of the induction hypothesis on members of
+$X$. But $f(X) = f(Y)$ so that's iff $f(u) \in f(Y) = f``Y$.  But then
+$u \in X$ beco's the only $z$ st $f(z) = f(u)$ is $u$, by induction
+hypothesis.
+Whence $X = Y$ by extensionality.  Whew.
+
+(For one ghastly moment i feared i was going to have to do it by a
+wellfounded induction on $V \times V$ using the relation
+$\tuple{x,y}\,R\,\tuple{x',y'}$ iff $x \in x' \wedge y \in y'$).
+  
+\bigskip
+
+Izaak Mammadov had an interesting take on this question, even if only
+beco's he misread it.  He read the condition as
+
+$$(\forall x y)(x \in y \to f(x) \in f(y))$$
+i.e., as a conditional not a biconditional.  And he had difficulty
+showing that $f$ must be the identity---even with the assumption that $f$ is onto.  Well, he's not the only one.
+I can't prove it either!  And my current guess is that it's not true.
+
+\bigskip
+
+One thought that i had at the back of my mind is that thinking about
+$f$s like this---that satisfy the biconditional and not merely the
+conditional and are injective but not required to be surjective---can
+be connected to $f$s that satisfy an extra ``elementarity'' condition.
+This condition says that
+$$(\forall \vec x)(\phi(\vec x) \bic \phi(\vec f(x)))$$
+Such an $f$ must send the empty set to the empty set. And the
+singleton of the empty set to the singleton of the empty set.  In fact
+it's quite hard to see how $f$ can avoid being the identity.  Indeed the
+assertion that there is a nonidentity $f$ of this kind is incredibly
+strong.  The least ordinal $\alpha$ s.t. $\alpha \not= f(\alpha)$ is a
+monster.  Study of functions of this kind is absolutely central to
+postmodern set theory with large cardinals.
+
+
+\end{document}
+
+
+\section{Model Tripos questions}
+
+Need a model question on ordinals.  One fact to fit in is that 
+$\alpha \mapsto \alpha^2$ is not normal.
+\subsection*{A Model Propositional Logic Question}
+
+(This is a real live example from my research)
+
+We have a propositional language ${\cal L}$ with propositional letters
+$p_i$, $q_i$ and $r_i$ for all $i \in \ZZ$.  The theory $T$ has two
+schemes; one to say that, for each $i\in\ZZ$, precisely one of $p_i$,
+$q_i$ and $r_i$ is true. The other scheme says
+$\neg(p_i \wedge p_{i+1}) \wedge \neg(q_i \wedge q_{i+1}) \wedge \neg(r_i \wedge r_{i+1})$.
+
+$T$, considered as the deductive closure of these axioms (a set of 
+formul{\ae}) has a automorphism group generated by $S_3$ (permute 
+$\{p,q,r\}$)  and $\ZZ$ (permute the subscripts).  This group is the 
+group of automorphisms of $T$ in the sense that if $\sigma(\psi)$ is 
+the result of doing the permutation $\sigma$ to the formula $\psi$ then 
+$T \vdash \psi$ iff $T \vdash \sigma(\psi)$. Explain this situation.
+
+Let us write $\psi^+$ for the result of increasing every subscript in
+$\psi$ by $1$.  
+\begin{quote}
+(a) Show that, altho' for all $\psi$ we have: $T \vdash \psi$ iff 
+$T \vdash \psi^+$,  nevertheless we do not have $T \vdash \psi \bic \psi^+$ 
+for all $\psi$.  Indeed, if we add the  scheme of biconditionals 
+$\psi \bic \psi^+$ to $T$ the resulting theory is inconsistent.  
+
+(b) Prove that nevertheless each expression of the form 
+$\phi \bic \phi^+$ is individually consistent with $T$.  
+\end{quote}
+
+\commentblock{(a) is pretty obvious; for (b) Randall has persuaded me
+  that Specker's rather elliptical explanation (filtered thru' my
+  hesitant translation) makes sense.  Fix an arbitrary $S$; we will find a
+  valuation satisfying $S \bic S^+$. Suppose (with a view to obtaining
+  a contradiction) that every valuation satisfies precisely one of $S$
+  and $S^+$. Think of the valuation that goes
+  $\ldots p\, q\, r\, p\, q\, r\ldots$ (with period $3$) as you ascend
+  through the levels (call it $f$) and the two valuations $f^+$ and
+  $f^{++}$.  Recall that $f$ sat $S$ iff $f^+$ sat $S^+$ and so on.
+  Do any of these valuations actually satisfy $S \bic S^+$?  If they
+  do, we are happy.  If not, then each of them satisfies precisely one
+  of $\{S, S^+\}$. WLOG $f$ satisfies $S$ but not $S^+$; then $f^+$
+  satisfies $S^+$ but not $S$, $f^{++}$ satisfies $S$ but not $S^+$
+  and $f^{+++}$ satisfies $S^+$ but not $S$.  But $f^{+++} = f$.}
+
+\subsection*{Another Propositional Logic Question}
+
+Let $T$ be a propositional theory with an automorphism $\sigma$.  That
+is to say, $\sigma:{\cal L}(T) \bic {\cal L}(T)$ satisfies $T\vdash A$
+iff $T\vdash \sigma(A)$ for all $A \in {\cal L}(T)$. We stipulate that
+$\sigma$ has no finite cycles, and we write `$A^n$' for `$\sigma^n(A)$'.
+(There being only one automorphism we can grant it name suppression.)
+Let us write $T^{(N)}$ for (the deductive closure of) $T$ augmented by
+the scheme of all biconditionals $\phi \bic \phi^n$.
+\begin{quote}
+Prove that $T^{(M\cdot N)} \subseteq T^M \cap T^N$.
+\end{quote}
+
+I'm pretty sure the proof is constructive.  Mind you, I don't know
+how to do the inclusion in the other direction. How in God's name do i
+deduce $\phi \bic \phi^n \vee \psi \bic \psi^m$ from $T^{(n\cdot m)}$!?
+In fact the more i think about it the less plausible it seems.
+
+
+\subsubsection{Finite axiomatisability}
+
+Show that the intersection of two finitely (resp recursively) axiomatisable
+theories is finitely (resp recursively) axiomatisable.
+
+\subsection{Axiomatising theories}
+
+ Are the following theories axiomatisable in the language of posets? Finitely axiomatisable?
+\begin{tabbing}
+(1) \= Directed Posets;\\
+(2)\> Posets in which every chain has an upper bound;\\
+(3)\>Posets in which every element belongs to a unique maximal antichain.
+\end{tabbing}
+In each case exhibit an axiomatisation or prove that there is none.
+
+
+\subsection{Omitting Types}
+  A {\sl type} in a propositional
+  language ${\cal L}$ is a set of formul{\ae} (a countably infinite set
+  unless otherwise specified).
+
+  For $T$ an ${\cal L}$-theory a $T$-{\sl valuation} is an ${\cal
+    L}$-valuation that satisfies $T$.  A valuation $v$ {\sl realises}
+  a type $\Sigma$ if $v(\sigma)$ = \verb#true# for every $\sigma \in
+  \Sigma$.  Otherwise $v$ {\sl omits} $\Sigma$.  We say a theory $T$
+  {\sl locally omits} a type $\Sigma$ if, whenever $\phi$ is a formula
+  such that $T$ proves $\phi \to \sigma$ for every $\sigma \in
+  \Sigma$, then $T \vdash \neg \phi$.
+
+
+\bigskip
+
+Now prove the following:
+
+\bigskip
+
+
+  {\sl Let $T$ be a propositional theory, and $\Sigma \subseteq {\cal
+    L}(T)$ a type.  If $T$ locally omits $\Sigma$ then there is a
+  $T$-valuation omitting $\Sigma$.}
+
+\bigskip
+
+You may also wish to prove the generalisation
+
+\bigskip
+
+
+{\sl Let $T$ be a propositional theory and, for each $i \in \Nn$,
+  let $\Sigma_i \subseteq {\cal L}(T)$ be a type.  If $T$ locally omits
+  every $\Sigma_i$ then there is a $T$-valuation omitting all of the
+  $\Sigma_i$.}
+
+
+[Hint: Show that, if you can find---for each $n$---a family
+$\tuple{\phi_i: i \leq n}$, with $\phi_i$ in $\Sigma_i$ for every
+$i < n$ s.t. $T \cup \{\bigwedge_{i \leq n} \neg \phi_i\}$ is
+consistent, then you can extend this family to one of length $n+1$.]
+
+
+\bigskip
+
+For further reading have a look at \url{yabloomittingtypes.pdf} linked from my home page.
+
+\commentblock{
+\Proof
+
+We prove only the hard (second) part.
+
+We will show that whenever $T \cup \{\neg \phi_1, \ldots \neg \phi_i\}$ 
+is consistent, where $\phi_n \in \Sigma_n$ for each $n \leq i$, then we 
+can find $\phi_{i+1} \in \Sigma_{i+1}$ such that 
+$T \cup \{\neg \phi_1, \ldots \neg \phi_i, \neg \phi_{i+1}\}$ is consistent.
+
+Suppose not, then 
+$\displaystyle{T \vdash (\bigwedge_{1 \leq j \leq i} \neg \phi_j) \to \phi_{i+1}}$
+for every $\phi_{i+1} \in \Sigma_{i+1}$.  But, by assumption,
+$T$ locally omits $\Sigma_{i+1}$, so we would have 
+$\displaystyle{T \vdash \neg \bigwedge_{1 \leq j \leq i} \neg \phi_j}$ 
+contradicting the assumption that 
+$T \cup \{\neg \phi_1, \ldots \neg \phi_i\}$ is consistent.
+
+Now, as long as there is an enumeration of the formul{\ae} in ${\cal
+  L}(T)$, we can run an iterative process where at each stage we pick
+for $\phi_{i+1}$ the first formula in $\Sigma_{i+1}$ such that $T \cup
+\{\neg \phi_1, \ldots \neg \phi_i, \neg \phi_{i+1}\}$ is consistent.
+This gives us a theory $T \cup \{\neg \phi_i: i \in \Nn\}$ which is
+consistent by compactness.  Any model of $T \cup \{\neg \phi_i: i \in
+\Nn\}$ is a model of $T$ that omits each $\Sigma_i$.
+
+\endproof
+
+
+There is a version of this theorem for predicate (first-order) logic. 
+(It deals with $n$-types for $n >0$.)  I can't face proving it here!}
+
+\subsection{A Model Tripos Question about Hall's Marriage Theorem}
+
+
+see \url{www.math.uwo.ca/~mdawes/courses/420/asst3.pdf}
+
+\medskip
+
+A countable set $M$ of men, and a countable set $W$ of women
+and a binary compatibility relation between them.  Assume that, 
+
+(i) for each man, the set of women with whom he is compatible is 
+finite. Assume further
+
+(ii) that, for every finite set $W' \subset W$, 
+the set of those men who are compatible only with members of 
+$W'$ is no bigger than $C'$.
+
+Use propositional compactness to show that in these circumstances
+every man can be paired with a compatible woman.  You may assume 
+Hall's theorem in the finite case, namely that if $W$ and $M$ are 
+finite, and the condition on all $W' \subseteq M$ is satisfied 
+for all such $W'$, then every man can be paired with a woman.
+
+Use your result to prove the axiom of choice for countable sets 
+of finite sets.
+
+\commentblock{
+
+%\end{document}
+
+
+\subsection*{Discussion}
+
+In an earlier version of the question above, i omitted the first
+condition.  Trying to solve it without this condition is actually
+quite instructive.  
+
+\smallskip
+
+OK, so what's the obvious thing to do?  For each pair $b,c$ of a bloke
+and a chick, have a propositional letter $p_{bc}$ to say that $b$ and
+$c$ are compatible, and for each pair $b,c$ of a bloke and a chick,
+have a propositional letter $m_{bc}$ to say that $b$ and $c$ are
+paired off at the end. Clearly, for each $b$ and $c$ we have either
+$p_{bc}$ or $\neg p_{bc}$ as an axiom, and we have $m_{bc} \to p_{bc}$
+as an axiom.  Also, for every $b \not= b'$ and every $c$ we have an
+axiom $\neg(m_{bc} \wedge m_{b'c})$ and for every $c \not= c'$ and
+every $b$ we have an axiom $\neg(m_{bc} \wedge m_{bc'})$.  The problem
+is, how do we express the condition that says that for every finite set
+$C' \subset C$, the set of those blokes who are compatible only with
+members of $C'$ is no bigger than $C'$.  I mean, dammit, how do we say
+that for even one bloke there is someone he's compatible with?  One
+seems to need an infinite disjunction.
+
+
+The key is to exploit the fact that each bloke is compatible with only
+finitely many chicks, so we don't need the $p$ letters.  And that of
+course was the detail i omitted.  For each bloke you have an axiom
+that is a finite disjunction of $m$ letters, $m_{bc} \vee m_{bc'} \vee
+m_{bc''} \vee \ldots$.  We have these axioms instead of the $m_{bc}
+\to p_{bc}$ axioms.
+
+I think it's easy from there, tho' i might supply the details if i am
+at a loose end and pressed by my students.
+
+\medskip
+
+It does make me wonder about the infinite case. Can the infinite
+case be turned into a more complex propositional logic exercise,
+possibly involving propositional omitting types?  Sadly this cannot
+possibly work. For how would it work?  One would prove the infinite
+version of the marriage theorem by showing how to omit countably many
+types, as follows.  For each bloke one omits the type that says he is
+a wallflower, chicks ditto. If one is to omit all these types one has
+to adopt as an axiom every formula $\phi$ that locally realises any of
+these types.  But of course there is no such formula! (Any such
+formula would mention only finitely many blokes and chicks and
+therefore cannot imply that (s)he is never mated.)
+
+A pity
+
+}
+
+%\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{thebibliography}{}
+%\bibitem{sweetreason} Tymoczko and Henle.   Sweet Reason: A Field Guide to Modern Logic.  Birkh\"auser 2000  ISBN 
+%\end{thebibliography}
+
+
+
+
+
+\end{document}
+\documentclass{article}
+ \usepackage{amssymb}
+ \usepackage{amsbsy}
+ \usepackage{amsmath}
+ \usepackage[english]{babel}
+ \usepackage{bussproofs}
+ \usepackage{boxedminipage}
+ \usepackage{latexsym}
+ \usepackage{graphicx}
+ \usepackage{makeidx}
+ \usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage{pifont}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{pgf}
+\usepackage{txfonts}%for \leftsquigarrow
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+\usepackage[latin1]{inputenc}
+\usepackage{dingbat}
+\input newlogicmacr
+ \begin{document}
+ \title{Part II Set Theory and Logic Exam Questions for 2017}
+ \author{Thomas Forster}
+  \maketitle
+
+
+\section{Question 1}
+Show that the wellordering principle is equivalent to the assertion that
+$|X \times X| = |X|$ for every infinite set $X$.
+
+You may use without proof any facts about normal functions On $\to$ On
+that you need provided you state them correctly.  You may use Hartogs'
+Lemma and Bernstein's Lemma without proof provided you state them correctly.
+
+
+\subsection*{Answer to Question 1}
+
+First we show Left $\to$ Right.
+
+\smallskip
+
+[What follows is a slightly doctored extract from the notes from which
+  i lectured this result.  It has been available to the students
+  (linked from my home page) from the time i lectured it]
+
+(Using the letter `$\aleph$' as  a variable to range over alephs\ldots)
+ 
+We start by noting that $\aleph = \aleph+\aleph+\aleph$. This is
+because $2\cdot \omega_\alpha = \omega_\alpha$.  Any order of limit
+order-type consists of lots of concatenated copies of $\Nn$, each of
+length $\omega$.  You can interleave three wellorders of length
+$\omega$ to get a wellorder of length $\omega$ so you can do this for
+all the copies simultaneously.
+
+\smallskip
+
+We start by defining a function ${\mathfrak S}: On \to On$.  Given an
+ordinal $\alpha$, take a wellordering $\tuple{A, <_A}$ of order type
+$\alpha$, make disjoint copies of all its proper initial segments, and
+then concatenate the copies \ldots with longer things appended after
+shorter things. 
+
+
+The result is a wellordering and its order type is defined to be
+${\mathfrak S}(\alpha)$. 
+
+\begin{lem}\label{lem:S} \mbox{\negthinspace}\\
+
+(i) ${\mathfrak S}: On \to On$ is a normal function;
+
+(ii) Every initial ordinal is a value of ${\mathfrak S}$.
+
+\end{lem}
+
+\Proof
+
+(i) ${\mathfrak S}: On \to On$ evidently also has a recursive definition:
+\begin{quote}
+${\mathfrak S}(\alpha + 1) = {\mathfrak S}(\alpha) + \alpha$\ \ \ and\\  
+${\mathfrak S}(\lambda) = $ Sup$\{{\mathfrak S}(\alpha): \alpha < \lambda\}$ for $\lambda$ limit.\end{quote}
+\ldots from which it is clear that ${\mathfrak S}$ is a normal function. 
+
+\medskip
+
+(ii)
+Use the division algorithm for normal functions to show that there is a 
+$\beta$ s.t ${\mathfrak S}(\beta)\leq\omega_\alpha<{\mathfrak S}(\beta+1)$.  
+If ${\mathfrak S}(\beta) < \omega_\alpha$ then we have 
+$\omega_\alpha \leq {\mathfrak S}(\beta+1)={\mathfrak S}(\beta)+\beta$ 
+which is impossible, since ${\mathfrak S}(\beta)$ and $\beta$ both have 
+cardinality below $\aleph_\alpha$.\endproof
+
+\medskip
+
+We want to show that $(\aleph_\alpha)^2 = \aleph_\alpha$. $\aleph_\alpha$ is 
+defined as the cardinal $\{\beta:\beta<\omega_\alpha\}$, which means that 
+the canonical set of size $(\aleph_\alpha)^2$ is the cartesian product  
+$\{\beta: \beta < \omega_\alpha\} \times \{\beta: \beta < \omega_\alpha\}$.  
+We partition this last set into three pieces: \begin{quote}
+
+(i) the [graph of] the identity relation restricted to $\{\beta:\beta<\alpha\}$, and
+
+(ii), (iii) the two triangles above-and-to-the-left, and
+below-and-to-the-right of the diagonal.  \end{quote}
+
+To be slightly more formal about it, we partition the cartesian product 
+$\{\beta: \beta <\alpha\} \times \{\beta: \beta < \alpha\}$ into the 
+three pieces $\{\tuple{\beta,\gamma}: \beta < \gamma < \alpha\}$, 
+$\{\tuple{\beta,\gamma}: \beta = \gamma < \alpha\}$ and 
+$\{\tuple{\beta,\gamma}: \gamma < \beta < \alpha\}$.
+
+It is clear that the third piece is of order type 
+${\mathfrak S}(\alpha)$ in the lexicographic order.
+
+The idea is to show that these three pieces all have cardinality
+$\aleph_\alpha$.  That's obvious for the second piece, the identity
+relation.  Also there is an obvious bijection between the first and
+third piece (``flip your ordered pairs'') so it will suffice to prove
+that the third piece (``the bottom-right triangle'') has cardinality
+$\aleph_\alpha$.
+
+\smallskip
+
+Now we can prove
+
+$$(\forall \alpha)(\aleph_\alpha = (\aleph_\alpha)^2).$$
+
+\Proof
+
+By induction on $\alpha$.  The fact that it holds for $\alpha = 0$ you
+learnt in 1a.
+
+
+Assume true for all alephs $< \aleph_\alpha$. By lemma \ref{lem:S},
+$\omega_\alpha$ is a value of $\mathfrak S$; we want to show that it
+is actually a fixed point.  Now $\omega_\alpha$ is an initial ordinal,
+which is to say that for any $\beta < \omega_\alpha$, the cardinal
+$|\{\gamma:\gamma<\beta\}|$ is less than $\aleph_\alpha$, and (by
+induction hypthesis) is equal to its own square.  Suppose
+$\omega_\alpha$ were ${\mathfrak S}(\beta)$ for some $\beta
+<\omega_\alpha$.  This would entail that the size of the cartesian
+product $\{\gamma: \gamma < \beta\} \times \{\gamma: \gamma < \beta\}$
+is at least $\aleph_\alpha$, contradicting the induction. So
+$\omega_\alpha$ is a fixed point of $\mathfrak S$.  This means that
+the lower-right triangle of the cartesian product $\{\gamma: \gamma <
+\omega_\alpha\} \times \{\gamma: \gamma < \omega_\alpha\}$---which can
+be wellordered to length ${\mathfrak S}(\omega_\alpha)
+=\omega_\alpha$---is of cardinality $\aleph_\alpha$.  It's clearly
+naturally isomorphic to the upper-left triangle (as remarked earlier)
+so the cartesian product is now a union of three sets each of size
+$\aleph_\alpha$, giving $(\aleph_\alpha)^2 = \aleph_\alpha +
+\aleph_\alpha + \aleph_\alpha = \aleph_\alpha$ as desired.
+
+\endproof
+
+
+\smallskip
+
+Now we prove Right $\to$ Left.
+
+\smallskip
+
+\begin{quote}
+{\bf If $\alpha = \alpha^2$ for all infinite cardinals, then AC follows.}\end{quote}
+
+\Proof  Let $\alpha$ be an arbitrary infinite cardinal, and suppose $\beta^2 = \beta$ for all infinite cardinals $\beta$.  Then we have
+\begin{tabbing}
+$\alpha + \aleph(\alpha)$\ \= = \=$(\alpha + \aleph(\alpha))^2$\\
+                         \> = \> $\alpha^2 + 2\cdot\alpha\cdot \aleph(\alpha) + (\aleph(\alpha))^2$\\
+                         \> = \> $\alpha + 2\cdot\alpha\cdot \aleph(\alpha) + \aleph(\alpha)$\\
+                         \> = \> $\alpha + \alpha\cdot \aleph(\alpha) + \aleph(\alpha)$\\
+                         \> = \> $\alpha(1 + \aleph(\alpha)) + \aleph(\alpha)$\\
+                         \> = \> $(\alpha \cdot \aleph(\alpha)) + \aleph(\alpha)$\\
+                         \> = \> $(\alpha + 1) \cdot \aleph(\alpha)$\\
+                         \> = \> $\alpha \cdot \aleph(\alpha)$\\
+\end{tabbing}
+
+Now we use Bernstein's lemma (which says that $\gamma + \delta = \alpha \cdot \beta\ \to\ \alpha \leq^* \gamma \vee \beta \leq \delta$) to infer
+$$\aleph(\alpha) \leq \alpha \vee \alpha \leq^* \aleph(\alpha)$$
+The first disjunct is of course impossible---by definition of
+$\aleph(\alpha)$---so we infer the second, which tells us that any set
+of size $\alpha$ is a surjective image of a wellordered set.  But any
+such surjective image can be wellordered, and this gives us our result. 
+\endproof
+
+
+
+
+\section{Question 2}
+  What is a boolean algebra? What is a filter? An ultrafilter?  Prove
+  that in every boolean algebra every element belongs to some
+  ultrafilter.  Deduce that every boolean algebra is isomorphic to
+  some subalgebra of a power set algebra.
+
+\subsection*{Answer to Question 2}
+
+A Boolean algebra is a distributive complemented lattice. 
+It also obeys the de Morgan Laws: $\overline{a \vee b} = \overline{a} \wedge \overline{b}$ and $\overline{a \wedge b} = \overline{a} \vee \overline{b}$.
+
+A filter in a Boolean algebra is an upward-closed subset closed also
+under $\wedge$.  An ultrafilter is a $\subseteq$-maximal filter that
+is {\sl proper}: not containing the $0$ of the algebra.
+
+In any boolean algebra ${\cal B}$, and for any two elements $b,b'\in{\cal B}$ 
+with $b \not\leq b'$, the set of proper filters $F$ with $b\in F$ but 
+$b' \not\in F$ is a chain-complete poset, and has a maximal element by 
+Zorn's lemma.  This ensures that the map $h$ sending each element 
+$b \in {\cal B}$ to the set of ultrafilters containing it is injective, 
+and respects $\wedge$ and $\vee$.  Furthermore, every ultrafilter $\U$ 
+must contain $b$ or $\overline{b}$, $\forall b \in {\cal B}$.  This 
+ensures that $h$ respects complementation.
+
+Thus $h$ is an injective boolean homomorphism from ${\cal B}$ into the
+power set of the set of all ultrafilters $\subset {\cal B}$.
+
+[where do we use distributivity?]
+
+ 
+\section{Question 3}
+
+
+Which of the following assertions about ordinals are true?  Justify your answers
+
+\begin{tabbing}
+(i)\ \ \ \ \= $\alpha < \beta$\ \ \ \ \    \= \ $\to \gamma\alpha < \gamma \beta$;\\
+
+(ii)       \> $\alpha < \beta$    \> \ $\to \alpha\gamma < \beta\gamma$;\\
+
+(iii)      \> $\alpha^2 = \beta^2$  \> $\to \alpha = \beta$;\\
+
+(iv)       \> $\alpha\beta = \beta\alpha$ \> $\to \alpha^2\beta^2 = \beta^2\alpha^2$?
+\end{tabbing}
+
+\subsection*{Answer to Question 3}
+
+(i) is true (at least if $\gamma > 0$) and (ii) is false.  We
+illustrate the falsehood of (ii) by setting $\alpha = 1$, $\beta = 2$
+and $\gamma = \omega$.
+
+\smallskip
+
+(iii) is true.  (We prove the contrapositive). Suppose $\alpha <
+\beta$.  Then $\alpha^2 < \alpha\beta$ by (i).  But $\alpha^2 =
+\beta^2$ so we can substitute to get $\beta^2 < \alpha\beta$.  Also we
+have $\alpha\beta \leq \beta^2$ (because $\alpha \leq \beta$) giving
+$\beta^2 < \beta^2$.
+
+\smallskip
+
+(iv) is true. Suppose $\alpha\beta = \beta\alpha$.  Multiply both
+sides by $\alpha$ on the left and $\beta$ on the right to obtain
+$\alpha^2\beta^2 = \underline{\alpha\beta}\alpha\beta$.  Now permute
+the underlined bits to obtain
+
+$$\alpha^2\beta^2 = \beta\alpha\underline{\alpha\beta}$$  and permute again to obtain
+
+$$\alpha^2\beta^2 = \beta\underline{\alpha\beta}\alpha$$ and yet  {\sl again} to obtain
+
+$$\alpha^2\beta^2 = \beta^2\alpha^2.$$
+
+
+But actually they ask about the converse: If $\alpha^2\beta^2 = \beta^2\alpha^2$ must we have $\alpha\beta = \beta\alpha$.   Well, suppose $\alpha\beta < \beta\alpha$.
+
+Then $\alpha\beta$ copies of $\alpha$ is less than $ \beta\alpha$ copies of $\alpha$ giving
+$$\alpha^2\beta < \alpha\beta\alpha$$
+
+But $\alpha\beta < \beta\alpha$ so $\alpha$ copies of $\alpha\beta$ $\leq$ $\alpha$ copies of $\beta\alpha$ giving
+$$\alpha^2\beta < \alpha\beta\alpha \leq \beta\alpha^2$$
+in other words
+$$\alpha^2\beta < \beta\alpha^2$$
+Look at the RHS of this inequality. $\alpha^2\beta < \beta\alpha^2$ so
+$\alpha^2\beta$ copies of $\beta$ $\leq$  $\beta\alpha^2$ copies of $\beta$ giving $$\alpha^2\beta^2 < \beta^2\alpha^2$$
+
+
+
+\section{Question 4}
+
+
+ Show that, for a first-order theory $T$, the class of models of $T$
+ is closed under substructure if and only if $T$ is a universal
+ theory.
+
+\subsection*{Answer to Question 4}
+
+  The {\bf diagram} $D_{\M}$ of a structure $\M$ is the theory
+  obtained by expanding $\M$ by giving names to every $m \in M$, and
+  collecting all true atomic assertions about them.
+
+We need a lemma:
+
+\begin{lem}
+
+  For any consistent theory $T$ and any model $\M$ of $T_\forall$ (the
+  set of universal consequences of $T$) the theory $T \cup D_\M$, is
+  consistent.
+\end{lem}
+
+\Proof
+
+Let $\M$ be a model of $T_\forall$, with carrier set $M$.  Add to
+${\cal L}(T)$ names for every member of $M$.  Add to $T$ all the
+(quantifier-free) assertions about the new constants that $\M$
+believes to be true.  This theory is $T \cup D_\M$.  We want this
+theory to be consistent.  How might it not be?  Well, if it isn't,
+there must be an inconsistency to be deduced from a conjunction $\psi$
+of finitely many of the new axioms. This rogue $\psi$ mentions
+finitely many of the new constants.  We have a proof of $\neg \psi$
+from $T$.  $T$ knows nothing about these new constants, so clearly we
+must have a UG proof of $(\forall \vec x)\neg\psi$.  But this would
+contradict the fact that $\M$ satisfies every universal consequence of
+$T$. \endproof
+
+We can now prove:
+
+\begin{thm}\label{universalsubstructure}\mbox{\negthinspace}\\
+  $T$ is universal iff every substructure of a model of $T$ is a model
+  of $T$.\end{thm}
+
+\Proof
+
+L $\to$ R is easy.  We prove only the hard direction.
+
+\smallskip
+
+Suppose that $T$ is a theory such that every substructure of a
+model of $T$ is also a model of $T$.  Let $\M$ be an arbitrary model
+of $T_\forall$.  We will show that it must be a model of $T$.  We know
+already from the foregoing that the theory $T \cup D_\M$ is consistent,
+and so it must have a model---$\M^*$, say. $\M^*$ is a model of $T$,
+and $\M$ is a submodel of $\M^*$ and therefore (by assumption on $T$)
+a model of $T$---as desired.
+
+But all we knew about $\M$ was that it was a model of the universal
+consequences of $T$.  So any $\M$ that was a model of the universal
+consequences of $T$ is a model of $T$.  So $T$ is axiomatised by its
+universal consequences. \endproof
+
+
+\end{document}
+
+
+
+The implication the other way 
+
+
+
+$\alpha\beta = \beta\cdot\alpha \to (\exists \gamma)(\omega^\gamma \leq \alpha, \beta < \omega^{\gamma + 1})$
+
+
+
+
+
+$\alpha^2\beta^2 = \beta^2\alpha^2\ \to\ alpha\beta = \beta\alpha$
+
+
+
+\begin{question}
+Let ${\cal X}$ be an arbitrary set.  Consider the set ${\cal E}$ of
+equivalence relations on $X$ ordered by $E_1 \leq E_2$ if $E_2
+\subseteq E_1$ as sets of ordered pairs. Show that $\tuple{{\cal X},
+  \leq}$ is a complete poset.  Is it a distributive lattice?
+
+\medskip
+
+Explain briefly why $V_\alpha$ is transitive for all $\alpha$.  Fix an
+ordinal $\alpha$ and consider the poset of equivalence relations on
+$V_\alpha$ partially ordered as above.  If $R$ is an equivalence
+relation on $V_\alpha$ so is [the restriction to $V_\alpha$ of] the
+relation $R^+$ defined by $R^+(x,y)$ iff$_{df}$ $(\forall x'\in
+x)(\exists y' \in y)(R(x',y') \wedge (\forall y' \in y)(\exists x'\in
+x)(R(x',y')$.  Fixed points for + are {\sl contractions}.  If $R$ is a
+contraction show how to turn the quotient over $R$ into a structure
+for the language of set theory.
+\end{question}
+
+\begin{question}
+\end{question}
+
+
+\commentblock{
+\begin{answer}
+
+(a) 
+
+By contraposition.  Suppose there is no $T$-valuation omitting $\Sigma$.  
+Then every formula in $\Sigma$ is a theorem of $T$, so there is an 
+expression $\phi$ (namely `$\top$') such that $T \vdash \phi \to \sigma$ 
+for every $\sigma \in \Sigma$ but $T \not\vdash \neg \phi$. But of course 
+$T \vdash \top$.  Contraposing, we infer that if $T \vdash \neg \phi$ for 
+every $\phi$ such that $T \vdash \phi \to \sigma$ for every $\sigma \in \Sigma$
+then there is a $T$-valuation omitting $\Sigma$. 
+
+(b)
+
+We will show that: whenever $T \cup \{\neg A_1, \ldots \neg A_i\}$ is
+consistent, where $A_n \in \Sigma_n$ for each $n \leq i$, then we can
+find $A_{i+1} \in \Sigma_{i+1}$ such that $T \cup \{\neg A_1, \ldots
+\neg A_i, \neg A_{i+1}\}$ is consistent.
+
+Suppose not, then $\displaystyle{T \vdash (\bigwedge_{1 \leq j \leq i} \neg A_j) \to
+A_{i+1}}$ for every $A_{i+1} \in \Sigma_{i+1}$.  But, by assumption,
+$T$ locally omits $\Sigma_{i+1}$, so we would have 
+$\displaystyle{T \vdash \neg \bigwedge_{1 \leq j \leq i} \neg A_j}$ contradicting 
+the assumption that $T \cup \{\neg A_1, \ldots \neg A_i\}$ is 
+consistent.
+
+Now, as long as there is an enumeration of the formul{\ae} in ${\cal
+  L}(T)$, we can run an iterative process where at each stage we pick
+for $A_{i+1}$ the first formula in $\Sigma_{i+1}$ such that $T \cup
+\{\neg A_1, \ldots \neg A_i, \neg A_{i+1}\}$ is consistent.  This
+gives us a theory $T \cup \{\neg A_i: i \in \Nn\}$ which is consistent
+by compactness.  Any model of $T \cup \{\neg A_i: i \in \Nn\}$ is a
+model of $T$ that omits each $\Sigma_i$.
+
+\smallskip
+
+The first part is the {\sl Omitting Types Theorem} and the second part
+is the {\sl Extended omitting Types Theorem}. They come to life when
+you consider the analogues for predicate logic.  The standard model of
+arithmetic is one that omits the $1$-type $\{a \not= 0, a \not=S(0), a \not=S(S(0)) \ldots\}$
+
+\end{answer}
+}
+
+
+
+
+

@@ -1,0 +1,36 @@
+Title: Substitution in Fraenkel-Mostowski sets
+Abstract:
+
+Fraenkel-Mostowski (FM) sets was introduced in the first half of the
+last century to prove the independence of AC from the other axioms of
+ZF set theory with atoms (urelemente).  Gabbay (that's me) and Pitts
+applied the theory in a new way to give a set-theoretic model of
+alpha-equivalence, which they used to design the FreshML programming
+language and the Gabbay-Pitts NEW quantifier.  Details and papers are
+on my homepage www.gabbay.org.uk
+
+In this talk I will show that FM sets is actually a model of
+capture-avoiding substitution as well.  That is, there is a
+function-class which substitutes atoms a,b,c for sets in a
+capture-avoiding way.  Unlike the naive action given by
+
+a[a->x]=x
+b[a->x]=b
+Z[a->x]={z[a->x] | z:Z}
+
+our action is intelligent enough to detect when an atom is mentioned
+"free" in a set and act accordingly.  For example if we write Atoms
+for the set of atoms then
+
+Atoms[a->x] = Atoms
+
+according to our action, and
+
+(Atoms - {a})[a->0] = Atoms - {0}
+
+This work is similar in flavour to Aczel's universes with parameters,
+but FM sets is a set theory with no obvious bells and whistles, like
+Aczel's systems.  It is therefore possible to import technology from
+syntax to set theory, and talk about "unification of sets", and from
+semantics to build models directly in set theory where variables are
+represented by atoms, and substitution is represented by substitution.

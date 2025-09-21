@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>A Coursework</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>Chapter 5</h2>
+<h1>A Coursework</h1>
+<p>An interleaving of two words <i>w</i><sub>1</sub> and <i>w</i><sub>2</sub> is a word obtained by inserting the
+characters from <i>w</i><sub>1</sub> into <i>w</i><sub>2</sub> in the order in which they appear in <i>w</i><sub>1</sub>. Thus, for
+example, <i>b</i>0<i>a</i>1<i>c</i> is an interleaving of <i>bac</i> and 01. So are <i>bac</i>01 and <i>ba</i>0<i>c</i>1 for that
+matter.
+</p>
+<h3>Question 1</h3>
+<p>We start with a brief exercise to check that you understand what an interleaving
+is. Let <i>w</i><sub>1</sub> and <i>w</i><sub>2</sub> be two words having no characters in common.<br><br>(i) How many ways are there of interleaving <i>w</i><sub>1</sub> and <i>w</i><sub>2</sub> ?<br><br>
+      (ii) Supply all the words that can be obtained by interleaving <i>abc</i>
+      with 01, and arrange them lexicographically, taking the characters
+      to be in the order 0 < 1 < <i>a</i> < <i>b</i> < <i>c</i>.
+</p>
+<h3>Question 2</h3>
+<p>Now let <i>L</i><sub>1</sub> and <i>L</i><sub>2</sub> be regular languages. Let the <b>interleaving</b> of <i>L</i><sub>1</sub> and <i>L</i><sub>2</sub>
+be the set of words that can be obtained by interleaving words from <i>L</i><sub>1</sub> with
+<br>Suppose <i>L</i><sub>1</sub> and <i>L</i><sub>2</sub> are recognised by deterministic finite state machines &#8499;<sub>1</sub> and &#8499;<sub>2</sub>. Explain how to obtain from &#8499;<sub>1</sub> and &#8499;<sub>2</sub> a
+     nondeterministic machine that recognises the interleaving of <i>L</i><sub>1</sub> and
+     <i>L</i><sub>2</sub>.</p>
+<p>One question one can always ask about a nondeterministic machine is: how
+badly does it fail to be deterministic? That is to say, if we know it is in state
+&#120706;, and we give it character <i>c</i>, how many different states might it go to? Of
+course if it is deterministic the answer is 1. For the moment one might call the
+maximal value this can take (as &#120706; and <i>c</i> vary) the degree of nondeterminism of
+the machine.</p>
+<p>A hint for this question is: what might the degree of nondeterminism be of
+the machine you are building?</p>
+<p>It will probably help if you start by considering a simple case where <i>L</i><sub>1</sub> and
+<i>L</i><sub>2</sub> come from disjoint alphabets. What is the degree of nondeterminism in this
+case?</p>
+<h3>Question 3</h3>
+<p>What can you say about the case where you are interleaving more than two
+languages?</p>
+<a href="4-0.html">Back: 4 Nondeterministic Machines</a>
+
+</body>
+</html>

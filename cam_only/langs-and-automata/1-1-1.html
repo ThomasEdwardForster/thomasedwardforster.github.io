@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Languages from machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="main.html">Main page</a>
+</ul>
+
+<!-- Main content -->
+<h2>1.1.1 Languages from machines</h2>
+<p>Some languages have sensible definitions in terms of machines. There is an easy
+and natural way of associating languages with machines. It goes like this.</p>
+<p>For each machine we single out one state as the designated "start" state.
+Then we decorate some of the states of our machines with labels saying
+"accepting". My (highly personal and nonstandard!) notation for this is a
+smiley smacked on top of the circle corresponding to the state in question. The
+more usual notation is much less evocative: states are represented as circles,
+and accepting states are represented by a pair of concentric circles.
+</p>
+
+<p><b>Aside on notation</b><br><i>
+Some people write pictures of machines from which arrows might be
+missing, in that there could be a state <i>s</i> and a character <i>c</i> such that
+there is no arrow from <i>s</i> labelled <i>c</i>. With some people this means
+that you stay in <i>s</i>, and with some it means that you go from <i>s</i> to a
+terminally unhappy state - which I notate with a scowlie. My policy
+is to put in all arrows. This is a minority taste, but I think it makes
+things clearer. It's important to remember that what this affords us
+is not two examples of a different concept of machine, but different
+notations.</i>
+</p>
+<p>(For some reason the expression 'final state' is sometimes used for 'accepting
+state'. I don't like this notation, since it suggests that once you get the machine
+into that state it won't go any further or has to be reset or something, and this
+is not true. But you will see this nomenclature in the literature.)
+</p>
+<p>The use of the word "accepting" is a give-away for the use we will put this
+labelling to. We say that a machine <b>accepts</b> a string if, when the machine is
+powered up in the designated start state, and is fed the characters from <i>s</i> in
+order, when it has read the last character of <i>s</i> it is in an accepting state.
+</p>
+<p>This gives us a natural way of making machines correspond to languages.
+When one is shown a machine &#8499; one's thoughts naturally turn to the set of
+strings that &#8499; can accept - which is of course a language. We say that this set
+is the language <b>recognised</b> by &#8499;, and we write it <i>L</i>(&#8499;).</p>
+<p>Pin this to the wall too:</p><br>The set of strings accepted by a machine &#8499; is the language recognised by &#8499;<br><br>
+</p>
+<p>People often confuse a machine-recognising-a-language with a machine-accepting-
+a-string. It is sort-of OK to <i>end up</i> confusing 'recognise' and 'accept' once you really know what's going on: lots of people do. However if you <i>start off</i> confusing them you will become hopelessly lost.</p>
+<p>Two points to notice here. It's obvious that the language recognised by a
+machine is uniquely determined. However, if you start from the other direction,
+with a language and ask what machine determines it then it's not clear that there will be a unique machine that recognises it. There may be lots or there
+may be none at all. The first possibility isn't one that will detain us long,
+but the second possibility will, for the difference between languages that have
+machines that accept them and languages that don't is a very important one.
+We even have a special word for them.</p>
+<p>Definition:<br>
+If there is a finite state machine which recognises <i>L</i> then <i>L</i> is regular.<br></p>
+Easy exercise. For any alphabet &#931; whatever, the language &#931;* is regular.
+Exhibit a machine that recognises &#931;* . This is so easy you will probably suspect
+a trick.<br>
+<a href="answer2.html">Click here for the answer</a><br>
+<p>I'm not sure why Kleene (for it was he) chose the word 'regular' for languages
+recognised by finite state machines. It doesn't seem well motivated.</p>
+
+<a href="1-1-2.html">Next: 1.1.2 Some exercises</a><br>
+<a href="1-1.html">Back: 1.1 Languages recognised by machines</a>
+</body>
+</html>
